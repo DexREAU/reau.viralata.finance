@@ -206,11 +206,6 @@ header {
     transition: background-color 0.4s ease, color 0.4s ease;
     white-space: nowrap;
     box-sizing: border-box;
-} header nav .bt.redes:hover .social {
-    visibility: visible;
-    opacity: 1;
-    transform: translate(0);
-    transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s ease;
 } header nav .bt:hover {
     background-color: rgb(255 255 255 / 9%);
     transition: background-color 0.1s ease, color 0.1s ease;
@@ -223,13 +218,9 @@ header {
     bottom: calc((4rem + clamp(1rem, 4vw, 2rem)) * -1);
     display: flex;
     flex-direction: row;
-    gap: clamp(1rem, 4vw, 2rem);
+    gap: 1rem;
     left: 0;
     right: 0;
-    transform: translateY(-50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: transform 0.3s 0.3s ease, opacity 0.3s 0.3s ease, visibility 0.3s 0.3s ease;
     cursor: default;
 } header .social a {
     width: 3.5rem;
@@ -241,9 +232,16 @@ header {
     background-repeat: no-repeat;
     cursor: pointer;
     border: 0.1rem solid var(--light);
+    box-sizing: border-box;
 } header .social .telegram {
     background-image: url(assets/icons/telegram-logo-solo.svg);
     background-color: #0088cc;
+} header .social .instagram {
+    background-image: url(assets/icons/instagram.svg);
+    background-color: #d62976;
+} header .social .discord {
+    background-image: url(assets/icons/discord.svg);
+    background-color: #7289da;
 } header .conectar_wallet {
     box-shadow: 0 0.35rem var(--c2);
     /* background-color: var(--lightgrey); */
@@ -1155,6 +1153,21 @@ footer {
         bottom: -5rem;
         justify-content: center;
         box-sizing: border-box;
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s 0.3s ease, opacity 0.3s 0.3s ease, visibility 0.3s 0.3s ease;
+    } header .social a {
+        transform: scale(1);
+        transition: transform 0.3s ease;
+    } header .social a:hover {
+        transform: scale(1.1);
+        transition: transform 0.1s ease;
+    } header nav .bt.redes:hover .social {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0);
+        transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s ease;
     } .menu_bt {
         display: none;
     }
