@@ -41,7 +41,7 @@ let touchendY = 0
 function checkDirection() {
 
     if(window.matchMedia('(max-width: 1000px)').matches) {
-        if((touchendX - (window.innerWidth / 2.3)) > touchstartX && touchendY < (touchstartY + 100) && touchendY > (touchstartY - 100)) {
+        if((touchendX - (window.innerWidth / 1.9)) > touchstartX && touchendY < (touchstartY + 100) && touchendY > (touchstartY - 100)) {
     
             if(showingMenu == false) {
                 toggleNav()
