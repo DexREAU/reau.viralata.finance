@@ -259,12 +259,15 @@ header {
 } header .social .telegram {
     background-image: url(assets/icons/telegram-logo-solo.svg);
     background-color: #0088cc;
+    transition-delay: 0.1s;
 } header .social .instagram {
     background-image: url(assets/icons/instagram.svg);
     background-color: #d62976;
+    transition-delay: 0.15s;
 } header .social .discord {
     background-image: url(assets/icons/discord.svg);
     background-color: #7289da;
+    transition-delay: 0.2s;
 } header .conectar_wallet {
     box-shadow: 0 0.35rem var(--c2);
     padding: clamp(0.6rem, 2vw, 1rem) calc(clamp(0.6rem, 3vw, 1.1rem) * 1.6);
@@ -1178,8 +1181,7 @@ footer {
         border-right: unset;
         overflow-x: auto;
         max-width: 59vw;
-        overflow-x: auto;
-        overflow-y: hidden;
+        overflow: unset;
     } header nav .bt {
         padding: 0.8rem 1.1vw 0.8rem clamp(0.3rem, 1.1vw, 1.1rem);
         font-size: 0.9em;
