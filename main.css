@@ -130,7 +130,7 @@ body::-webkit-scrollbar-thumb {
 
 header {
     width: 100%;
-    height: clamp(5rem, 22vw, 7.5rem);
+    height: clamp(5rem, 22vw, 7rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,14 +214,20 @@ header {
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    gap: 0.9rem;
+    gap: clamp(0.8rem, 4vw, 1.5rem);
+    padding: 1.8rem 1.1vw 1.8rem clamp(0.3rem, 3vw, 1.2rem);
 } header nav .bt svg {
-    width: 2rem;
-    height: 1.5rem;
-    opacity: 0.15;
+    
+width: 2rem;
+    
+height: 1.5rem;
+    
+opacity: 0.15;
 } header nav .cta {
-    border: 0.1rem solid var(--c2);
-    text-align: center;
+    
+border: 0.1rem solid var(--c2);
+    
+text-align: center;
 } header nav .cta span {
     color: var(--c2);
 } header nav .cta span span {
@@ -278,7 +284,7 @@ header {
     align-self: center;
     color: var(--lightgrey);
     position: relative;
-    bottom: 0.05rem;
+    bottom: 0.2rem;
     white-space: nowrap;
     user-select: none;
     cursor: pointer;
@@ -1183,10 +1189,12 @@ footer {
         max-width: 59vw;
         overflow: unset;
     } header nav .bt {
-        padding: 0.8rem 1.1vw 0.8rem clamp(0.3rem, 1.1vw, 1.1rem);
         font-size: 0.9em;
+        padding: 0.9rem 1.1vw;
+    } header nav .bt:not(.cta) {
+    padding: 0.9rem 1.1vw 0.9rem clamp(0.3rem, 3vw, 1.2rem);
     } header .social {
-        bottom: -4.5rem;
+        bottom: -4rem;
         justify-content: center;
         box-sizing: border-box;
         transform: translateY(-30%);
@@ -1195,20 +1203,16 @@ footer {
         transition: transform 0.3s 0.3s ease, opacity 0.3s 0.3s ease, visibility 0.3s 0.3s ease;
         gap: 1rem;
     } header .bt.redes {
-        
-background-color: var(--darkgrey2);
-        
-margin-top: unset;
-        
-border-top: unset;
-        
-border-radius: 0.3rem;
+        background-color: var(--darkgrey2);
+        margin-top: unset;
+        border-top: unset;
+        border-radius: 0.3rem;
     } header .social a {
         transform: scale(1);
         transition: transform 0.3s ease;
         width: 3rem;
         height: 3rem;
-        background-size: 62%;
+        background-size: 55%;
     } header .social a:hover {
         transform: scale(1.1);
         transition: transform 0.1s ease;
