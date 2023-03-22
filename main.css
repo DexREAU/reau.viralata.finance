@@ -727,7 +727,7 @@ transform: rotate(1deg);
     backdrop-filter: blur(0.5rem);
     max-height: 62vh;
 } .tokenomics .content p {
-    font-size: clamp(1.4rem, 4vw, 1.6rem);
+    font-size: clamp(1.4rem, 4vw, 1.5rem);
     margin-top: 1rem;
 } .tokenomics .box {
     text-align: left;
