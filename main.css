@@ -210,9 +210,18 @@ header {
     background-color: rgb(255 255 255 / 9%);
     transition: background-color 0.1s ease, color 0.1s ease;
     color: var(--c1);
+} header nav .bt:not(.cta) {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 0.9rem;
+} header nav .bt svg {
+    width: 2rem;
+    height: 1.5rem;
+    opacity: 0.15;
 } header nav .cta {
-    
-border: 0.1rem solid var(--c2);
+    border: 0.1rem solid var(--c2);
+    text-align: center;
 } header nav .cta span {
     color: var(--c2);
 } header nav .cta span span {
@@ -222,7 +231,7 @@ border: 0.1rem solid var(--c2);
     border-top: 0.2rem solid var(--darkgrey2);
     margin-top: 2rem;
     border-radius: unset;
-    text-align: center;
+    justify-content: center;
 } header .bt {
     position: relative;
 } header .social {
@@ -1168,10 +1177,11 @@ footer {
         font-weight: 500;
         border-right: unset;
         overflow-x: auto;
-        max-width: 57vw;
-        overflow: unset;
+        max-width: 59vw;
+        overflow-x: auto;
+        overflow-y: hidden;
     } header nav .bt {
-        padding: 0.8rem 1.1vw;
+        padding: 0.8rem 1.1vw 0.8rem clamp(0.3rem, 1.1vw, 1.1rem);
         font-size: 0.9em;
     } header .social {
         bottom: -4.5rem;
