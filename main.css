@@ -210,6 +210,19 @@ header {
     background-color: rgb(255 255 255 / 9%);
     transition: background-color 0.1s ease, color 0.1s ease;
     color: var(--c1);
+} header nav .cta {
+    
+border: 0.1rem solid var(--c2);
+} header nav .cta span {
+    color: var(--c2);
+} header nav .cta span span {
+    color: var(--c1);
+} header .bt.redes {
+    background-color: transparent;
+    border-top: 0.2rem solid var(--darkgrey2);
+    margin-top: 2rem;
+    border-radius: unset;
+    text-align: center;
 } header .bt {
     position: relative;
 } header .social {
@@ -218,6 +231,7 @@ header {
     bottom: calc((4rem + clamp(1rem, 4vw, 2rem)) * -1);
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 2rem;
     left: 0;
     right: 0;
@@ -244,7 +258,6 @@ header {
     background-color: #7289da;
 } header .conectar_wallet {
     box-shadow: 0 0.35rem var(--c2);
-    /* background-color: var(--lightgrey); */
     padding: clamp(0.6rem, 2vw, 1rem) calc(clamp(0.6rem, 3vw, 1.1rem) * 1.6);
     border-radius: 0.4rem;
     font-weight: 400;
@@ -319,7 +332,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: var(--light);
-    clip-path: ellipse(200% 100% at 50% -0.5%);
+    /* clip-path: ellipse(200% 100% at 50% -0.5%); */
     -webkit-backface-visibility: hidden;
     background-image: linear-gradient(0deg, rgb(255 249 0 / 50%), transparent 38%), url(assets/padrao1.jpg);
     background-image:linear-gradient(0deg, rgb(255 249 0 / 50%), transparent 38%), -webkit-image-set(url(assets/padrao1.jpg) 1x, url(assets/padrao1.webp) 1x);
@@ -563,6 +576,15 @@ header {
     height: 0.1rem;
     background-color: #EEE;
     margin: clamp(4rem, 10vw, 7rem) 0;
+} .nota_duzentos {
+    
+width: clamp(10rem, 60vw, 27rem);
+    
+display: block;
+    
+margin: clamp(2rem, 4vw, 3rem) 0 0;
+    
+transform: rotate(1deg);
 }
 
 
@@ -675,7 +697,7 @@ header {
     align-items: center;
     gap: 2rem;
     width: 100%;
-    height: clamp(4rem, 45vw, 39rem);
+    height: clamp(4rem, 45vw, 35rem);
     overflow-y: auto;
     overflow-x: hidden;
     padding: clamp(2rem, 6vw, 3rem) clamp(1rem, 4vw, 2rem);
@@ -696,7 +718,7 @@ header {
     color: var(--light);
     /* background-color: var(--dark); */
     /* background-image: linear-gradient(0deg, var(--darkgrey) -30%, var(--dark) 24%); */
-    padding: 1.2rem 1.6rem 1.1rem;
+    padding: 1.2rem 1.4rem 1.1rem 1.6rem;
     border-radius: 0.8rem;
     box-sizing: border-box;
     border: 0.1rem solid rgb(51 51 51 / 30%);
@@ -724,7 +746,8 @@ header {
 
 .pdg_sec {
     background-color: var(--c1);
-    clip-path: ellipse(200% 100% at 50% 100%);
+    background-image: linear-gradient(180deg, #ffffffaa, transparent 38%);
+    clip-path: ellipse(138% 100% at 50% 100%);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -824,7 +847,7 @@ max-width: unset;
     /* background-color: var(--light); */
     -webkit-mask-image: linear-gradient(90deg, white calc(100% - 3rem), transparent calc(100% + 15rem));
     max-width: 180rem;
-    margin: 4rem 0 0 auto;
+    margin: 2rem 0 0 auto;
     scroll-snap-type: x mandatory;
 } .nfts_sec h3 {
     font-size: clamp(1.9rem, 6.5vw, 3rem);
@@ -842,7 +865,7 @@ max-width: unset;
     color: var(--light);
     font-weight: 700;
     letter-spacing: 0.1rem;
-    border-radius: 0.8rem;
+    border-radius: 0.7rem;
     /* background-image: url(assets/dogira-bg.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
@@ -851,7 +874,7 @@ max-width: unset;
     font-size: 1.3rem;
     border: 0.1rem solid var(--c2);
     overflow: hidden;
-    border: 0.3rem solid var(--dark);
+    border: 0.4rem solid var(--dark);
     box-shadow: 0 1rem 2rem rgb(170 170 170 / 80%);
     box-sizing: border-box;
     max-height: 90vh;
@@ -915,7 +938,7 @@ footer {
     background-color: #000;
     position: relative;
 } footer .moon_doggo {
-    width: clamp(10rem, 100vw, 70rem);
+    width: clamp(10rem, 100vw, 62rem);
     position: relative;
 } footer .outdoor {
     position: absolute;
@@ -1151,7 +1174,7 @@ footer {
         padding: 0.8rem 1.1vw;
         font-size: 0.9em;
     } header .social {
-        bottom: -5rem;
+        bottom: -4.5rem;
         justify-content: center;
         box-sizing: border-box;
         transform: translateY(-30%);
@@ -1159,9 +1182,21 @@ footer {
         visibility: hidden;
         transition: transform 0.3s 0.3s ease, opacity 0.3s 0.3s ease, visibility 0.3s 0.3s ease;
         gap: 1rem;
+    } header .bt.redes {
+        
+background-color: var(--darkgrey2);
+        
+margin-top: unset;
+        
+border-top: unset;
+        
+border-radius: 0.3rem;
     } header .social a {
         transform: scale(1);
         transition: transform 0.3s ease;
+        width: 3rem;
+        height: 3rem;
+        background-size: 62%;
     } header .social a:hover {
         transform: scale(1.1);
         transition: transform 0.1s ease;
@@ -1234,7 +1269,7 @@ footer {
         right: calc(clamp(40%, calc(60vw - 5rem), 130%) * 1);
     } .tokenomics {
         position: absolute;
-        width: clamp(10rem, 25vw, 35rem);
+        width: clamp(10rem, 25vw, 33rem);
         left: calc(clamp(40%, calc(62vw + 10rem), 130%) * 1);
     }
 
@@ -1271,14 +1306,18 @@ footer {
 
 @media (min-width:1920px) {
     html {
-        font-size:12px;
+        font-size:11px;
     }
   } @media (min-width:2440px) {
     html {
-        font-size:15px;
+        font-size:13px;
     }
   } @media (min-width:3000px) {
     html {
-        font-size:18px;
+        font-size:16px;
+    }
+  } @media (min-width:4000px) {
+    html {
+        font-size:22px;
     }
   }
