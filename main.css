@@ -1500,7 +1500,7 @@ footer {
         visibility: hidden;
         transition: transform 0.3s 0.3s ease, opacity 0.3s 0.3s ease, visibility 0.3s 0.3s ease;
         gap: 1rem;
-        bottom: -0.2rem;
+        bottom: 0.4rem;
     } header .bt.redes {
         background-color: var(--darkgrey2);
         margin-top: unset;
