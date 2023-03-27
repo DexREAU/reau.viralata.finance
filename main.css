@@ -832,7 +832,7 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     align-items: center;
     gap: clamp(1rem, 3vw, 2rem);
     /* padding: 1.2rem; */
-    background-color: rgb(10 15 17 / 62%);
+    background-color: rgb(10 15 17 / 50%);
     border-radius: 0.8rem;
     border: 0.1rem solid #08090B;
     position: relative;
