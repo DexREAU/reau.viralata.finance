@@ -876,14 +876,15 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     align-items: center;
     font-weight: 400;
     letter-spacing: 0.1rem;
-    color: orange;
-}  .colocado .status .icon {
+} .colocado .status .icon {
     width: clamp(0.9rem, 2.5vw, 1.1rem);
     height: calc(clamp(0.9rem, 2.5vw, 1.1rem) * 1.1);
     background-position: center;
     background-repeat: no-repeat;
     /* opacity: 0.15; */
-} .colocado:not(.dead) .status span {
+} .colocado:not(.dead) .status span {} .queima {
+    color: darkorange;
+} .tempo {
     color: var(--lightgrey);
 } .queima .icon {
     background-image: url(assets/icons/fire.svg);
@@ -955,12 +956,18 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     font-size: 0.5em;
     margin-left: 0.1rem;
 } .xp .soma {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 0.55em;
-    transform: translateY(-95%);
-    color: var(--light);
+    
+position: absolute;
+    
+right: 0;
+    
+top: 0;
+    
+font-size: 0.55em;
+    
+transform: translateY(-95%);
+    
+color: var(--light);
 } .colocado .img_perfil {
     width: clamp(4rem, 12vw, 6.5rem);
     height: clamp(4rem, 12vw, 6.5rem);
