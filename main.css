@@ -217,7 +217,7 @@ header {
     /* justify-content: center; */
     align-items: center;
     gap: clamp(0.8rem, 4vw, 1.5rem);
-    padding: 1.8rem 1.1vw 1.8rem clamp(0.3rem, 3vw, 1.2rem);
+    padding: 1.8rem 1.1vw 1.8rem clamp(0.3rem, 4vw, 2rem);
 } header nav .bt svg {
     
 width: 2rem;
@@ -493,7 +493,7 @@ text-align: center;
     letter-spacing: 0.1rem;
 } .intro_sec .cta_ctnr .social {
     background-color: #0088cc;
-    padding: 0.5rem 1.8rem 0.5rem 0.5rem;
+    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
     border-radius: 5rem;
     border: 0.2rem solid var(--light);
     color: var(--light);
@@ -502,13 +502,13 @@ text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    box-shadow: 0 0.8rem 1.3rem -0.8rem #0088cc;
+    gap: 1.3rem;
+    box-shadow: 0 0.8rem 1.3rem -0.8rem var(--light);
     text-transform: uppercase;
 } .intro_sec .cta_ctnr .social .icon {
     background-image: url(assets/icons/telegram-logo.svg);
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.6rem;
+    height: 2.6rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -782,8 +782,9 @@ transform: rotate(1deg);
     flex-direction: column;
     align-items: center;
     box-shadow: inset 0 0.9rem clamp(2rem, 5vw, 3rem) -1rem rgb(255 252 133 / 40%);
-    /* max-height: 49rem; */
+    max-height: 49rem;
     transition: max-height 0.8s ease;
+    overflow-y: hidden;
 } .placar_sec .ctnr {width: var(--base-width);} .placar_sec h2 {
 
 margin-bottom: clamp(3rem, 6vw, 4rem);
@@ -851,15 +852,15 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     overflow-x: hidden;
     transition: color 0.5s ease;
 } .colocado .img_perfil {
-    width: clamp(5rem, 15vw, 7rem);
-    height: clamp(5rem, 15vw, 7rem);
+    width: clamp(5rem, 15vw, 6.5rem);
+    height: clamp(5rem, 15vw, 6.5rem);
     border-radius: 0.8rem 0 0 0.8rem;
     border: 0.1rem solid var(--darkgrey2);
     object-fit: cover;
     background-color: var(--darkgrey);
 } .expandir {
     position: absolute;
-    bottom: 0;
+    top: 31rem;
     left: 0;
     right: 0;
     height: 12rem;
@@ -870,15 +871,13 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     cursor: pointer;
     padding-top: 5rem;
     font-size: 2.4rem;
-    display: none;
+    /* display: none; */
 } .expandir span {
     text-shadow: 0 -0.4rem 0.2rem #000;
 } .placar_sec .ctnr > .flex {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    overflow-y: hidden;
-    max-height: 140%;
+    overflow-y: auto;
     gap: 3rem;
     justify-content: center;
 } .placar_sec .ctnr > .flex > div {
@@ -936,7 +935,7 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
 .pdg_sec {
     background-color: var(--c1);
     background-image: linear-gradient(180deg, #ffffffaa, transparent 38%);
-    clip-path: ellipse(138% 100% at 50% 100%);
+    clip-path: ellipse(180% 100% at 50% 100%);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1062,7 +1061,7 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-width: clamp(10rem, 64vw, 30rem);
+    min-width: clamp(10rem, 64vw, 28rem);
     font-size: 1.3rem;
     border: 0.1rem solid var(--c2);
     overflow: hidden;
@@ -1373,14 +1372,13 @@ footer {
     } header nav .bt:not(.cta) {
     padding: 0.9rem 1.1vw 0.9rem clamp(0.3rem, 3vw, 1.2rem);
     } header .social {
-        bottom: -4rem;
         justify-content: center;
         box-sizing: border-box;
         opacity: 0;
         visibility: hidden;
         transition: transform 0.3s 0.3s ease, opacity 0.3s 0.3s ease, visibility 0.3s 0.3s ease;
         gap: 1rem;
-        bottom: unset;
+        bottom: -0.2rem;
     } header .bt.redes {
         background-color: var(--darkgrey2);
         margin-top: unset;
@@ -1480,15 +1478,16 @@ color: var(--darkgrey);
         
     }
 
-
-    .nfts_sec .ctnr .content {
+    .nfts_sec {
+        padding-top: 12rem;
+        margin-top: -3%;
+    } .nfts_sec .ctnr .content {
         padding: 0 20rem 6rem;
         margin: 4rem auto 0;
         scroll-snap-type: unset;
     } .nfts_sec article {
         scroll-snap-align: unset;
     }
-
 
     .ctnr_compra video {
         position: absolute;
