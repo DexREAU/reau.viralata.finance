@@ -843,7 +843,7 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
 } .placar > .flex .colocado:nth-child(1)::after, .placar > .flex .colocado:nth-child(2)::after, .placar > .flex .colocado:nth-child(3)::after {
     content:'';
     position: absolute;
-    bottom: -0.2rem;
+    bottom: -0.3rem;
     right: -0.2rem;
     border-right: 0rem solid;
     border-bottom: 0.3rem solid;
