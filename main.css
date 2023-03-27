@@ -785,6 +785,7 @@ transform: rotate(1deg);
     max-height: 49rem;
     transition: max-height 0.8s ease;
     overflow-y: hidden;
+    position: relative;
 } .placar_sec .ctnr {width: var(--base-width);} .placar_sec h2 {
 
 margin-bottom: clamp(3rem, 6vw, 4rem);
@@ -869,11 +870,16 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     background-image: linear-gradient(0deg, var(--dark) 40%, transparent);
     z-index: 3;
     cursor: pointer;
-    padding-top: 5rem;
-    font-size: 2.4rem;
+    padding-top: 6rem;
+    font-size: 2rem;
     /* display: none; */
 } .expandir span {
-    text-shadow: 0 -0.4rem 0.2rem #000;
+    background-color: var(--light);
+    color: #222;
+    height: fit-content;
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.3rem;
+    font-weight: 700;
 } .placar_sec .ctnr > .flex {
     display: flex;
     flex-flow: row wrap;
@@ -941,6 +947,8 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     flex-direction: column;
     justify-content: center;
     padding: 9rem 0 0 0;
+    position: relative;
+    z-index: 3;
 } .pdg_sec .ctnr {
     width:var(--base-width);
     display: flex;
