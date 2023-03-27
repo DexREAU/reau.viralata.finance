@@ -116,7 +116,9 @@ body::-webkit-scrollbar-thumb {
 .mobile_hidden {
     display:none;
 }
-
+.flex {
+    display: flex;
+}
 
 
 
@@ -138,7 +140,7 @@ header {
     top: 0;
     background-color: var(--dark);
     color: var(--light);
-    z-index: 2;
+    z-index: 4;
     border-bottom: clamp(0.1rem, 0.3vw, 0.2rem) solid var(--darkgrey2);
     position: relative;
 } header .ctnr {
@@ -222,7 +224,7 @@ header {
     
 width: 2rem;
     
-height: 1.5rem;
+height: 1.6rem;
     
 opacity: 0.15;
 } header nav .cta {
@@ -568,14 +570,14 @@ text-align: center;
 
 .sobre_sec {
     background-color: #ffffff;
-    padding: clamp(8rem, 20vw, 12rem) 0 5rem;
-    margin: -4rem 0 0;
+    padding: clamp(0rem, calc(8vw - 4rem), 12rem) 0 5rem;
+    margin: 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 } .sobre_sec .ctnr {
-    width: clamp(10rem, 91vw, 130rem);
+    width: clamp(10rem, 100%, 130rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -583,7 +585,7 @@ text-align: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-} .sobre_sec .txt {} .sobre_sec .txt h4 {
+} .sobre_sec .txt {width: clamp(10rem, 85%, 130rem);margin: 0 auto;} .sobre_sec .txt h4 {
     font-size: clamp(2.6rem, 7vw, 4rem);
     font-weight: 800;
     margin-bottom: 1rem;
@@ -595,7 +597,7 @@ text-align: center;
     width: 100%;
     height: 0.1rem;
     background-color: #EEE;
-    margin: clamp(4rem, 10vw, 7rem) 0;
+    margin: clamp(4rem, 10vw, 6rem) 0;
 } .nota_duzentos {
     
 width: clamp(10rem, 60vw, 27rem);
@@ -769,9 +771,9 @@ transform: rotate(1deg);
     color: var(--light);
     width: 100%;
     backdrop-filter: blur(0.2rem);
-    background-color: var(--dark);
+    background-color: #111619;
     margin: calc(clamp(3rem, 5vw, 10rem) * -1) 0 -6rem 0;
-    background-image: linear-gradient(0deg, #0B0D0E, transparent clamp(10rem, 60vw, 30rem)), linear-gradient(180deg, rgb(255 252 133 / 15%), transparent 30% clamp(10rem, 60vw, 30rem));
+    background-image: linear-gradient(0deg, #0B0D0E, transparent clamp(10rem, 60vw, 30rem)), linear-gradient(180deg, rgb(255 252 133 / 15%), transparent 20% clamp(10rem, 60vw, 30rem));
     background-attachment: fixed;
     background-position: bottom;
     border: 0.4rem solid var(--c2);
@@ -782,7 +784,7 @@ transform: rotate(1deg);
     flex-direction: column;
     align-items: center;
     box-shadow: inset 0 0.9rem clamp(2rem, 5vw, 3rem) -1rem rgb(255 252 133 / 40%);
-    max-height: 49rem;
+    max-height: 55rem;
     transition: max-height 0.8s ease;
     overflow-y: hidden;
     position: relative;
@@ -799,8 +801,25 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     gap: clamp(0.9rem, 2vw, 1.1rem);
     overflow-y: auto;
     max-width: 100%;
+} .placar > .flex {
+    flex-direction: column;
+    gap: inherit;
 } .placar .title {
     font-size: 2.5rem;
+    width: fit-content;
+    padding-left: 1.8rem;
+    position: relative;
+} .placar .title::after {
+    content:'';
+    background-image: url(assets/icons/up-down.svg);
+    width: 1rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
 } .placar .divider {
     width: 100%;
     height: 0.1rem;
@@ -809,77 +828,160 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
 } .colocado {
     display: flex;
     align-items: center;
-    gap: clamp(1rem, 2vw, 2rem);
+    gap: clamp(1rem, 3vw, 2rem);
     /* padding: 1.2rem; */
     background-color: rgb(10 15 17 / 62%);
     border-radius: 0.8rem;
-    border: 0.1rem solid #1b2429;
+    border: 0.1rem solid #08090B;
     position: relative;
     transition: border-color 0.5s ease;
+    padding: 0.8rem 1.5rem 0.8rem 0.8rem;
+    border-bottom-width: 0.5rem;
+    border-right-width: 0.4rem;
+} .placar > .flex .colocado:nth-child(1)::after, .placar > .flex .colocado:nth-child(2)::after, .placar > .flex .colocado:nth-child(3)::after {
+    content:'';
+    position: absolute;
+    bottom: -0.2rem;
+    right: -0.2rem;
+    border-right: 0rem solid;
+    border-bottom: 0.3rem solid;
+    height: 1rem;
+    width: 3rem;
+    border-radius: 0 0 0.8rem 0;
+    filter: drop-shadow(-0.5rem 0.1rem 0.5rem);
+    pointer-events: none;
+} .placar > .flex .colocado:nth-child(1)::after {
+    color: gold;
+    width: 5rem;
+} .placar > .flex .colocado:nth-child(2)::after {
+    color: silver;
+    width: 4rem;
+} .placar > .flex .colocado:nth-child(3)::after {
+    color: #d17000;
 } .colocado:hover {
-    border-color: var(--darkgrey2);
+    border-color: var(--dark);
     transition: border-color 0.05s ease;
+} .colocado .status {
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.2rem, 1vw, 0.4rem);
+} .colocado .status .flex {
+    flex-direction: row;
+    font-size: clamp(1.1rem, 3.2vw, 1.4rem);
+    gap: clamp(0.7rem, 2vw, 1rem);
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: orange;
+}  .colocado .status .icon {
+    width: clamp(0.9rem, 2.5vw, 1.1rem);
+    height: calc(clamp(0.9rem, 2.5vw, 1.1rem) * 1.1);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* opacity: 0.15; */
+} .colocado:not(.dead) .status span {
+    color: var(--lightgrey);
+} .queima .icon {
+    background-image: url(assets/icons/fire.svg);
+} .tempo .icon {
+    background-image: url(assets/icons/star.svg);
+} .colocado.anonimo .nome::after, .colocado.verificado .nome::after {
+    position: absolute;
+    right: 1.1rem;
+    font-size: clamp(0.65em, 3.3vw, 0.7em);
+    top: 0.6rem;
+    font-weight: 600;
+    color: var(--darkgrey);
 } .colocado.anonimo .nome::after {
     content: 'anônimo';
-    position: absolute;
-    right: 0.9rem;
-    font-size: 0.7em;
-    top: 0.9rem;
-    font-weight: 700;
-    color: var(--darkgrey);
+} .colocado.verificado .nome::after {
+    content: 'verificado';
+    color: var(--grey);
 } .colocado.dead {
     border: 0.1rem solid var(--darkgrey2);
     background-color: rgb(10 15 17 / 100%);
-} .colocado .flex {
+    border-bottom-width: 0.5rem;
+    border-right-width: 0.4rem;
+} .colocado > .flex {
     display: flex;
     flex-direction: column;
     flex: 1;
     width: 70%;
     justify-content: center;
-    gap: clamp(0.2rem, 1vw, 0.5rem);
+    /* gap: clamp(0.2rem, 1vw, 0.5rem); */
+    align-items: baseline;
+    margin: 0.3rem 0 0.7rem 0;
+    gap: 0.6rem;
 } .colocado a:hover {
     color:var(--lightgrey);
     transition: color 0.05s ease;
 } .colocado .nome {
-    font-size: 1.9rem;
-    max-width: 80%;
+    font-size: clamp(1.9rem, 6vw, 2.1rem);
+    white-space: nowrap;
 } .colocado .address {
     color: var(--darkgrey);
     font-weight: 600;
-    -webkit-mask-image: linear-gradient(45deg, white 62%, transparent);
+    /* -webkit-mask-image: linear-gradient(45deg, white 62%, transparent); */
     font-size: 1.3rem;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow-x: hidden;
     transition: color 0.5s ease;
+    /* max-width: 17rem; */
+    flex: 1;
+} .colocado:not(.dead) .row {
+    max-width: 80%;
+} .colocado .row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    align-items: baseline;
+    width: 100%;
+} .xp {
+    text-align: center;
+    font-size: clamp(2.3rem, 6vw, 3rem);
+    color: var(--c2);
+    font-weight: 500;
+    margin-top: -1.5rem;
+    letter-spacing: 0.1rem;
+    position: absolute;
+    bottom: 0.8rem;
+    right: clamp(1rem, 3vw, 1.5rem);
+} .xp sup {
+    font-size: 0.5em;
+    margin-left: 0.1rem;
 } .colocado .img_perfil {
-    width: clamp(5rem, 15vw, 6.5rem);
-    height: clamp(5rem, 15vw, 6.5rem);
-    border-radius: 0.8rem 0 0 0.8rem;
+    width: clamp(4rem, 12vw, 6.5rem);
+    height: clamp(4rem, 12vw, 6.5rem);
+    border-radius: 0.5rem;
     border: 0.1rem solid var(--darkgrey2);
     object-fit: cover;
     background-color: var(--darkgrey);
+    align-self: flex-start;
 } .expandir {
     position: absolute;
-    top: 31rem;
+    top: 35rem;
     left: 0;
     right: 0;
-    height: 12rem;
+    height: 16rem;
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(0deg, var(--dark) 40%, transparent);
+    background-image: linear-gradient(0deg, var(--dark) 35%, transparent);
     z-index: 3;
     cursor: pointer;
     padding-top: 6rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     /* display: none; */
 } .expandir span {
-    background-color: var(--light);
+    background-color: var(--c2);
     color: #222;
     height: fit-content;
-    padding: 0.4rem 1.2rem;
+    padding: 0.6rem 1.5rem;
     border-radius: 0.3rem;
     font-weight: 700;
+    border: 0.2rem solid #c3b259;
+    box-shadow: 0 0.4rem 1.2rem -0.6rem gold;
 } .placar_sec .ctnr > .flex {
     display: flex;
     flex-flow: row wrap;
@@ -1177,7 +1279,7 @@ footer {
 .parca_vfunk {
     position: fixed;
     bottom: 0;
-    right: clamp(1rem, 5vw, 4rem);
+    right: clamp(1rem, 4vw, 4rem);
     display: grid;
     z-index: 3;
     transition: transform 0.3s ease;
@@ -1186,7 +1288,7 @@ footer {
     width: 100%;
     align-items: center;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
     width: fit-content;
 } .parca_vfunk img {
     width: clamp(7.5rem, 15vw, 8rem);
@@ -1197,14 +1299,14 @@ footer {
     align-items: flex-end;
     gap: 0.8rem;
     font-family: 'Retro', sans-serif;
-    transform: translateY(6%);
+    transform: translateY(15%);
     letter-spacing: 0.1rem;
 } .balloon, .parca_vfunk a {
     transform: translateY(1rem);
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
 } .balloon {
-    width: clamp(12rem, 54vw, 27rem);
+    width: clamp(12rem, 63vw, 26rem);
     background-color: var(--darkgrey);
     padding: 0.6rem 1.2rem 0.6rem 0.6rem;
     border-radius: 0.1rem;
@@ -1358,6 +1460,8 @@ footer {
 
     header {
         position:sticky;
+        backdrop-filter: blur(0.4rem);
+        background-color: rgb(17 21 23 / 95%);
     } header nav {
         width:unset;
         height: unset;
@@ -1379,6 +1483,7 @@ footer {
         padding: 0.9rem 1.1vw;
     } header nav .bt:not(.cta) {
     padding: 0.9rem 1.1vw 0.9rem clamp(0.3rem, 3vw, 1.2rem);
+    border: 0.1rem solid rgb(51 51 51 / 38%);
     } header .social {
         justify-content: center;
         box-sizing: border-box;
@@ -1415,7 +1520,7 @@ color: var(--darkgrey);
     }
 
     .intro_sec {
-        height: clamp(30rem, 100vw, 67rem);
+        height: clamp(30rem, 100vw, 68rem);
     } .intro_sec .ctnr {
         flex-direction: row;
         justify-content: flex-start;
@@ -1479,9 +1584,12 @@ color: var(--darkgrey);
     }
 
 
-    .colocado .address {
+    .colocado:not(.dead) .address {
         -webkit-mask-image: unset;
         width: min-content;
+        max-width: 15rem;
+    } .colocado .row {
+        max-width: unset;
     } .dead .img_perfil {
         
     }
