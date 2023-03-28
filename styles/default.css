@@ -1,0 +1,112 @@
+:root {
+    --light:#f8f8ff;
+    --lightgrey:#aaaaaa;
+
+    --grey:#666666;
+
+    --darkgrey:#333333;
+    --darkgrey2:#181c1e;
+    
+    --dark:#111517;
+
+
+    --c1:#00eeef;
+    --c2: #fffc85;
+    --c3: #60005B;
+
+    --base-width: clamp(10rem, 91vw, 130rem);
+ }
+
+
+html, body, p, h1, h2, h3, h4, h5, h6 {
+    margin:0;
+    cursor:default;
+}
+
+
+@font-face {
+    font-family: Sofia Sans;
+    src: url("../assets/fonts/SofiaSansSemiCondensed-VariableFont_wght.ttf");
+    font-style: normal;
+} @font-face {
+    font-family: Sofia Sans;
+    src: url("../assets/fonts/SofiaSansSemiCondensed-Italic-VariableFont_wght.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Retro;
+    src: url("../assets/fonts/retro.ttf");
+}
+
+
+html {
+    font-size:10px;
+    scroll-behavior:smooth;
+    overflow-x: hidden;
+} body {
+    color:var(--dark);
+    background-color:var(--light);
+    font-family: 'Sofia Sans', 'Roboto', sans-serif;
+    font-size: clamp(1rem, 5vw, 1.8rem);
+    background-color: var(--dark);
+}
+
+/* .doge {
+    font-family: 'Doge', sans-serif;
+    font-weight: 100;
+} .real {
+    font-family: 'Real', sans-serif;
+    font-weight: 100;
+} */
+
+a {
+    text-decoration: none;
+    color:unset;
+}
+
+img, video {
+    user-select: none;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+body::-webkit-scrollbar-track, .nfts_sec article::-webkit-scrollbar-track {
+    background: var(--light);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--dark);
+}
+
+.nfts_sec .wrapper::-webkit-scrollbar {
+    width: 0.6rem;
+} .nfts_sec .wrapper::-webkit-scrollbar-thumb {
+    background: var(--darkgrey);
+}
+
+
+.ctnr_compra ul::-webkit-scrollbar-thumb, .tokenomics .content::-webkit-scrollbar-thumb {
+    background: var(--light);
+} .ctnr_compra ul::-webkit-scrollbar-track, .tokenomics .content::-webkit-scrollbar-track, .nfts_sec .wrapper::-webkit-scrollbar-track, .nfts_sec article::-webkit-scrollbar-thumb {
+    background: var(--dark);
+}
+
+
+::selection {
+    background-color: var(--darkgrey);
+    color:var(--light);
+}
+
+.mobile_hidden {
+    display:none;
+}
+.flex {
+    display: flex;
+}
