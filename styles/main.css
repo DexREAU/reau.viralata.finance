@@ -505,6 +505,7 @@ transform: rotate(1deg);
     background-size: cover;
     background-position: bottom center;
     background-attachment: fixed;
+    margin-bottom: -3rem;
 } .sec2 .ctnr {
     display: flex;
     flex-direction: column;
