@@ -1,3 +1,7 @@
+body {
+    color:var(--dark);
+}
+
 header {
     width: 100%;
     height: clamp(5rem, 22vw, 7rem);

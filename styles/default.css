@@ -45,7 +45,6 @@ html {
     scroll-behavior:smooth;
     overflow-x: hidden;
 } body {
-    color:var(--dark);
     background-color:var(--light);
     font-family: 'Sofia Sans', 'Roboto', sans-serif;
     font-size: clamp(1rem, 5vw, 1.8rem);
