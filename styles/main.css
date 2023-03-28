@@ -509,7 +509,7 @@ transform: rotate(1deg);
     background-size: cover;
     background-position: bottom center;
     background-attachment: fixed;
-    margin-bottom: -3rem;
+    /* margin-bottom: -3rem; */
 } .sec2 .ctnr {
     display: flex;
     flex-direction: column;
@@ -662,7 +662,7 @@ transform: rotate(1deg);
     transition: max-height 0.8s ease;
     overflow-y: hidden;
     position: relative;
-    display: none;
+    /* display: none; */
 } .placar_sec .ctnr {width: var(--base-width);} .placar_sec h2 {
 
 margin-bottom: clamp(3rem, 6vw, 4rem);
