@@ -89,6 +89,8 @@ body {
     background-image: url(../assets/icons/github.svg);
 } .icon.bscscan {
     background-image: url(../assets/icons/bscscan.svg);
+} .icon.youtube {
+    background-image: url(../assets/icons/youtube.svg);
 }  .bio_ctnr article .flex {
     display: flex;
     justify-content: stretch;
