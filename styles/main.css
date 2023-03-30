@@ -509,7 +509,7 @@ transform: rotate(1deg);
     background-size: cover;
     background-position: bottom center;
     background-attachment: fixed;
-    margin-bottom: -3rem;
+    /* margin-bottom: -3rem; */
 } .sec2 .ctnr {
     display: flex;
     flex-direction: column;
@@ -662,7 +662,7 @@ transform: rotate(1deg);
     transition: max-height 0.8s ease;
     overflow-y: hidden;
     position: relative;
-    display: none;
+    /* display: none; */
 } .placar_sec .ctnr {width: var(--base-width);} .placar_sec h2 {
 
 margin-bottom: clamp(3rem, 6vw, 4rem);
@@ -708,18 +708,19 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     gap: clamp(1rem, 3vw, 2rem);
     /* padding: 1.2rem; */
     background-color: #153e3f3d;
-    border-radius: 0.8rem;
-    border: 0.1rem solid #08090B;
+    border-radius: 0.6rem;
+    border: 0.1rem solid;
+    border-bottom: 0.4rem solid #08090B;
+    /* border-left: 0.3rem solid #08090B; */
     position: relative;
     transition: border-color 0.5s ease;
     padding: 0.7rem 1.5rem 0.7rem 0.7rem;
-    border-bottom-width: 0.5rem;
-    border-right-width: 0.4rem;
+    border-color: #10242e;
 } .placar > .flex .colocado:nth-child(1)::after, .placar > .flex .colocado:nth-child(2)::after, .placar > .flex .colocado:nth-child(3)::after {
     content:'';
     position: absolute;
     bottom: -0.3rem;
-    right: -0.2rem;
+    right: -0.1rem;
     border-right: 0rem solid;
     border-bottom: 0.3rem solid;
     height: 1rem;
@@ -779,8 +780,8 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
 } .colocado.dead {
     /* border: 0.1rem solid var(--darkgrey2); */
     background-color: #153e3f3d;
-    border-bottom-width: 0.5rem;
-    border-right-width: 0.4rem;
+    border-bottom-width: 0.4rem;
+    border-right-width: 0.3rem;
 } .colocado > .flex {
     display: flex;
     flex-direction: column;
