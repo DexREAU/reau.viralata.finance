@@ -30,13 +30,13 @@ header {
     font-size: clamp(1.8rem, 5vw, 2rem);
     font-weight: 700;
     letter-spacing: 0.2rem;
-    gap: 0.8rem;
+    gap: 0.9rem;
 } header .logo .icon {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.2rem;
+    height: 2.2rem;
     border-radius: 5rem;
     background-position: center;
-    background-size: 58%;
+    background-size: 65%;
     background-repeat: no-repeat;
     box-shadow: 0 0.5rem 0.6rem var(--darkgrey);
 } header .bsc {
@@ -81,12 +81,12 @@ header {
     background-color:transparent;
 } header nav .bt {
     padding: 1.5rem 1.3rem;
-    background-color: var(--darkgrey2);
-    border-radius: 0.3rem;
+    background-color: var(--dark);
     cursor: pointer;
     transition: background-color 0.4s ease, color 0.4s ease;
     white-space: nowrap;
     box-sizing: border-box;
+    border-radius: 0.4rem;
 } header nav .bt:hover {
     background-color: rgb(255 255 255 / 9%);
     transition: background-color 0.1s ease, color 0.1s ease;
@@ -97,6 +97,7 @@ header {
     align-items: center;
     gap: clamp(0.8rem, 4vw, 1.5rem);
     padding: 1.8rem 1.1vw 1.8rem clamp(0.3rem, 4vw, 2rem);
+    border: 0.1rem solid var(--darkgrey2);
 } header nav .bt svg {
     
 width: 2rem;
@@ -105,10 +106,9 @@ height: 1.6rem;
     
 opacity: 0.15;
 } header nav .cta {
-    
-border: 0.1rem solid var(--c2);
-    
-text-align: center;
+    border: 0.1rem solid var(--c2);
+    text-align: center;
+    border-bottom-width: 0.3rem;
 } header nav .cta span {
     color: var(--c2);
 } header nav .cta span span {
@@ -207,19 +207,27 @@ text-align: center;
     border-radius: 0 0 0.5rem;
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: transform 0.15s ease;
 } .menu_bt div, .sec2 a::after {
     border-top: 0.3rem solid;
     border-right: 0.3rem solid;
     width: 0.5rem;
     height: 0.5rem;
     transform: rotate(45deg);
-} .menu_bt.hide {
-    visibility: hidden;
-    opacity: 0;
+} .menu_bt.hide {transform: translateX(-100%);}
+
+.external::after {
+    content:'';
+    position:absolute;
+    right: 0.4rem;
+    top: 0.4rem;
+    width: 0.7rem;
+    height: 0.8rem;
+    background-image: url(../assets/icons/external-white.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-
 
 
 
@@ -240,7 +248,7 @@ text-align: center;
     position: relative;
     z-index: 1;
 } .intro_sec .ctnr {
-    width: clamp(10rem, 91vw, 140rem);
+    width: clamp(10rem, 91vw, 145rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -249,7 +257,7 @@ text-align: center;
     margin-top: -1.5rem;
     /* position: relative; */
 } .intro_sec .business_doggo {
-    width: clamp(10rem, 75vw, 59rem);
+    width: clamp(10rem, 75vw, 57rem);
     max-height: 95vh;
     max-width: 50rem;
     /* min-width: 20vh; */
@@ -342,7 +350,7 @@ text-align: center;
 } .intro_sec .stats span, .intro_sec .stats a {
     font-weight: 800;
     background-color: var(--light);
-    padding: 0.6rem 1.4rem 0.6rem 1.2rem;
+    padding: 0.6rem 1.2rem 0.6rem 0.8rem;
     border-radius: 0.6rem;
     display: inline-block;
     display: flex;
@@ -358,7 +366,7 @@ text-align: center;
     transition: transform 0.2s ease;
     transform: translateY(-0.3rem);
 } .intro_sec .stats::-webkit-scrollbar, .pdg_sec .roadmap_ctnr::-webkit-scrollbar, .nfts_sec .ctnr .content::-webkit-scrollbar {
-    height: 0.8rem;
+    height: 0.6rem;
 } .intro_sec .stats::-webkit-scrollbar-track, .pdg_sec .roadmap_ctnr::-webkit-scrollbar-track,  .nfts_sec .ctnr .content::-webkit-scrollbar-track {
     background-color: transparent;
 } .intro_sec .stats::-webkit-scrollbar-thumb, .pdg_sec .roadmap_ctnr::-webkit-scrollbar-thumb,  .nfts_sec .ctnr .content::-webkit-scrollbar-thumb {
@@ -366,7 +374,7 @@ text-align: center;
 } .intro_sec .cta_ctnr {
     display: flex;
     align-items: center;
-    gap: clamp(1.5rem, 6vw, 2rem);
+    gap: clamp(1.5rem, 6vw, 2.4rem);
     font-weight: 800;
     flex-flow: row wrap;
     justify-content: center;
@@ -374,25 +382,29 @@ text-align: center;
     letter-spacing: 0.1rem;
 } .intro_sec .cta_ctnr .social {
     background-color: #0088cc;
-    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
-    border-radius: 5rem;
     border: 0.2rem solid var(--light);
     color: var(--light);
-    font-weight: 700;
+    font-weight: 600;
+    padding: 0.7rem 2rem 0.7rem 1.2rem;
+    border-radius: 0.5rem;
+    position: relative;
     font-size: 0.9em;
+    border-bottom-width: 0.5rem;
+} .intro_sec .cta_ctnr .social, .vfunk_cta {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.3rem;
-    box-shadow: 0 0.8rem 1.3rem -0.8rem var(--light);
-    text-transform: uppercase;
-} .intro_sec .cta_ctnr .social .icon {
-    background-image: url(../assets/icons/telegram-logo.svg);
-    width: 2.6rem;
-    height: 2.6rem;
+    gap: 1.2rem;
+    position: relative;
+} .intro_sec .cta_ctnr .social .icon, .vfunk_cta .icon {
+    width: 2rem;
+    height: 1.6rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+} .intro_sec .cta_ctnr .social .icon {
+    background-image: url(../assets/icons/telegram-logo-solo.svg);
+    /* display: none; */
 } .intro_sec .cta, .ctnr_compra .cta {
     background-color: var(--c3);
     width: fit-content;
@@ -407,6 +419,46 @@ text-align: center;
     /* box-shadow: 0 0.4rem var(--c2); */
     text-transform: uppercase;
     box-shadow: 0 0.3rem, 0 0.8rem 1.2rem rgb(51 51 51 / 24%), inset 0 -1.5rem 2.2rem -1.8rem;
+    position: relative;
+    width: clamp(18rem, 55vw, 20rem);
+    text-align: center;
+} .vfunk_cta {
+    background-color: rgb(17 21 23 / 85%);
+    color: var(--light);
+    font-weight: 400;
+    padding: 0 2rem 0 1.2rem;
+    border-radius: 0.4rem;
+    position: relative;
+    font-size: 0.9em;
+    /* display: flex; */
+    /* gap: 0.6rem; */
+} .vfunk_cta:before {
+    content: '';
+    position: absolute;
+    inset: -0.1rem;
+    background-image: linear-gradient(90deg, #5fdaff, #ff74b4, #4000ff, #5fdaff);
+    z-index: -1;
+    border-radius: 0.4rem;
+    animation: steamBt 2s linear infinite;
+    background-size: 76%;
+    background-position: 0 0;
+    opacity: 0.8;
+    box-shadow: 0 0.4rem 1.6rem -0.8rem black;
+    bottom: -0.4rem;
+} @keyframes steamBt {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 640% 0;
+	}
+} .vfunk_cta .icon {
+    background-image: url(../assets/icons/foragido.png);
+    background-image: -webkit-image-set(url(../assetsicons/foragido.png) 1x, url(../assets/icons/foragido.webp) 1x);
+    width: 2rem;
+    height: 2.8rem;
+    margin-top: 0.6rem;
+    background-position: bottom;
 } .cta span {
     color:var(--c1);
 } header nav::-webkit-scrollbar-thumb:hover, .intro_sec .stats::-webkit-scrollbar-thumb:hover {
@@ -449,7 +501,7 @@ text-align: center;
 
 .sobre_sec {
     background-color: #ffffff;
-    padding: clamp(0rem, calc(8vw - 4rem), 12rem) 0 5rem;
+    padding: clamp(0rem, calc(8vw - 4rem), 5rem) 0 5rem;
     margin: 0 0 0;
     display: flex;
     flex-direction: column;
@@ -515,7 +567,7 @@ transform: rotate(1deg);
     background-size: cover;
     background-position: bottom center;
     background-attachment: fixed;
-    /* margin-bottom: -3rem; */
+    margin-bottom: -3rem;
 } .sec2 .ctnr {
     display: flex;
     flex-direction: column;
@@ -664,11 +716,11 @@ transform: rotate(1deg);
     flex-direction: column;
     align-items: center;
     box-shadow: inset 0 0.9rem clamp(2rem, 5vw, 3rem) -1rem rgb(255 252 133 / 40%);
-    max-height: 65rem;
+    max-height: 62rem;
     transition: max-height 0.8s ease;
     overflow-y: hidden;
     position: relative;
-    /* display: none; */
+    display: none;
 } .placar_sec .ctnr {width: var(--base-width);} .placar_sec h2 {
 
 margin-bottom: clamp(3rem, 6vw, 4rem);
@@ -1101,6 +1153,7 @@ color: var(--light);
     margin: 0 auto;
     width: 75%;
     transition: border-color 0.4s ease;
+    position: relative;
 } .nfts_sec a:hover {
     border-color: var(--c2);
     transition: border-color 0.1s ease;
@@ -1250,7 +1303,7 @@ footer {
     text-shadow: 0 0.2rem var(--dark);
     right: -0.1rem;
     background-color: var(--darkgrey);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.8rem 0.5rem 1rem;
     border-radius: 0.3rem;
     border: 0.1rem solid var(--c2);
     text-transform: uppercase;
@@ -1380,7 +1433,7 @@ footer {
     header {
         position:sticky;
         backdrop-filter: blur(0.4rem);
-        background-color: rgb(17 21 23 / 95%);
+        background-color: rgb(17 21 23 / 96%);
     } header nav {
         width:unset;
         height: unset;
@@ -1413,7 +1466,7 @@ footer {
         gap: 1rem;
         bottom: 0.4rem;
     } header .bt.redes {
-        background-color: var(--darkgrey2);
+        background-color: var(--dark);
         margin-top: unset;
         border-top: unset;
         border-radius: 0.3rem;
@@ -1440,11 +1493,11 @@ color: var(--darkgrey);
     }
 
     .intro_sec {
-        height: clamp(30rem, 100vw, 68rem);
+        height: clamp(30rem, 100vw, 64rem);
     } .intro_sec .ctnr {
         flex-direction: row;
         justify-content: flex-start;
-        gap: calc(10vw - 13rem);
+        gap: calc(10vw - 11rem);
         margin-top: unset;
     } .intro_sec h1 {
         font-size: clamp(2.1em, 6vw, 5em);
@@ -1455,7 +1508,7 @@ color: var(--darkgrey);
         box-shadow: unset;
     } .intro_sec .content {
         margin: 0;
-        max-width: clamp(0rem, 49vw, 69rem);
+        max-width: clamp(0rem, 49vw, 81rem);
         text-align: unset;
     } .intro_sec .business_doggo {
         position: sticky;
@@ -1468,6 +1521,7 @@ color: var(--darkgrey);
         text-align: left;
     } .intro_sec .cta {
         margin:unset;
+        width: unset;
     } .intro_sec .cta_ctnr, .ctnr_compra .cta {
         margin: 1.5rem 0 0;
         justify-content: flex-start;
