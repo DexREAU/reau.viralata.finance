@@ -219,18 +219,6 @@ border-bottom-width: 0.3rem;
     transform: rotate(45deg);
 } .menu_bt.hide {transform: translateX(-100%);}
 
-.external::after {
-    content:'';
-    position:absolute;
-    right: 0.4rem;
-    top: 0.4rem;
-    width: 0.7rem;
-    height: 0.8rem;
-    background-image: url(../assets/icons/external-white.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 
 
