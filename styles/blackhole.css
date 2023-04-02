@@ -120,7 +120,7 @@ main {
 
 header {
     position: fixed;
-    top: 4.5rem;
+    top: clamp(2rem, 5vh, 4.5rem);
     /* width: clamp(10rem, 95vw, 160rem); */
     height: clamp(6rem, 22vw, 12rem);
     z-index: 1;
@@ -137,21 +137,23 @@ header {
     width: fit-content;
 } header .logo {
     width: clamp(16rem, 51vw, 22rem);
+    max-width: 40vh;
 } header h1 {
     font-weight: 400;
     letter-spacing: 0.2rem;
     position: relative;
     /* left: 0.5rem; */
-    background-color: var(--dark);
-    padding: 0.4rem;
-    width: 100%;
+    background-color: #000;
+    padding: 0.3rem 0.5rem 0.3rem 0.7rem;
+    /* width: 100%; */
     text-align: center;
     border: 0.1rem solid var(--darkgrey2);
     border-radius: 0.4rem;
+    font-size: clamp(1rem, 1.5vh, 2rem);
 } header .address {
     font-size: 1.5rem;
     font-weight: 400;
-    letter-spacing: 1rem;
+    letter-spacing: clamp(0.5rem, 1.5vh, 1.05rem);
     position: relative;
     left: 0;
     padding-right: 1.2rem;
@@ -163,19 +165,16 @@ header {
 .status_ctnr {
     width: 100%;
     position: sticky;
-    top: 0;
-    bottom: 1.8rem;
+    top: 0vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    /* justify-content: flex-start; */
     align-items: center;
     color: var(--light);
     font-size: 1.6rem;
     gap: 1.4rem;
-    position: relative;
     z-index: 2;
     box-sizing: border-box;
-    padding-bottom: clamp(4rem, 10vw, 10rem);
     height: 65vh;
 } .status_ctnr a {
     background-color: var(--light);
@@ -185,27 +184,28 @@ header {
     font-weight: 800;
     transform: translateY(50%);
 } .status_ctnr section {
-    background-color: rgb(17 21 23 / 96%);
+    background-color: rgb(0 0 0 / 95%);
     width: clamp(10rem, 91%, 50rem);
-    border-radius: 0.4rem;
-    margin-top: 1rem;
+    border-radius: 1rem;
     backdrop-filter: blur(0.2rem);
-    border: 0.2rem solid var(--darkgrey2);
+    border: 0.1rem solid var(--light);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 2rem 0;
+    padding: 4rem 2.5rem 0;
     box-shadow: 0 2rem 6rem 1rem #000004;
+    max-height: 75vh;
+    /* overflow-y: auto; */
 } .status_ctnr .content {
     display: flex;
     flex-flow: column;
     width: 100%;
     justify-content: space-between;
-    gap: clamp(0.3rem, 3vw, 1rem);
+    gap: clamp(0.3rem, 4vw, 2rem);
     align-items: baseline;
     font-size: clamp(1.5rem, 3.8vw, 1.8rem);
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     align-items: stretch;
 } .status_ctnr .content li {
     display: flex;
@@ -229,7 +229,7 @@ header {
     background-position: center;
     background-size: contain;
     transform: rotate(-30deg) translateY(calc(30vh + 20vw));
-    animation: translate_moon 200s linear infinite;
+    animation: translate_moon 180s linear infinite;
     background-repeat: no-repeat;
     filter: brightness(0.6);
 }
@@ -307,20 +307,20 @@ header {
         transform: translate3D(-75vw, -40vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
     } 20% {
-        transform: translate3D(0, 0, 0) scale(0.2) rotate(50deg);
+        transform: translate3D(0, 0, 0) scale(0.2) rotate(90deg);
         filter: brightness(0);
     } 100% {
-        transform: translate3D(0, 0, 0) scale(0.2) rotate(50deg);
+        transform: translate3D(0, 0, 0) scale(0.2) rotate(90deg);
         filter: brightness(0);
     }
 }
 
 @keyframes fall03 {
     0% {
-        transform: translate3D(-20vw, -70vh, 0) scale(1) rotate(0deg);
+        transform: translate3D(-30vw, -70vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
     } 20% {
-        transform: translate3D(-20vw, -70vh, 0) scale(1) rotate(0deg);
+        transform: translate3D(-30vw, -70vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
     }  50% {
         transform: translate3D(0, 0, 0) scale(0.4) rotate(360deg);
