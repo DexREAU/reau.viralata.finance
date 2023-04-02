@@ -29,7 +29,7 @@ main {
     background-size: cover;
     transform: translateY(-50%) scale(2.4) rotate(0deg);
     z-index: -1;
-    animation: rotatebg 300s linear infinite;
+    animation: rotatebg 240s linear infinite;
     width: 100vw;
     height: 100vw;
     top: 50%;
@@ -93,7 +93,7 @@ main {
     display: block;
     font-size: 0.35em;
     color: var(--c2);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.2rem;
 } .title_ctnr h2 strong span {
     color: var(--c1);
@@ -107,7 +107,7 @@ main {
     padding: 0.3rem 1.4rem;
     border-radius: 0.5rem;
     color: var(--dark);
-    font-weight: 800;
+    font-weight: 900;
     border: 0.3rem solid rgb(248 248 255 / 60%);
     box-shadow: 0 0.9rem 0.6rem -0.6rem;
     font-size: 1em;
@@ -328,10 +328,10 @@ header {
 
 @keyframes fall03 {
     0% {
-        transform: translate3D(-30vw, -70vh, 0) scale(1) rotate(0deg);
+        transform: translate3D(-50vw, -70vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
     } 20% {
-        transform: translate3D(-30vw, -70vh, 0) scale(1) rotate(0deg);
+        transform: translate3D(-50vw, -70vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
     }  50% {
         transform: translate3D(0, 0, 0) scale(0.4) rotate(360deg);
