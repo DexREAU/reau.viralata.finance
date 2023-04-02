@@ -5,13 +5,13 @@ main {
     flex-direction: column;
     overflow: hidden;
     height: 63vh;
-    height: clamp(74lvh, 180vw, 85vh);
+    height: clamp(74svh, 180vw, 85vh);
 }
 
 .blackhole_ctnr {
     position: fixed;
     height: 100vh;
-    height: 100lvh;
+    height: 100svh;
     inset: 0;
     background-color: #000000;
     display: flex;
@@ -260,15 +260,15 @@ header {
     background-position: center;
     /* animation: unset !important; */
 } .falling_ctnr .o1 {
-    background-image: url(../assets/buraco-negro/doggo01.png);
-    width:18rem;
-    height:18em;
-    animation: fall01 50s cubic-bezier(0.88, 0.54, 0.94, 0.3) infinite;
-} .falling_ctnr .o2 {
     background-image: url(../assets/buraco-negro/mc_wojak.png);
     width: 24rem;
     height:18em;
-    animation: fall02 65s cubic-bezier(0.88, 0.54, 0.94, 0.3) infinite;
+    animation: fall01 50s cubic-bezier(0.88, 0.54, 0.94, 0.3) infinite;
+} .falling_ctnr .o2 {
+    background-image: url(../assets/buraco-negro/doggo01.png);
+    width:18rem;
+    height:18em;
+    animation: fall02 75s cubic-bezier(0.88, 0.54, 0.94, 0.3) infinite;
 } .falling_ctnr .o3 {
     background-image: url(../assets/buraco-negro/pepe.gif);
     width: 16rem;
@@ -278,7 +278,7 @@ header {
     background-image: url(../assets/logo-REAU.png);
     width: 10rem;
     height: 10rem;
-    animation: fall04 15s cubic-bezier(0.88, 0.54, 0.94, 0.3) infinite;
+    animation: fall04 10s cubic-bezier(0.88, 0.54, 0.94, 0.3) infinite;
 } .falling_ctnr .o5 {
     background-image: url(../assets/logo-REAU.png);
     width: 10rem;
@@ -306,7 +306,7 @@ header {
     0% {
         transform: translate3D(-75vw, -40vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
-    } 10% {
+    } 20% {
         transform: translate3D(0, 0, 0) scale(0.2) rotate(50deg);
         filter: brightness(0);
     } 100% {
