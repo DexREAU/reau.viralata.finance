@@ -19,7 +19,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dentro do buraco negro · $REAU Viralata Finance</title>
+    <title>Buraco negro · $REAU Viralata Finance</title>
 
     <link rel="stylesheet" href="../styles/default.css">
     <link rel="stylesheet" href="../styles/blackhole.css">
@@ -38,7 +38,7 @@
             <img src="../assets/logo-color.svg" alt="Logo Viralata" draggable="false">
         </a>
 
-        <h1>Dentro do Buraco Negro</h1>
+        <h1>No Buraco Negro</h1>
     </header>
 
     <main>
@@ -58,8 +58,8 @@
             <div class="zoom_ctnr">
                 <div class="blackhole">
                     <div class="title_ctnr">
-                        <h2>45 Tri <strong><span>$</span>REAUs</strong></h2>
-                        <a href="#stats">Abrir status</a>
+                        <h2><span>Queimados:</span>45 Tri <strong><span>$</span>REAUs</strong></h2>
+                        <a href="#stats">Status <div class="icon"></div></a>
                     </div>
                     <div class="border"></div>
                     <div class="blur"></div>
@@ -116,5 +116,19 @@
             <a href="../index.html">viralata.finance</a>
         </section>
     </div>
+
+    <script>
+        const statusSec = document.querySelector('.status_ctnr section')
+
+        window.addEventListener('scroll', function() {
+            if(window.scrollY > 1) {
+                statusSec.style.backgroundColor = 'rgb(0 0 0 / 88%)'
+                statusSec.style.backdropFilter = 'blur(0.5rem)'
+            } else {
+                statusSec.style.backgroundColor = 'rgb(0 0 0 / 0%)'
+                statusSec.style.backdropFilter = 'blur(0rem)'
+            }
+        })
+    </script>
 </body>
 </html>

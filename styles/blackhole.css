@@ -5,13 +5,13 @@ main {
     flex-direction: column;
     overflow: hidden;
     height: 63vh;
-    height: clamp(90svh, 120vw, 60rem);
+    height: clamp(69lvh, 120vw, 66rem);
 }
 
 .blackhole_ctnr {
     position: fixed;
     height: 100vh;
-    height: 100svh;
+    height: clamp(90lvh, 100vw, 100vh);
     inset: 0;
     background-color: #000000;
     display: flex;
@@ -51,7 +51,7 @@ main {
     background-image: linear-gradient(90deg, #00eeef, #fffc85, #fffc85, #00eeef);
     z-index: -1;
     border-radius: 50%;
-    animation: movegradient 5s linear infinite;
+    animation: movegradient 3s linear infinite;
     background-size: 76%;
     background-position: 0 0;
     /* opacity: 0.8; */
@@ -63,9 +63,20 @@ main {
 	100% {
 		background-position: 640% 0;
 	}
+} .blackhole::after {
+    content:'';
+    position: absolute;
+    inset: 0;
+    border: 5rem solid #fffa30;
+    border-radius: 50%;
+    transform: skew(60deg, 0deg);
+    filter: blur(4rem);
+    z-index: -1;
 } .blackhole .blur {
     filter: blur(clamp(3rem, 8vw, 5rem));
     mix-blend-mode: hard-light;
+} .blackhole p {
+
 } .zoom_ctnr {
     /* transform: scale(6); */
     /* transition: transform 0.3s cubic-bezier(1, 0, 0.6, 0.95); */
@@ -89,6 +100,8 @@ main {
     text-align: center;
     white-space: nowrap;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 } .title_ctnr h2 strong {
     display: block;
     font-size: 0.35em;
@@ -97,6 +110,11 @@ main {
     letter-spacing: 0.2rem;
 } .title_ctnr h2 strong span {
     color: var(--c1);
+} .title_ctnr h2 > span {
+    font-size: 0.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
 } .title_ctnr a {
     position: absolute;
     bottom: -0.8rem;
@@ -104,20 +122,27 @@ main {
     letter-spacing: 0.1rem;
     font-size: 0.9em;
     background-color: var(--c2);
-    padding: 0.3rem 1.4rem;
+    padding: 0.3rem 1rem;
     border-radius: 0.5rem;
     color: var(--dark);
     font-weight: 900;
     border: 0.3rem solid rgb(248 248 255 / 60%);
     box-shadow: 0 0.9rem 0.6rem -0.6rem;
-    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+} .title_ctnr a .icon {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-right: 0.3rem solid var(--dark);
+    border-bottom: 0.3rem solid var(--dark);
+    transform: translateY(-0.2rem) rotate(45deg);
 } .title_ctnr p {
     font-size: clamp(2rem, 4vw, 2rem);
     font-weight: 400;
     opacity: 0;
     transition: opacity 1s ease;
-} .blackhole p {
-
 }
 
 
@@ -141,7 +166,7 @@ header {
     z-index: 3;
 } header .logo {
     width: clamp(16rem, 51vw, 22rem);
-    max-width: 25vh;
+    max-width: 35vh;
 } header h1 {
     font-weight: 400;
     letter-spacing: 0.2rem;
@@ -149,7 +174,6 @@ header {
     /* left: 0.5rem; */
     background-color: #000;
     padding: 0.3rem 0.5rem 0.3rem 0.7rem;
-    /* width: 100%; */
     text-align: center;
     border: 0.1rem solid var(--darkgrey2);
     border-radius: 0.4rem;
@@ -188,21 +212,20 @@ header {
     font-weight: 800;
     transform: translateY(50%);
 } .status_ctnr section {
-    background-color: rgb(0 0 0 / 88%);
+    /* background-color: rgb(0 0 0 / 88%); */
     width: clamp(10rem, 100%, 50rem);
-    backdrop-filter: blur(0.5rem);
+    /* backdrop-filter: blur(0.5rem); */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 4rem 3rem 0;
-    box-shadow: 0 -4rem 6rem 1rem #000004;
+    /* box-shadow: 0 -4rem 6rem 1rem #000004; */
     /* overflow-y: auto; */
     height: 100%;
-    border-right: 0.1rem solid var(--darkgrey2);
-    border-left: 0.1rem solid var(--darkgrey2);
+    transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1);
 } .status_ctnr section::before {
-    content:'';
+    /* content:''; */
     position: absolute;
     top: -0.3rem;
     height: 0.3rem;
@@ -223,6 +246,7 @@ header {
     justify-content: space-between;
     width: 100%;
     gap: 1rem;
+    text-shadow: 0 0.2rem var(--dark);
 } .status_ctnr .content span {
     /* display: inline-block; */
     /* word-break: break-word; */
@@ -240,7 +264,7 @@ header {
     background-position: center;
     background-size: contain;
     transform: rotate(-30deg) translateY(calc(30vh + 20vw));
-    animation: translate_moon 180s linear infinite;
+    animation: translate_moon 150s linear infinite;
     background-repeat: no-repeat;
     filter: brightness(0.6);
 }
@@ -287,13 +311,13 @@ header {
     animation: fall03 70s cubic-bezier(0.88, 0.54, 0.94, 0.3) infinite;
 } .falling_ctnr .o4 {
     background-image: url(../assets/logo-REAU.png);
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
     animation: fall04 20s cubic-bezier(0.88, 0.54, 0.94, 0.3) infinite;
 } .falling_ctnr .o5 {
     background-image: url(../assets/logo-REAU.png);
-    width: 10rem;
-    height: 10rem;
+    width: 18rem;
+    height: 18rem;
     animation: fall05 25s cubic-bezier(0.88, 0.54, 0.94, 0.3) infinite;
 }
 
