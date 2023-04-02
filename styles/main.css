@@ -106,9 +106,12 @@ height: 1.6rem;
     
 opacity: 0.15;
 } header nav .cta {
-    border: 0.1rem solid var(--c2);
-    text-align: center;
-    border-bottom-width: 0.3rem;
+    
+border: 0.1rem solid var(--c2);
+    
+text-align: center;
+    
+border-bottom-width: 0.3rem;
 } header nav .cta span {
     color: var(--c2);
 } header nav .cta span span {
@@ -248,7 +251,7 @@ opacity: 0.15;
     position: relative;
     z-index: 1;
 } .intro_sec .ctnr {
-    width: clamp(10rem, 91vw, 145rem);
+    width: clamp(10rem, 91vw, 140rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -385,11 +388,11 @@ opacity: 0.15;
     border: 0.2rem solid var(--light);
     color: var(--light);
     font-weight: 600;
-    padding: 0.7rem 2rem 0.7rem 1.2rem;
+    padding: 0.8rem 2rem 0.8rem 1.2rem;
     border-radius: 0.5rem;
     position: relative;
-    font-size: 0.9em;
-    border-bottom-width: 0.5rem;
+    font-size: 0.95em;
+    border-bottom-width: 0.4rem;
 } .intro_sec .cta_ctnr .social, .vfunk_cta {
     display: flex;
     justify-content: center;
@@ -423,13 +426,13 @@ opacity: 0.15;
     width: clamp(18rem, 55vw, 20rem);
     text-align: center;
 } .vfunk_cta {
-    background-color: rgb(17 21 23 / 85%);
+    background-color: rgb(17 21 23 / 91%);
     color: var(--light);
     font-weight: 400;
     padding: 0 2rem 0 1.2rem;
     border-radius: 0.4rem;
     position: relative;
-    font-size: 0.9em;
+    font-size: 0.95em;
     /* display: flex; */
     /* gap: 0.6rem; */
 } .vfunk_cta:before {
@@ -443,7 +446,7 @@ opacity: 0.15;
     background-size: 76%;
     background-position: 0 0;
     opacity: 0.8;
-    box-shadow: 0 0.4rem 1.6rem -0.8rem black;
+    box-shadow: 0 0.8rem 1.4rem -0.6rem white;
     bottom: -0.4rem;
 } @keyframes steamBt {
 	0% {
@@ -456,8 +459,8 @@ opacity: 0.15;
     background-image: url(../assets/icons/foragido.png);
     background-image: -webkit-image-set(url(../assetsicons/foragido.png) 1x, url(../assets/icons/foragido.webp) 1x);
     width: 2rem;
-    height: 2.8rem;
-    margin-top: 0.6rem;
+    height: 3.3rem;
+    margin-top: 0.4rem;
     background-position: bottom;
 } .cta span {
     color:var(--c1);
@@ -1508,7 +1511,7 @@ color: var(--darkgrey);
         box-shadow: unset;
     } .intro_sec .content {
         margin: 0;
-        max-width: clamp(0rem, 49vw, 81rem);
+        max-width: clamp(0rem, 49vw, 71rem);
         text-align: unset;
     } .intro_sec .business_doggo {
         position: sticky;
