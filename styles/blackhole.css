@@ -5,11 +5,13 @@ main {
     flex-direction: column;
     overflow: hidden;
     height: 100vh;
+    height: 100svh;
 }
 
 .blackhole_ctnr {
     position: sticky;
-    min-height: 100vh;
+    height: 100vh;
+    height: 100svh;
     inset: 0;
     background-color: #000000;
     display: flex;
@@ -46,7 +48,7 @@ main {
     position: relative;
 } .blackhole .blur, .blackhole .border {
     position: absolute;
-    inset: -0.9rem;
+    inset: -1.2rem;
     background-image: linear-gradient(90deg, #00eeef, #fffc85, #fffc85, #00eeef);
     z-index: -1;
     border-radius: 50%;
@@ -67,7 +69,7 @@ main {
     mix-blend-mode: hard-light;
 } .zoom_ctnr {
     /* transform: scale(6); */
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.6s cubic-bezier(1, 0, 0.6, 0.95);
 } .status_ctnr {
     gap: 1rem;
     position: fixed;
@@ -80,6 +82,7 @@ main {
     color: var(--light);
     font-weight: 700;
     top: calc(50% - (clamp(6rem, 10vw, 10rem) / 2));
+    transition: top 0.4s ease;
 } .status_ctnr h2 {
     font-size: clamp(6rem, 10vw, 10rem);
     line-height: 1;
@@ -95,7 +98,7 @@ main {
 
 header {
     position: fixed;
-    top: 3rem;
+    top: 3.5rem;
     width: clamp(10rem, 95vw, 160rem);
     height: clamp(6rem, 22vw, 12rem);
     z-index: 1;
@@ -121,14 +124,14 @@ header {
 footer {
     width: 100%;
     position: fixed;
-    bottom: 2rem;
+    bottom: 1.8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: var(--light);
     font-size: 1.6rem;
-    gap: 1.5rem;
+    gap: 1.4rem;
 } footer a {
     background-color: var(--light);
     padding: 0.5rem 1.6rem;
