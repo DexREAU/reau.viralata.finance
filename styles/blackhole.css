@@ -294,17 +294,17 @@ header {
     margin-bottom: 0;
     box-sizing: border-box;
 }.falling_ctnr .o1 {
-    background-image: url(../assets/buraco-negro/mc_wojak.png);
+    background-image: url(../assets/buraco-negro/falling-objs/famc_wojak.png);
     width: 24rem;
     height:18em;
     animation: fall01 50s infinite;
 } .falling_ctnr .o2 {
-    background-image: url(../assets/buraco-negro/doggo01.png);
+    background-image: url(../assets/buraco-negro/falling-objs/doggo01.png);
     width:18rem;
     height:18em;
     animation: fall02 75s infinite;
 } .falling_ctnr .o3 {
-    background-image: url(../assets/buraco-negro/pepe.gif);
+    background-image: url(../assets/buraco-negro/falling-objs/pepe.gif);
     width: 16rem;
     height: 18rem;
     animation: fall03 70s infinite;

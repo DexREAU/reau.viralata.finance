@@ -611,7 +611,7 @@ transform: rotate(1deg);
 } .rocket_doggo {
     width: clamp(10rem, 85vw, 60rem);
     margin-bottom: -8rem;
-    margin-bottom: -2rem;
+    margin-bottom: -4rem;
     z-index: 1;
     object-position: bottom;
     animation: surfing 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;

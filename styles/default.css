@@ -117,10 +117,10 @@ body::-webkit-scrollbar-thumb {
 .external::after {
     content:'';
     position:absolute;
-    right: 0.4rem;
-    top: 0.4rem;
+    right: 0.35rem;
+    top: 0.35rem;
     width: 0.7rem;
-    height: 0.8rem;
+    height: 0.7rem;
     background-image: url(../assets/icons/external-white.svg);
     background-size: contain;
     background-position: center;
