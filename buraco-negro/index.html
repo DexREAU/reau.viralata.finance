@@ -29,10 +29,11 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+    <a class="home" href="../index.html">Página inicial</a>
     <div class="ctnr">
 
         <header>
-    
             <a class="address external" href="https://bscscan.com/token/0x4c79b8c9cB0BD62B047880603a9DEcf36dE28344?a=0x000000000000000000000000000000000000dead" target="_blank">0x000...dead</a>
     
             <a class="title" href="../index.html" title="voltar ao site">
@@ -53,7 +54,10 @@
                     <div class="obj o2"></div>
                     <div class="obj o3"></div>
     
-                    <div class="obj o4"></div>
+                    <div class="obj o4 reau"></div>
+                    <div class="obj o5 reau"></div>
+                    <div class="obj o6 reau"></div>
+                    <div class="obj o7 reau"></div>
                 </div>
     
                 <div class="zoom_ctnr">
@@ -61,6 +65,7 @@
                         <div class="title_ctnr">
                             <h2>545 <span>trilhões</span></h2>
                             <a href="#stats">Status <div class="icon"></div></a>
+                            <sub class="current_date"></sub>
                         </div>
                         <div class="border"></div>
                         <div class="blur"></div>
@@ -144,6 +149,10 @@
                 }
             })
         }
+
+        let currentDate = new Date().toLocaleDateString("pt-BR");
+
+        document.querySelector('.current_date').innerHTML = currentDate
     </script>
 </body>
 </html>
