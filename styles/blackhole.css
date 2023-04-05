@@ -16,7 +16,7 @@ main {
     flex-direction: column;
     overflow: hidden;
     height: 63vh;
-    height: clamp(69lvh, 145vw, 85vh);
+    height: clamp(69lvh, calc(55vh + 40vw), 85vh);
 }
 
 .home {
@@ -251,6 +251,7 @@ header {
     z-index: 2;
     box-sizing: border-box;
     height: 75vh;
+    height: 75svh;
 } .status_ctnr a {
     background-color: var(--light);
     padding: 0.5rem 1.6rem;
