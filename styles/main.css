@@ -248,7 +248,7 @@ border-bottom-width: 0.3rem;
     margin-top: -1.5rem;
     /* position: relative; */
 } .intro_sec .business_doggo {
-    width: clamp(10rem, 75vw, 57rem);
+    width: clamp(10rem, 75vw, 59rem);
     max-height: 95vh;
     max-width: 50rem;
     /* min-width: 20vh; */
@@ -256,12 +256,13 @@ border-bottom-width: 0.3rem;
     pointer-events: none;
     /* position: relative; */
     margin-bottom: -0.5rem;
+    flex: 1;
 } .intro_sec .business_doggo img {
     object-fit: contain;
     object-position: bottom right;
 } .intro_sec h1 {
     font-size: 2.2em;
-    font-size: clamp(1.7em, calc(20.7vw - 4rem), 5em);
+    font-size: clamp(1.7em, calc(19vw - 3rem), 5em);
     font-weight: 800;
     color: var(--darkgrey2);
     line-height: 0.95;
@@ -335,7 +336,7 @@ border-bottom-width: 0.3rem;
     display: flex;
     overflow-x: auto;
     gap: 1rem;
-    padding: 0.3rem 0 0.6rem 0;
+    padding: 0 0.3rem 0.5rem 0.5rem;
     font-size: 0.85em;
 } .intro_sec .stats span, .intro_sec .stats a {
     font-weight: 500;
@@ -353,26 +354,20 @@ border-bottom-width: 0.3rem;
     /* border-bottom-width: 0.4rem; */
     position: relative;
     border-bottom: 0.4rem solid var(--darkgrey);
-} .intro_sec .stats a {
-    transition: transform 0.2s ease;
-} .intro_sec .stats a:hover {
-    transition: transform 0.2s ease;
-    transform: translateY(-0.3rem);
 } .intro_sec .stats::-webkit-scrollbar, .pdg_sec .roadmap_ctnr::-webkit-scrollbar, .nfts_sec .ctnr .content::-webkit-scrollbar, .horscroll::-webkit-scrollbar {
     height: 0.5rem;
 } .intro_sec .stats::-webkit-scrollbar-track, .pdg_sec .roadmap_ctnr::-webkit-scrollbar-track,  .nfts_sec .ctnr .content::-webkit-scrollbar-track, .horscroll::-webkit-scrollbar-track {
     background-color: transparent;
 } .intro_sec .stats::-webkit-scrollbar-thumb, .pdg_sec .roadmap_ctnr::-webkit-scrollbar-thumb,  .nfts_sec .ctnr .content::-webkit-scrollbar-thumb, .horscroll::-webkit-scrollbar-thumb {
-    background-color: #FFE;
+    background-color: rgba(0,0,0,0.2);
 } .intro_sec .ctas_ctnr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(0.5rem, 4vw, 2.4rem);
+    gap: clamp(0.5rem, 8vw, 4rem);
     font-weight: 800;
     /* flex-flow: row wrap; */
     justify-content: center;
-    margin: 2rem auto 0;
     letter-spacing: 0.1rem;
     width: 100%;
 } .intro_sec .ctas_ctnr .social {
@@ -382,29 +377,31 @@ border-bottom-width: 0.3rem;
     font-weight: 600;
     border-radius: 0.5rem;
     position: relative;
-    font-size: 0.95em;
+    font-size: 0.9em;
     border-bottom-width: 0.5rem;
 } .intro_sec .ctas_ctnr .comvc {
-    background-color: var(--c1);
-    border: 0.2rem solid var(--light);
-    color: var(--light);
+    background-color: #202c31;
+    border: 0.2rem solid var(--c1);
+    color: var(--c1);
     font-weight: 600;
     border-radius: 0.5rem;
     position: relative;
-    font-size: 0.95em;
+    font-size: 0.9em;
     border-bottom-width: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.2rem;
     position: relative;
+} .comvc .icon {
+    background-image: url(../assets/icons/viralata-com-vc.svg);
 } .intro_sec .ctas_ctnr .social, .vfunk_cta {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.2rem;
     position: relative;
-} .intro_sec .ctas_ctnr .social .icon, .vfunk_cta .icon {
+} .intro_sec .ctas_ctnr .social .icon, .vfunk_cta .icon, .comvc .icon {
     width: 2rem;
     height: 1.6rem;
     background-repeat: no-repeat;
@@ -419,11 +416,12 @@ border-bottom-width: 0.3rem;
     /* display: none; */
 } .intro_sec .ctas_ctnr .horscroll {
     display: flex;
-    gap: 1rem;
+    gap: clamp(0.8rem, 1vw, 1.5rem);
     overflow-x: auto;
-    max-width: 100%;
-    padding: 1rem 0.3rem 1rem;
+    width: 100%;
+    padding: 0rem 0.3rem 0.5rem 0.5rem;
     align-items: center;
+    box-sizing: border-box;
 } .intro_sec .ctas_ctnr .horscroll a {
     
 /* white-space: nowrap; */
@@ -438,7 +436,7 @@ padding: 0 2rem 0 3.8rem;
 }  .intro_sec .cta, .ctnr_compra .cta {
     background-color: var(--c3);
     width: fit-content;
-    padding: 1.1rem 1.6rem;
+    padding: 1rem 1.6rem;
     color: var(--c2);
     font-weight: 700;
     border-radius: 0.5rem;
@@ -452,7 +450,7 @@ padding: 0 2rem 0 3.8rem;
     position: relative;
     width: clamp(18rem, 55vw, 20rem);
     text-align: center;
-    margin: 0 auto;
+    margin: 1.3rem auto 0;
     white-space: nowrap;
 } .vfunk_cta {
     background-color: rgb(17 21 23 / 91%);
@@ -460,13 +458,13 @@ padding: 0 2rem 0 3.8rem;
     font-weight: 400;
     border-radius: 0.4rem;
     position: relative;
-    font-size: 0.95em;
+    font-size: 0.9em;
     /* display: flex; */
     /* gap: 0.6rem; */
 } .vfunk_cta:before {
     content: '';
     position: absolute;
-    inset: -0.1rem;
+    inset: -0.2rem;
     background-image: linear-gradient(90deg, #5fdaff, #ff74b4, #4000ff, #5fdaff);
     z-index: -1;
     border-radius: 0.4rem;
@@ -491,7 +489,7 @@ padding: 0 2rem 0 3.8rem;
     background-position: bottom;
 } .cta span {
     color:var(--c1);
-} header nav::-webkit-scrollbar-thumb:hover, .intro_sec .stats::-webkit-scrollbar-thumb:hover {
+} header nav::-webkit-scrollbar-thumb:hover, .intro_sec .stats::-webkit-scrollbar-thumb:hover, .horscroll::-webkit-scrollbar-thumb:hover {
     background: var(--grey);
 } .doggo_loco {
     background-image: url(../assets/chihuahua-angry.gif);
@@ -560,14 +558,12 @@ padding: 0 2rem 0 3.8rem;
     background-color: #EEE;
     margin: clamp(4rem, 10vw, 6rem) 0;
 } .nota_duzentos {
+    width: clamp(10rem, 60vw, 27rem);
+    display: block;
+    margin: clamp(2rem, 4vw, 3rem) 0 0;
+    transform: rotate(1deg);
+} .sobre_sec .tokenomics {
     
-width: clamp(10rem, 60vw, 27rem);
-    
-display: block;
-    
-margin: clamp(2rem, 4vw, 3rem) 0 0;
-    
-transform: rotate(1deg);
 }
 
 
@@ -597,7 +593,7 @@ transform: rotate(1deg);
     background-size: cover;
     background-position: bottom center;
     background-attachment: fixed;
-    margin-bottom: -3rem;
+    /* margin-bottom: -3rem; */
 } .space_sec .ctnr {
     display: flex;
     flex-direction: column;
@@ -750,7 +746,7 @@ transform: rotate(1deg);
     transition: max-height 0.8s ease;
     overflow-y: hidden;
     position: relative;
-    display: none;
+    /* display: none; */
 } .placar_sec .ctnr {width: var(--base-width);} .placar_sec h2 {
 
 margin-bottom: clamp(3rem, 6vw, 4rem);
@@ -1526,9 +1522,9 @@ color: var(--darkgrey);
         height: clamp(30rem, 100vw, 66rem);
     } .intro_sec .ctnr {
         flex-direction: row;
-        justify-content: flex-start;
-        gap: calc(10vw - 11rem);
+        justify-content: center;
         margin-top: unset;
+        gap: 3rem;
     } .intro_sec h1 {
         font-size: clamp(2.1em, 6vw, 5em);
     } .intro_sec h1 .bg {
@@ -1538,25 +1534,26 @@ color: var(--darkgrey);
         box-shadow: unset;
     } .intro_sec .content {
         margin: 0;
-        max-width: clamp(0rem, 46vw, 101rem);
+        max-width: clamp(0rem, 50vw, 80rem);
         text-align: unset;
     } .intro_sec .business_doggo {
         position: sticky;
         bottom: 0;
         align-self: end;
         -webkit-mask-image: linear-gradient(180deg, black 90%, transparent 145%);
-        max-width: unset;
-        min-width: 62vh;
+        max-width: 38vw;
     } .intro_sec h2 {
         align-self: unset;
         text-align: left;
+        max-width: 72rem;
     } .intro_sec .cta {
         margin:unset;
         width: unset;
     } .intro_sec .ctas_ctnr, .ctnr_compra .cta {
-        margin: 1.5rem 0 0;
         justify-content: flex-start;
         flex-direction: row;
+        margin: 1rem 0 0.5rem;
+        gap: 2rem;
     }
 
     
