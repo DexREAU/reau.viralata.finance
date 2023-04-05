@@ -382,7 +382,7 @@ border-bottom-width: 0.3rem;
 } .intro_sec .ctas_ctnr .comvc {
     background-color: #202c31;
     border: 0.2rem solid var(--c1);
-    color: var(--c1);
+    color: var(--light);
     font-weight: 600;
     border-radius: 0.5rem;
     position: relative;
@@ -408,9 +408,9 @@ border-bottom-width: 0.3rem;
     background-position: center;
     background-size: contain;
     position: absolute;
-    left: 0.8rem;
+    left: 1rem;
     height: 3rem;
-    width: 2rem;
+    width: 1.8rem;
 } .intro_sec .ctas_ctnr .social .icon {
     background-image: url(../assets/icons/telegram-logo-solo.svg);
     /* display: none; */
