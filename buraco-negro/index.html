@@ -29,106 +29,121 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div class="ctnr">
 
-    <header>
-
-        <a class="address external" href="https://bscscan.com/token/0x4c79b8c9cB0BD62B047880603a9DEcf36dE28344?a=0x000000000000000000000000000000000000dead" target="_blank">0x000...dead</a>
-
-        <a class="logo" href="../index.html" title="voltar ao site">
-            <img src="../assets/logo-color.svg" alt="Logo Viralata" draggable="false">
-        </a>
-
-        <h1>No Buraco Negro</h1>
-    </header>
-
-    <main>
-        <div class="blackhole_ctnr">
-            <div class="movable_ctnr">
-                <div class="bg"></div>
-            </div>
-
-            <div class="falling_ctnr">
-                <div class="obj o1"></div>
-                <div class="obj o2"></div>
-                <div class="obj o3"></div>
-
-                <div class="obj o4"></div>
-            </div>
-
-            <div class="zoom_ctnr">
-                <div class="blackhole">
-                    <div class="title_ctnr">
-                        <h2><span>Queimados:</span>45 Tri <strong><span>$</span>REAUs</strong></h2>
-                        <a href="#stats">Status <div class="icon"></div></a>
-                    </div>
-                    <div class="border"></div>
-                    <div class="blur"></div>
-                </div>
-            </div>
-
-            <div class="moon"></div>
-        </div>
-    </main>
-
-    <div class="status_ctnr">
-        <section id="stats">
-
-            <ul class="content">
-                <li>
-                    <span>Supply Total máximo</span>
-                    <div class="divider"></div>
-                    <span id="total_burn">1.000.000.000.000.000</span>
-                </li>
-                
-                <li>
-                    <span>Supply Total</span>
-                    <div class="divider"></div>
-                    <span id="total_burn">450.495.495.394.948</span>
-                </li>
-
-                <li>
-                    <span>Total no Blackhole</span>
-                    <div class="divider"></div>
-                    <span id="blackhole-total">545.630.074.492.220</span>
-                </li>
-                
-                <li>
-                    <span>Queima Total</span>
-                    <div class="divider"></div>
-                    <span id="total_burn">45.630.074.492.220</span>
-                </li>
-                
-                <li>
-                    <span>Total circulante</span>
-                    <div class="divider"></div>
-                    <span id="total_burn">150.495.495.394.948</span>
-                </li>
-                
-                <li>
-                    <span>Valor Total Bloqueado</span>
-                    <div class="divider"></div>
-                    <span id="total_burn">U$495.452</span>
-                </li>
-            </ul>
+        <header>
     
-            <p>🔥 Dados atualizados em tempo reau 🔥</p>
-
-            <a href="../index.html">$REAU viralata.finance</a>
-        </section>
+            <a class="address external" href="https://bscscan.com/token/0x4c79b8c9cB0BD62B047880603a9DEcf36dE28344?a=0x000000000000000000000000000000000000dead" target="_blank">0x000...dead</a>
+    
+            <a class="title" href="../index.html" title="voltar ao site">
+                <span>$</span>REAUs
+            </a>
+    
+            <h1>no Buraco Negro</h1>
+        </header>
+    
+        <main>
+            <div class="blackhole_ctnr">
+                <div class="movable_ctnr">
+                    <div class="bg"></div>
+                </div>
+    
+                <div class="falling_ctnr">
+                    <div class="obj o1"></div>
+                    <div class="obj o2"></div>
+                    <div class="obj o3"></div>
+    
+                    <div class="obj o4"></div>
+                </div>
+    
+                <div class="zoom_ctnr">
+                    <div class="blackhole">
+                        <div class="title_ctnr">
+                            <h2>545 <span>trilhões</span></h2>
+                            <a href="#stats">Status <div class="icon"></div></a>
+                        </div>
+                        <div class="border"></div>
+                        <div class="blur"></div>
+                    </div>
+                </div>
+    
+                <div class="moon"></div>
+            </div>
+        </main>
+    
+        <div class="status_ctnr">
+            <section id="stats">
+    
+                <ul class="content">
+                    <li>
+                        <span>Supply Total máximo</span>
+                        <div class="divider"></div>
+                        <span id="total_burn">1.000.000.000.000.000</span>
+                    </li>
+                    
+                    <li>
+                        <span>Supply Total</span>
+                        <div class="divider"></div>
+                        <span id="total_burn">450.495.495.394.948</span>
+                    </li>
+    
+                    <li>
+                        <span>Total no Blackhole</span>
+                        <div class="divider"></div>
+                        <span id="blackhole-total">545.630.074.492.220</span>
+                    </li>
+                    
+                    <li>
+                        <span>Queima Total</span>
+                        <div class="divider"></div>
+                        <span id="total_burn">45.630.074.492.220</span>
+                    </li>
+                    
+                    <li>
+                        <span>Total circulante</span>
+                        <div class="divider"></div>
+                        <span id="total_burn">150.495.495.394.948</span>
+                    </li>
+                    
+                    <li>
+                        <span>Valor Total Bloqueado</span>
+                        <div class="divider"></div>
+                        <span id="total_burn">U$495.452</span>
+                    </li>
+                </ul>
+        
+                <p>🔥 Dados atualizados em tempo reau 🔥</p>
+    
+                <a href="../index.html">$REAU viralata.finance</a>
+            </section>
+        </div>
     </div>
 
     <script>
         const statusSec = document.querySelector('.status_ctnr section')
+        const bodyCtnr = document.querySelector('body > .ctnr')
 
-        window.addEventListener('scroll', function() {
-            if(window.scrollY > 1) {
-                statusSec.style.backgroundColor = 'rgb(0 0 0 / 88%)'
-                statusSec.style.backdropFilter = 'blur(0.5rem)'
-            } else {
-                statusSec.style.backgroundColor = 'rgb(0 0 0 / 0%)'
-                statusSec.style.backdropFilter = 'blur(0rem)'
-            }
-        })
+        if(window.matchMedia('(min-width:600px)').matches) {
+            window.addEventListener('scroll', function() {
+                if(window.scrollY > 1) {
+                    statusSec.style.backgroundColor = 'rgb(0 0 0 / 88%)'
+                    statusSec.style.backdropFilter = 'blur(0.5rem)'
+                } else {
+                    statusSec.style.backgroundColor = 'rgb(0 0 0 / 0%)'
+                    statusSec.style.backdropFilter = 'blur(0rem)'
+                }
+            })
+        } else {
+            bodyCtnr.addEventListener('scroll', function() {
+                if(bodyCtnr.scrollTop > 1) {
+                    statusSec.style.backgroundColor = 'rgb(0 0 0 / 88%)'
+                    statusSec.style.backdropFilter = 'blur(0.5rem)'
+                } else {
+                    statusSec.style.backgroundColor = 'rgb(0 0 0 / 0%)'
+                    statusSec.style.backdropFilter = 'blur(0rem)'
+                }
+            })
+        }
     </script>
 </body>
 </html>
