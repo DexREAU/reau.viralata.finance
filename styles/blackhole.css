@@ -205,7 +205,7 @@ header {
     font-weight: 800;
     color: var(--c2);
     line-height: 1;
-    background: -webkit-linear-gradient(var(--c2), var(--c1));
+    background: -webkit-linear-gradient(0deg, var(--c2), var(--c1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 0.6rem rgb(255 252 133 / 38%);
