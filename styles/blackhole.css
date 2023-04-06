@@ -193,7 +193,7 @@ header {
     gap: clamp(0.2rem, 1vw, 0.3rem);
 } header .title {
     text-align: center;
-    font-size: clamp(5.5rem, 18vw, 8rem);
+    font-size: clamp(5.5rem, 18vw, 7.5rem);
     font-weight: 800;
     color: var(--c2);
     line-height: 1;
@@ -305,7 +305,7 @@ header {
     background-position: center;
     background-size: contain;
     transform: rotate(-30deg) translateY(calc(30vh + 20vw));
-    animation: translate_moon 150s linear infinite;
+    animation: translate_moon 90s linear infinite;
     background-repeat: no-repeat;
     filter: brightness(0.6);
 }
