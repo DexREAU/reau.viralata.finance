@@ -119,8 +119,8 @@ body::-webkit-scrollbar-thumb {
     position:absolute;
     right: 0.35rem;
     top: 0.35rem;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 0.6rem;
+    height: 0.6rem;
     background-image: url(../assets/icons/external-white.svg);
     background-size: contain;
     background-position: center;

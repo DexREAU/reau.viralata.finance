@@ -12,7 +12,7 @@ header {
     top: 0;
     background-color: var(--dark);
     color: var(--light);
-    z-index: 4;
+    z-index: 5;
     border-bottom: clamp(0.1rem, 0.3vw, 0.2rem) solid var(--darkgrey2);
     position: relative;
 } header .ctnr {
@@ -66,7 +66,6 @@ header {
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     font-weight: 600;
-    z-index: 5;
     box-sizing: border-box;
     padding: 4rem 2rem 3rem 2rem;
     font-weight: 500;
@@ -338,12 +337,15 @@ border-bottom-width: 0.3rem;
     gap: 1rem;
     padding: 0 0.3rem 0.5rem 0.5rem;
     font-size: 0.85em;
+} .stats .external::after {
+    
+filter: invert(1);
 } .intro_sec .stats span, .intro_sec .stats a {
-    font-weight: 500;
-    background-color: var(--darkgrey2);
-    color: #CCC;
+    font-weight: 800;
+    background-color: var(--light);
+    color: var(--darkgrey2);
     padding: 0.5rem 1.8rem 0.5rem 0.8rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
     border-radius: 0.4rem;
     display: inline-block;
     display: flex;
@@ -353,13 +355,13 @@ border-bottom-width: 0.3rem;
     /* border: 0.1rem solid #CDD; */
     /* border-bottom-width: 0.4rem; */
     position: relative;
-    border-bottom: 0.4rem solid var(--darkgrey);
+    border-bottom: 0.4rem solid #EBEBEB;
 } .intro_sec .stats::-webkit-scrollbar, .pdg_sec .roadmap_ctnr::-webkit-scrollbar, .nfts_sec .ctnr .content::-webkit-scrollbar, .horscroll::-webkit-scrollbar {
     height: 0.5rem;
 } .intro_sec .stats::-webkit-scrollbar-track, .pdg_sec .roadmap_ctnr::-webkit-scrollbar-track,  .nfts_sec .ctnr .content::-webkit-scrollbar-track, .horscroll::-webkit-scrollbar-track {
     background-color: transparent;
 } .intro_sec .stats::-webkit-scrollbar-thumb, .pdg_sec .roadmap_ctnr::-webkit-scrollbar-thumb,  .nfts_sec .ctnr .content::-webkit-scrollbar-thumb, .horscroll::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.1);
 } .intro_sec .ctas_ctnr {
     display: flex;
     flex-direction: column;
@@ -529,28 +531,34 @@ padding: 0 2rem 0 3.8rem;
 
 .sobre_sec {
     background-color: #ffffff;
-    padding: 4rem 0 0;
+    /* padding: 4rem 0 0; */
     margin: 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(0deg, var(--c2), transparent 10rem);
 } .sobre_sec > .ctnr {
     width: clamp(10rem, 100%, 130rem);
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 4rem;
+    margin-top: -1rem;
 } .sobre_sec .ctnr .content {
     display: flex;
     flex-direction: column;
-    /* gap: 2rem; */
+    gap: 2rem;
+    align-items: center;
     width: 100%;
 } .sobre_sec .txt {width: clamp(10rem, 85%, 130rem);margin: 0 auto;} .sobre_sec .txt h4 {
     font-size: clamp(2.6rem, 7vw, 4rem);
     font-weight: 800;
     margin-bottom: 1rem;
 } .sobre_sec .txt p {
-    font-size: clamp(1.6rem, 4.2vw, 2.2rem);
+    font-size: clamp(1.6rem, 4.2vw, 2rem);
     font-weight: 500;
     line-height: 1.3;
     margin-top: 1rem;
@@ -558,7 +566,8 @@ padding: 0 2rem 0 3.8rem;
     width: 100%;
     height: 0.1rem;
     background-color: #EEE;
-    margin: clamp(4rem, 10vw, 7rem) 0;
+    margin: clamp(4rem, 10vw, 6rem) 0;
+    display: none;
 } .nota_duzentos {
     width: clamp(10rem, 60vw, 27rem);
     display: block;
@@ -567,13 +576,12 @@ padding: 0 2rem 0 3.8rem;
 } .sobre_sec .tokenomics {
     display: flex;
     flex-direction: column;
-    /* gap: 3rem; */
     width: var(--base-width);
     align-items: center;
-    width: 85%;
+    max-width: 85%;
 } .sobre_sec .tokenomics .doggo {
-    background-image: url(../assets/circle01.png);
-    background-image: -webkit-image-set(url(../assets/circle01.png) 1x, url(../assets/circle01.webp) 1x);
+    background-image: url(../assets/caramelo01.png);
+    background-image: -webkit-image-set(url(../assets/caramelo01.png) 1x, url(../assets/caramelo01.webp) 1x);
     width: clamp(16rem, 50vw, 30rem);
     height: clamp(16rem, 50vw, 30rem);
     position: relative;
@@ -581,11 +589,24 @@ padding: 0 2rem 0 3.8rem;
     background-size: contain;
     background-repeat: no-repeat;
     margin: -2rem 0;
+    /* animation: tilt 7s ease infinite; */
+} @keyframes tilt {
+    0% {
+        transform:rotate(0deg)
+    } 15% {
+        transform:rotate(10deg)
+    } 38% {
+        transform:rotate(-15deg)
+    } 62% {
+        transform:rotate(0deg)
+    } 100% {
+        transform:rotate(0deg)
+    }
 } .sobre_sec .tokenomics .ctnr {
     /* width: 100%; */
     display: flex;
     flex-direction: column;
-    gap: clamp(1.4rem, 2vw, 2.5rem);
+    gap: clamp(0.8rem, 2vw, 2.5rem);
     position: relative;
     z-index: 1;
     flex: 1;
@@ -597,15 +618,15 @@ padding: 0 2rem 0 3.8rem;
     border-bottom-width: 0.4rem;
     display: flex;
     flex-direction: row;
-    width: 81%;
-    font-size: clamp(1.5rem, 2vw, 1.8rem);
+    width: clamp(10rem, 85%, 32rem);
+    font-size: clamp(1.5rem, 2vw, 1.65rem);
     align-items: center;
     gap: 1rem;
 } .sobre_sec .tokenomics .card > div:not(.icon) {
-flex: 1;
-margin: 0.5rem 0;
+    flex: 1;
+    margin: 0.5rem 0;
 } .sobre_sec .tokenomics .icon {
-    width: clamp(4rem, 3vw, 5rem);
+    width: clamp(4rem, 3vw, 4.5rem);
     height: 5rem;
     background-size: contain;
     background-position: center;
@@ -620,20 +641,23 @@ padding: 0 2rem 0 3.8rem;
     background-image: url(../assets/icons/staking.jpg);
 } .liquidez .icon {
     background-image: url(../assets/icons/liquidez.jpg);
-} .sobre_sec .card p {} .sobre_sec .card p b {
-    
-font-size: 1.1em;
-} .sobre_sec .tokenomics .card:nth-of-type(even) {
+} .sobre_sec .card p {
+
+line-height: 1.1;
+} .sobre_sec .card p b {
+    /* font-size: 1.1em; */
+    font-weight: 800;
+} .sobre_sec .tokenomics .ctnr:first-child .card:nth-of-type(even) {
     align-self: flex-start;
-} .sobre_sec .tokenomics .card:nth-of-type(odd) {
+} .sobre_sec .tokenomics .ctnr:first-child .card:nth-of-type(odd) {
     align-self: flex-end;
-} .sobre_sec .tokenomics .card:nth-of-type(even) {
+} .sobre_sec .tokenomics .ctnr:last-child .card:nth-of-type(even) {
+    align-self: flex-end;
+} .sobre_sec .tokenomics .ctnr:last-child .card:nth-of-type(odd) {
     align-self: flex-start;
-} .sobre_sec .tokenomics .card:nth-of-type(odd) {
-    align-self: flex-end;
 } .sobre_sec .bottom_doggo {
     display: flex;
-    width: clamp(10rem, 70vw, 60rem);
+    width: clamp(10rem, 70vw, 86rem);
     margin: 0 auto;
 }
 
@@ -664,7 +688,7 @@ font-size: 1.1em;
     background-size: cover;
     background-position: bottom center;
     background-attachment: fixed;
-    /* margin-bottom: -3rem; */
+    margin-bottom: -3rem;
 } .space_sec .ctnr {
     display: flex;
     flex-direction: column;
@@ -931,7 +955,7 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     content: 'anônimo';
 } .colocado.verificado .nome::after {
     content: 'verificado';
-    color: #3b6655;
+    color: #3b6366;
 } .colocado.dead {
     /* border: 0.1rem solid var(--darkgrey2); */
     background-color: #153e3f3d;
@@ -986,26 +1010,31 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     font-size: 0.5em;
     margin-left: 0.1rem;
 } .xp .soma {
-    
-position: absolute;
-    
-right: 0;
-    
-top: 0;
-    
-font-size: 0.55em;
-    
-transform: translateY(-95%);
-    
-color: var(--light);
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.55em;
+    transform: translateY(-95%);
+    color: var(--light);
 } .colocado .img_perfil {
-    width: clamp(4rem, 11vw, 5.5rem);
-    height: clamp(4rem, 11vw, 5.5rem);
+    width: clamp(4rem, 11vw, 5rem);
+    height: clamp(4rem, 11vw, 5rem);
     border-radius: 0.5rem;
-    border: 0.3rem solid var(--dark);
+    /* border: 0.3rem solid var(--dark); */
     object-fit: cover;
     background-color: var(--darkgrey);
     align-self: flex-start;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} .colocado.dead .img_perfil {
+    background-image: url(../assets/placar/dead.jpg);
+} .colocado.anonimo .img_perfil {
+    background-image: url(../assets/placar/anonimo.jpg);
+    background-image: -webkit-image-set(url(../assets/placar/anonimo.jpg) 1x, url(../assets/placar/anonimo.webp) 1x);
+    opacity: 0.8;
+} .colocado.verificado .img_perfil {
+    background-image: url(../assets/placar/anon09.jpg);
 } .expandir {
     position: absolute;
     top: 45rem;
@@ -1163,6 +1192,8 @@ color: var(--light);
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    position: relative;
+    z-index: 4;
     /* border-left: clamp(0.4rem, 1vw, 1rem) solid var(--dark); */
     /* border-right: clamp(0.4rem, 1vw, 1rem) solid var(--dark); */
     clip-path: ellipse(180% 100% at 50% 100%);
@@ -1350,7 +1381,7 @@ footer {
     bottom: 0;
     right: clamp(1rem, 4vw, 4rem);
     display: grid;
-    z-index: 3;
+    z-index: 4;
     transition: transform 0.3s ease;
     transform: translateY(110%);
     display: flex;
@@ -1628,10 +1659,11 @@ footer {
 
     
     .sobre_sec {
-        padding-bottom:unset;
+        padding: 6rem 0 0;
     } .sobre_sec .ctnr .content {
         flex-direction: row;
-        gap: clamp(5rem, 5vw, 10rem);
+        gap: clamp(5rem, 5vw, 6rem);
+        width: var(--base-width);
     } .sobre_sec .txt {
         width: clamp(20rem, 90vw, 180rem);
         margin-bottom: 5rem;
@@ -1643,7 +1675,6 @@ footer {
         flex-direction: row;
         gap: 2vw;
         margin-top: 2rem;
-        width: var(--base-width);
     } .sobre_sec .tokenomics .doggo {
         margin: unset;
     }
