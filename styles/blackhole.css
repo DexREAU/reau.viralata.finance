@@ -1,13 +1,4 @@
-body, html {
-    height: 100svh;
-    width: 100%;
-    overflow: hidden;
-} body > .ctnr {
-    height: 100%;
-    width: 103vw;
-    overflow: auto;
-    scroll-behavior: smooth;
-}
+
 
 main {
     display: flex;
@@ -501,14 +492,6 @@ header {
         /* width: fit-content; */
         /* margin: unset; */
         /* left: 4rem; */
-    }
-
-
-
-    body, html, body > .ctnr {
-        height: unset;
-        width: unset;
-        overflow: unset;
     }
 
     .home {

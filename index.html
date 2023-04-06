@@ -171,50 +171,72 @@
         <div class="ctnr">
 
             <div class="tokenomics">
-                <div class="cards">
-
+                <div class="ctnr">
+                    <div class="card supply">
+                        <div class="icon"></div>
+                        <div>
+                            <p><b>Número de tokens:</b> 1 quatrilhão</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card circulacao">
+                        <div class="icon"></div>
+                        <div>
+                            <p><b>Tokens em circulação:</b> Decrescendo progressivamente</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card queima">
+                        <div class="icon"></div>
+                        <div>
+                            <p><b>Queimas:</b> 3% do valor de cada transação é "queimado" para a piscina de liquidez</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="doggo"></div>
 
-                <div class="cards">
-
-                </div>
-            </div>
-
-            <div class="content">
-                <picture loading="lazy">
-                    <source srcset="assets/storytelling/01.webp" type="image/webp">
-                    <source srcset="assets/storytelling/01.jpg" type="image/png">
-                    <img src="assets/storytelling/01.jpg" alt="Business Doggo" draggable="false">
-                </picture>
-                
-                <div class="txt">
-                    <h4>Por quê?</h4>
-
-                    <p>Já que o nosso governo, apesar de imprimir dinheiro sem parar, não nos deixou <strong>colocar o vira-lata caramelo na nota de R$ 200,00</strong>, então faremos o <b>$REAUUUUUU</b> valer (bem) mais que 1 real.</p>
-
-                    <picture class="nota_duzentos" loading="lazy">
-                        <source srcset="assets/nota-200.webp" type="image/webp">
-                        <source srcset="assets/nota-200.jpg" type="image/png">
-                        <img src="assets/nota-200.jpg" alt="Business Doggo" draggable="false">
-                    </picture>
+                <div class="ctnr">
+                    
+                    <div class="card staking">
+                        <div class="icon"></div>
+                        <div>
+                            <p><b>Staking:</b> 1% distribuído aos hodlers a cada transação</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card liquidez">
+                        <div class="icon"></div>
+                        <div>
+                            <p><b>Liquidez:</b> Metade dos tokens foram adicionados à liquidez no lançamento</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="icon"></div>
+                        <div>
+                            <p><b>Mecanismo anti-baleias:</b> Compra e venda máximas de 5 trilhões de $REAUs</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="divider"></div>
 
             <div class="content">
-                <picture loading="lazy">
-                    <source srcset="assets/storytelling/02.webp" type="image/webp">
-                    <source srcset="assets/storytelling/02.jpg" type="image/png">
-                    <img src="assets/storytelling/02.jpg" alt="Business Doggo" draggable="false">
-                </picture>
-
                 <div class="txt">
-                    <h4>Dogecoin?</h4>
-                    <p><b>Nunca.</b> Dogecoin é pior que o real! Ambas são, em termos extremamente técnicos, <b>duas shitcoins</b>: inflacionárias, dominadas por "baleias" e repletas de insiders. Nosso token teve um lançamento honesto, com um <b>mecanismo anti-baleias</b> - o máximo de $REAUs que podemos comprar ou vender por vez é 5 trilhões.</p>
+                    <h4>Por quê?</h4>
+
+                    <p>Já que o nosso governo, apesar de imprimir dinheiro sem parar, não nos deixou <strong>colocar o vira-lata caramelo na nota de R$ 200,00</strong>, então faremos o <b>$REAUUUUUU</b> valer (bem) mais que 1 real.</p>
+                    
+                    <p><b>Dogecoin? Nunca.</b> Dogecoin é pior que o real! Ambas são, em termos extremamente técnicos, <b>duas shitcoins</b>: inflacionárias, dominadas por "baleias" e repletas de insiders. Nosso token teve um lançamento honesto, com um <b>mecanismo anti-baleias</b> - o máximo de $REAUs que podemos comprar ou vender por vez é 5 trilhões.</p>
                 </div>
+
+                <picture loading="lazy" class="bottom_doggo">
+                    <source srcset="assets/caramelo01.webp" type="image/webp">
+                    <source srcset="assets/caramelo01.png" type="image/png">
+                    <img src="assets/caramelo01.png" alt="Business Doggo" draggable="false">
+                </picture>
             </div>
         </div>
     </section>
@@ -883,7 +905,7 @@
         setTimeout(() => {
             window.addEventListener("scroll", function(e){
                 if(vFunkIsShowing == false) {
-                    if(window.scrollY > 1000) {
+                    if(window.scrollY > 1500) {
                         setTimeout(() => {
                             vFunkPal.classList.add('show')
 
