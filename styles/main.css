@@ -625,7 +625,7 @@ padding: 0 2rem 0 3.8rem;
     position: relative;
     z-index: 1;
     flex: 1;
-    margin-bottom: 3rem;
+    margin-bottom: clamp(4rem, 10vw, 6rem);
 } .sobre_sec .tokenomics .card {
     padding: 0.5rem 1rem;
     border-radius: 0.9rem;
@@ -639,15 +639,6 @@ padding: 0 2rem 0 3.8rem;
     align-items: center;
     gap: 1rem;
     /* box-shadow: 0 1.2rem 0.4rem -0.8rem #00000022; */
-    animation: float 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-} @keyframes float {
-    0% {
-        transform:translateY(0rem);
-    } 50% {
-        transform:translateY(-0.3rem);
-    } 100% {
-        transform:translateY(0rem);
-    }
 } .sobre_sec .tokenomics .card > div:not(.icon) {
     flex: 1;
     margin: 0.5rem 0;
@@ -683,7 +674,7 @@ line-height: 1.1;
     align-self: flex-start;
 } .sobre_sec .bottom_doggo {
     display: flex;
-    width: clamp(10rem, 50vw, 32rem);
+    width: clamp(10rem, 50vw, 30rem);
     animation: tilt 7s ease infinite;
 }
 
@@ -1589,7 +1580,6 @@ footer {
 
 @media screen and (min-width:650px) {
 
-
     header {
         position:sticky;
         backdrop-filter: blur(0.4rem);
@@ -1700,7 +1690,7 @@ footer {
     .sobre_sec .tokenomics {
         flex-direction: row;
         gap: 2vw;
-        margin-top: 2rem;
+        margin-top: 4rem;
         margin-bottom: unset;
         align-items: end;
     } .sobre_sec .tokenomics .doggo {
