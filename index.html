@@ -80,20 +80,39 @@
 
                     <div class="social">
                         <a class="telegram" href="https://t.me/viralatafinance" target="_blank" title="Grupo do Telegram"></a>
+
                         <a class="instagram" href="https://www.instagram.com/reau_cripto/" target="_blank" title="Instagram $REAU"></a>
+
                         <a class="discord" href="https://discord.com/invite/MHpmCjS6hw" target="_blank" title="Discord ViralataFunks"></a>
+
                         <a class="tiktok" href="https://www.tiktok.com/@viralatafunk" target="_blank" title="TikTok ViralataFunks"></a>
                     </div>
                 </div>
                 <!-- <a>Sobre o REAU</a> -->
             </nav>
 
-            <div class="conectar_wallet soon" role="button" title="em breve!">
+            <!-- <div class="conectar_wallet soon" role="button" title="em breve!">
                 Conectar Carteira
                 <span>Em breve!</span>
+            </div> -->
+
+            <div class="conectar_wallet conectada" role="button">
+                <div class="icon"></div>
+                0x4c79b...93dS3
             </div>
         </div>
     </header>
+
+    <!-- 
+        - Qte. de REAUs na carteira
+        - Qte. de REAUs queimados pela carteira
+        - Botão redirecionando pro endereço na BSC
+        - Itens enterrados: row de NFTs associados à carteira
+     -->
+
+    <div class="wallet_stats">
+        <button class="close" type="button" title="close"></button>
+    </div>
 
     <div class="menu_bt" role="button">
         <div></div>
@@ -950,6 +969,28 @@
             placarSec.style.maxHeight = '200rem';
             expandirPlacar.remove()
         })
+
+
+        const openWalletStatusBt = document.querySelector('.conectar_wallet.conectada')
+        const walletStats = document.querySelector('.wallet_stats')
+        const closeWalletStatsBt = document.querySelector('.wallet_stats .close')
+
+        let showingWalletStats = false;
+
+        function toggleWalletStats() {
+            if(showingWalletStats == false) {
+                walletStats.style.display = 'block';
+
+                showingWalletStats = true;
+            } else {
+                walletStats.style.display = 'none';
+
+                showingWalletStats = false;
+            }
+        }
+
+        openWalletStatusBt.addEventListener('click', toggleWalletStats)
+        closeWalletStatsBt.addEventListener('click', toggleWalletStats)
     </script>
 </body>
 </html>

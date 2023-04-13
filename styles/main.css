@@ -14,7 +14,7 @@ header {
     color: var(--light);
     z-index: 5;
     border-bottom: clamp(0.1rem, 0.3vw, 0.2rem) solid var(--darkgrey2);
-    position: relative;
+    position: sticky;
 } header .ctnr {
     display: flex;
     flex-direction: row;
@@ -35,9 +35,7 @@ header {
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 5rem;
-    background-position: center;
     background-size: 65%;
-    background-repeat: no-repeat;
     box-shadow: 0 0.5rem 0.6rem var(--darkgrey);
 } header .bsc {
     background-image: url(../assets/icons/bsc.svg);
@@ -160,26 +158,25 @@ border-bottom-width: 0.3rem;
     background-color: #000000;
 } header .conectar_wallet {
     box-shadow: 0 0.35rem;
-    padding: clamp(0.6rem, 2vw, 1rem) calc(clamp(0.6rem, 3vw, 1.1rem) * 1.6);
+    padding: clamp(0.6rem, 2vw, 1rem) calc(clamp(0.6rem, 3vw, 1.1rem) * 1.4);
     border-radius: 0.4rem;
     font-weight: 400;
-    /* outline: 0.1rem solid #11151722; */
-    /* outline-offset: -0.3rem; */
     align-self: center;
-    color: var(--grey);
     position: relative;
     bottom: 0.2rem;
     white-space: nowrap;
     user-select: none;
     cursor: pointer;
-    border: 0.1rem solid var(--darkgrey);
     letter-spacing: 0.06rem;
-    font-size: 0.9em;
+    font-size: 0.8em;
+    border: 0.1rem solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 } header .conectar_wallet:hover span {
     opacity: 1;
-}
-
-.conectar_wallet span {
+} .conectar_wallet span {
     position: absolute;
     left: 0;
     right: 0;
@@ -189,12 +186,53 @@ border-bottom-width: 0.3rem;
     opacity: 0;
     transition: opacity 0.3s ease;
 } .conectar_wallet.soon {
+    color: var(--grey);
+    border-color: var(--darkgrey);
+} .conectar_wallet.conectada {
+    color: var(--c1);
+} .conectar_wallet.conectada .icon {
+    background-image: url(../assets/icons/wallet.svg);
+    width: 2rem;
+    height: 2rem;
+}
 
+.wallet_stats {
+    position: fixed;
+    display: none;
+    height: 25rem;
+    background-color: var(--darkgrey2);
+    z-index: 5;
+    right: 2rem;
+    left: 2rem;
+    top: 7.1rem;
+    border-radius: 1.2rem;
+    border: 0.2rem solid var(--c1);
+    box-shadow: 0 2rem 3rem -1rem;
+} .wallet_stats::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    background-color: var(--c1);
+    width: 2.6rem;
+    height: 1.3rem;
+    clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 100%);
+    transform: translateY(-100%);
+} .wallet_stats .close {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: clamp(3rem, 10vw, 4rem);
+    height: clamp(3rem, 10vw, 4rem);
+    background-image: url(../assets/icons/close-8bit.svg);
+    background-position: center;
+    background-size: clamp(1rem, 3.5vw, 1.6rem);
+    background-repeat: no-repeat;
 }
 
 .menu_bt {
     position: sticky;
-    top: 0;
+    top: clamp(5rem, 22vw, 7rem);
     background-color: var(--dark);
     width: 7rem;
     height: 2.6rem;
@@ -218,7 +256,7 @@ border-bottom-width: 0.3rem;
     width: 0.5rem;
     height: 0.5rem;
     transform: rotate(45deg);
-} .menu_bt.hide {transform: translateX(-100%);}
+} .menu_bt.hide {/* transform: translateX(-100%); */}
 
 
 
@@ -412,9 +450,6 @@ filter: invert(1);
 } .intro_sec .ctas_ctnr .social .icon, .vfunk_cta .icon, .comvc .icon {
     width: 2rem;
     height: 1.6rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
     position: absolute;
     left: 1rem;
     height: 3rem;
@@ -645,9 +680,6 @@ padding: 0 2rem 0 3.8rem;
 } .sobre_sec .tokenomics .icon {
     width: clamp(3.5rem, 3vw, 4.5rem);
     height: clamp(4rem, 10vw, 5rem);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 } .supply .icon {
     background-image: url(../assets/icons/supply.jpg);
 } .circulacao .icon {
@@ -963,8 +995,6 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
 } .colocado .status .icon {
     width: clamp(0.9rem, 2.5vw, 1.1rem);
     height: calc(clamp(0.9rem, 2.5vw, 1.1rem) * 1.1);
-    background-position: center;
-    background-repeat: no-repeat;
     /* opacity: 0.15; */
 } .colocado:not(.dead) .status span {} .placar .queima {
     color: darkorange;
@@ -1146,6 +1176,8 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
 
 
 
+
+
 .pdg_sec {
     background-color: var(--c1);
     background-image: linear-gradient(180deg, #ffffffaa, transparent 38%);
@@ -1202,6 +1234,9 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     font-size: 0.9em;
     border: 0.1rem solid var(--light);
 }
+
+
+
 
 
 
@@ -1336,6 +1371,10 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
 
 
 
+
+
+
+
 .outdoor {
     position: sticky;
     /* display: flex; */
@@ -1357,6 +1396,10 @@ margin-bottom: clamp(3rem, 6vw, 4rem);
     
 object-position: bottom;
 }
+
+
+
+
 
 
 
@@ -1495,6 +1538,12 @@ footer {
 
 
 
+
+
+
+
+
+
 .ctnr_compra {
     visibility: hidden;
     position: fixed;
@@ -1578,10 +1627,53 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width:650px) {
 
     header {
-        position:sticky;
+        /* position:sticky; */
         backdrop-filter: blur(0.4rem);
         background-color: rgb(17 21 23 / 96%);
         /* max-height: 16vh; */
@@ -1641,6 +1733,11 @@ footer {
     } .menu_bt {
         display: none;
     }
+
+    .wallet_stats {
+left: unset;
+width: clamp(10rem, 50vw, 50rem);
+}
 
     .intro_sec {
         height: clamp(30rem, 65vw, 67rem);
@@ -1770,11 +1867,3 @@ footer {
 
 
 }
-
-
-
-
-
-
-
-

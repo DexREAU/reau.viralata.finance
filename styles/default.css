@@ -132,10 +132,24 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+.icon {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 
 
 
+button {
+    background-color: transparent;
+    outline-color: transparent;
+    border: unset;
+    padding: unset;
+    font-family: 'Brooklyn', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
 
 
 
