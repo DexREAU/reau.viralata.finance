@@ -111,7 +111,41 @@
      -->
 
     <div class="wallet_stats">
-        <button class="close" type="button" title="close"></button>
+        <div class="header">
+            <button class="close" type="button" title="close"></button>
+        </div>
+
+        <div class="ctnr">
+            <div class="row">
+                <p>💰 Em carteira</p>
+                <hr>
+                <p>934.837.486.342 $REAUs</p>
+            </div>
+
+            <div class="row">
+                <p>🔥 Queimados</p>
+                <hr>
+                <p>9.308.374.863 $REAUs</p>
+            </div>
+
+            <hr>
+
+            <div class="seus_nfts">
+                <p>🦴 Itens enterrados</p>
+
+                <div class="row">
+                    <img src="https://i.seadn.io/gcs/files/a7b41697c0fdddc4a208b8dadfa4c907.png?auto=format&w=1000" alt="">
+
+                    <img src="https://i.seadn.io/gcs/files/4b9b45c92c733e8c9003e6c3dcbaf0b3.png?auto=format&w=1000" alt="">
+
+                    <img src="https://i.seadn.io/gcs/files/c62d0d849972fc738e386a983c6d7f41.png?auto=format&w=1000" alt="">
+
+                    <img src="https://1400214502-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MebWz1Zc0hSkoVe6anX%2F-MftcFrV_8La07RkQ_Zb%2F-MfuWcXvRIX8VXHykDk1%2Fimage.png?alt=media&token=986f89ae-68c1-43de-92f4-0b21fc933152" alt="">
+
+                    <img src="assets/bitcao-01.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="menu_bt" role="button">
@@ -979,7 +1013,7 @@
 
         function toggleWalletStats() {
             if(showingWalletStats == false) {
-                walletStats.style.display = 'block';
+                walletStats.style.display = 'flex';
 
                 showingWalletStats = true;
             } else {
