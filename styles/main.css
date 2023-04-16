@@ -295,10 +295,12 @@ header .conectar_wallet:hover span {
     width: 100%;
     border: unset;
     border-bottom: 0.1rem dashed var(--light);
-} .wallet_stats .ctnr > hr {
-    width: 100%;
-    border: unset;
-    border-bottom: 0.1rem solid var(--darkgrey);
+}
+
+.wallet_stats .ctnr>hr {
+    width: 100%;
+    border: unset;
+    border-bottom: 0.1rem solid var(--darkgrey);
 }
 
 .wallet_stats p {

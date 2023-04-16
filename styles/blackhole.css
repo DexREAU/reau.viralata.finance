@@ -1,5 +1,3 @@
-
-
 main {
     display: flex;
     justify-content: center;
@@ -40,9 +38,11 @@ main {
     margin-bottom: -8rem;
     width: 100%;
     overflow: hidden;
-} .blackhole_ctnr .bg {
-    position:fixed;
-    inset:0;
+}
+
+.blackhole_ctnr .bg {
+    position: fixed;
+    inset: 0;
     background-image: url('../assets/buraco-negro/space.jpg');
     background-image: -webkit-image-set(url(../assets/buraco-negro/space.png) 1x, url(../assets/buraco-negro/space.webp) 1x);
     background-position: center;
@@ -53,21 +53,30 @@ main {
     width: 100vw;
     height: 100vw;
     top: 50%;
-} @keyframes rotatebg {
+}
+
+@keyframes rotatebg {
     0% {
         transform: translateY(-50%) scale(2.4) rotate(0deg);
-    } 100% {
+    }
+
+    100% {
         transform: translateY(-50%) scale(2.4) rotate(-360deg);
     }
-} .blackhole {
+}
+
+.blackhole {
     background-color: #000;
-    width: clamp(10rem, 50vw, 42vh);
-    height: clamp(10rem, 50vw, 42vh);
+    width: clamp(10rem, 60vw, clamp(25rem, 50vh, 35rem));
+    height: clamp(10rem, 60vw, clamp(25rem, 50vh, 35rem));
     max-width: 40rem;
     border-radius: 50%;
     position: relative;
     max-height: 40rem;
-} .blackhole .blur, .blackhole .border {
+}
+
+.blackhole .blur,
+.blackhole .border {
     position: absolute;
     inset: calc(clamp(0.7rem, 2vw, 1rem) * -1);
     background-image: linear-gradient(90deg, #00eeef, #fffc85, #fffc85, #00eeef);
@@ -78,15 +87,20 @@ main {
     background-position: 0 0;
     /* opacity: 0.8; */
     box-shadow: 0 0.4rem 1.6rem -0.8rem black;
-} @keyframes movegradient {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: 640% 0;
-	}
-} .blackhole::after {
-    content:'';
+}
+
+@keyframes movegradient {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 640% 0;
+    }
+}
+
+.blackhole::after {
+    content: '';
     position: absolute;
     inset: 0;
     border: 5rem solid #fffa30;
@@ -94,18 +108,24 @@ main {
     transform: skew(60deg, 0deg);
     filter: blur(3.8rem);
     z-index: -1;
-} .blackhole .blur {
+}
+
+.blackhole .blur {
     filter: blur(clamp(3rem, 8vw, 5rem));
     mix-blend-mode: hard-light;
-} .blackhole p {
+}
 
-} .zoom_ctnr {
+.blackhole p {}
+
+.zoom_ctnr {
     /* transform: scale(6); */
     /* transition: transform 0.3s cubic-bezier(1, 0, 0.6, 0.95); */
-} .title_ctnr {
+}
+
+.title_ctnr {
     position: relative;
-    width: clamp(10rem, 50vw, 42vh);
-    height: clamp(10rem, 50vw, 42vh);
+    width: clamp(10rem, 60vw, clamp(25rem, 50vh, 35rem));
+    height: clamp(10rem, 60vw, clamp(25rem, 50vh, 35rem));
     max-width: 40rem;
     max-height: 40rem;
     display: flex;
@@ -117,37 +137,39 @@ main {
     font-weight: 700;
     /* top: 50%; */
     /* transform: translateY(-50%); */
-} .title_ctnr h2 {
-    font-size: clamp(2rem, calc(5vw + 8vh), 14.5rem);
-    line-height: 0.9;
+}
+
+.title_ctnr h2 {
+    font-size: clamp(2rem, calc(8vw + 8vh), 14.5rem);
+    line-height: 0.85;
     text-align: center;
     white-space: nowrap;
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
-} .title_ctnr sub {
-    font-weight: 500;
-    letter-spacing: 0.3em;
-    font-size: clamp(0.75rem, 3.5vw, 0.9em);
-    color: var(--grey);
-    top: 18%;
-    padding-top: 0.4rem;
-    margin-bottom: -0.6rem;
-} .title_ctnr h2 b {
+}
+
+
+.title_ctnr h2 b {
     display: block;
     font-size: clamp(2.5rem, 10vw, 3.5rem);
     /* color: var(--c2); */
     font-weight: 700;
     letter-spacing: 0.4rem;
     text-transform: uppercase;
-} .title_ctnr h2 > span {
+}
+
+.title_ctnr h2>span {
     font-size: 0.25em;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-weight: 800;
     line-height: 1;
     color: var(--c2);
-} .title_ctnr a {
+    margin-top: 1rem;
+}
+
+.title_ctnr a {
     position: absolute;
     bottom: -7rem;
     text-transform: uppercase;
@@ -161,17 +183,28 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-} .title_ctnr a .icon {
+}
+
+.title_ctnr a .icon {
     width: 0.4rem;
     height: 0.4rem;
     border-right: 0.3rem solid var(--light);
     border-bottom: 0.3rem solid var(--light);
     transform: translateY(-0.2rem) rotate(45deg);
-} .title_ctnr p {
+}
+
+.title_ctnr p {
     font-size: clamp(2rem, 4vw, 2rem);
     font-weight: 400;
     opacity: 0;
     transition: opacity 1s ease;
+}
+
+.title_ctnr .restante {
+    display: block;
+    font-size: 0.2em;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
 }
 
 
@@ -191,7 +224,9 @@ header {
     width: fit-content;
     z-index: 3;
     gap: clamp(0.2rem, 1vw, 0.3rem);
-} header .title {
+}
+
+header .title {
     text-align: center;
     font-size: clamp(5.5rem, 18vw, 7.5rem);
     font-weight: 800;
@@ -201,9 +236,13 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 0.6rem rgb(255 252 133 / 38%);
-} header .title span {
-    color:var(--c1);
-} header h1 {
+}
+
+header .title span {
+    color: var(--c1);
+}
+
+header h1 {
     font-weight: 400;
     letter-spacing: 0.2rem;
     position: relative;
@@ -217,14 +256,18 @@ header {
     width: 100%;
     box-sizing: border-box;
     letter-spacing: 0.6rem;
-} header .address {
+}
+
+header .address {
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: clamp(0.5rem, 1.1vh, 1.05rem);
     position: relative;
     left: 0;
     padding-right: 1.2rem;
-} header .address::after {
+}
+
+header .address::after {
     top: 0;
     right: 0;
 }
@@ -240,18 +283,22 @@ header {
     color: var(--light);
     font-size: 1.6rem;
     gap: 1.4rem;
-    z-index: 2;
+    z-index: 3;
     box-sizing: border-box;
     height: 75vh;
     height: 75svh;
-} .status_ctnr a {
+}
+
+.status_ctnr a {
     background-color: var(--light);
     padding: 0.5rem 1.6rem;
     border-radius: 10rem;
     color: var(--dark);
     font-weight: 800;
     transform: translateY(50%);
-} .status_ctnr section {
+}
+
+.status_ctnr section {
     /* background-color: rgb(0 0 0 / 88%); */
     width: clamp(10rem, 100%, 50rem);
     /* backdrop-filter: blur(0.5rem); */
@@ -263,16 +310,21 @@ header {
     /* box-shadow: 0 -4rem 6rem 1rem #000004; */
     /* overflow-y: auto; */
     height: 100%;
+    height: -webkit-fill-available;
     transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1);
     /* border-radius: 1.8rem 1.8rem 0 0; */
-} .status_ctnr section::before {
+}
+
+.status_ctnr section::before {
     /* content:''; */
     position: absolute;
     top: -0.3rem;
     height: 0.3rem;
-    width:100%;
+    width: 100%;
     background-image: linear-gradient(90deg, var(--c1), var(--c2));
-} .status_ctnr .content {
+}
+
+.status_ctnr .content {
     display: flex;
     flex-flow: column;
     width: 100%;
@@ -282,16 +334,22 @@ header {
     font-size: clamp(1.5rem, 3.8vw, 1.8rem);
     margin-bottom: 5rem;
     align-items: stretch;
-} .status_ctnr .content li {
+}
+
+.status_ctnr .content li {
     display: flex;
     justify-content: space-between;
     width: 100%;
     gap: 1rem;
     text-shadow: 0 0.2rem var(--dark);
-} .status_ctnr .content span {
+}
+
+.status_ctnr .content span {
     /* display: inline-block; */
     /* word-break: break-word; */
-} .status_ctnr .content .divider {
+}
+
+.status_ctnr .content .divider {
     border-bottom: 0.2rem dotted var(--grey);
     flex: 1;
     /* display: none; */
@@ -313,7 +371,9 @@ header {
 @keyframes translate_moon {
     0% {
         transform: rotate(-30deg) translateY(calc(30vh + 20vw));
-    } 100% {
+    }
+
+    100% {
         transform: rotate(-390deg) translateY(calc(30vh + 20vw));
     }
 }
@@ -329,44 +389,62 @@ header {
     align-items: center;
     margin-bottom: 0;
     box-sizing: border-box;
-}.falling_ctnr .o1 {
+}
+
+.falling_ctnr .o1 {
     background-image: url(../assets/buraco-negro/falling-objs/mc_wojak.png);
     width: 24rem;
-    height:18em;
+    height: 18em;
     animation: fall01 50s infinite;
-} .falling_ctnr .o2 {
+}
+
+.falling_ctnr .o2 {
     background-image: url(../assets/buraco-negro/falling-objs/doggo01.png);
-    width:18rem;
-    height:18em;
+    width: 18rem;
+    height: 18em;
     animation: fall02 75s infinite;
-} .falling_ctnr .o3 {
+}
+
+.falling_ctnr .o3 {
     background-image: url(../assets/buraco-negro/falling-objs/pepe.gif);
     width: 16rem;
     height: 18rem;
     animation: fall03 70s infinite;
-} .falling_ctnr .o4 {
+}
+
+.falling_ctnr .o4 {
     width: 12rem;
     height: 12rem;
     animation: fall04 15s infinite;
-} .falling_ctnr .o5 {
+}
+
+.falling_ctnr .o5 {
     width: 10rem;
     height: 10rem;
     animation: fall05 24s infinite;
-}  .falling_ctnr .o6 {
+}
+
+.falling_ctnr .o6 {
     width: 9rem;
     height: 9rem;
     animation: fall06 38s infinite;
-}  .falling_ctnr .o7 {
+}
+
+.falling_ctnr .o7 {
     width: 7rem;
     height: 7rem;
     animation: fall07 7s infinite;
-}  .falling_ctnr .obj {
+}
+
+.falling_ctnr .obj {
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     animation-timing-function: cubic-bezier(0.72, 0.69, 1, 0.03);
-} .falling_ctnr .obj.reau {
+}
+
+.falling_ctnr .obj.reau {
     background-image: url(../assets/logo-REAU.png);
 }
 
@@ -374,13 +452,19 @@ header {
     0% {
         transform: translate3D(75vw, 40vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
-    } 20% {
+    }
+
+    20% {
         transform: translate3D(75vw, 40vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
-    } 50% {
+    }
+
+    50% {
         transform: translate3D(0, 0, 0) scale(0.2) rotate(-120deg);
         filter: brightness(0);
-    } 100% {
+    }
+
+    100% {
         transform: translate3D(0, 0, 0) scale(0.2) rotate(-120deg);
         filter: brightness(0);
     }
@@ -390,10 +474,14 @@ header {
     0% {
         transform: translate3D(-75vw, -40vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
-    } 20% {
+    }
+
+    20% {
         transform: translate3D(0, 0, 0) scale(0.2) rotate(90deg);
         filter: brightness(0);
-    } 100% {
+    }
+
+    100% {
         transform: translate3D(0, 0, 0) scale(0.2) rotate(90deg);
         filter: brightness(0);
     }
@@ -403,13 +491,19 @@ header {
     0% {
         transform: translate3D(-50vw, -70vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
-    } 20% {
+    }
+
+    20% {
         transform: translate3D(-50vw, -70vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
-    }  50% {
+    }
+
+    50% {
         transform: translate3D(0, 0, 0) scale(0.4) rotate(360deg);
         filter: brightness(0);
-    } 100% {
+    }
+
+    100% {
         transform: translate3D(0, 0, 0) scale(0.4) rotate(360deg);
         filter: brightness(0);
     }
@@ -419,7 +513,9 @@ header {
     0% {
         transform: translate3D(-45vw, 70vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
-    } 100% {
+    }
+
+    100% {
         transform: translate3D(0, 0, 0) scale(0.2) rotate(120deg);
         filter: brightness(0);
     }
@@ -429,31 +525,43 @@ header {
     0% {
         transform: translate3D(75vw, -15vh, 0) scale(1) rotate(0deg);
         filter: brightness(1);
-    } 80% {
+    }
+
+    80% {
         transform: translate3D(0, 0, 0) scale(0.2) rotate(1100deg);
         filter: brightness(0);
-    } 100% {
+    }
+
+    100% {
         transform: translate3D(0, 0, 0) scale(0.2) rotate(1100deg);
         filter: brightness(0);
     }
 }
+
 @keyframes fall06 {
     0% {
         transform: translate3D(-75vw, 70vh, 0) scale(1) rotate(-60deg);
         filter: brightness(1);
-    } 12% {
+    }
+
+    12% {
         transform: translate3D(-75vw, 70vh, 0) scale(1) rotate(-60deg);
         filter: brightness(1);
-    }  100% {
+    }
+
+    100% {
         transform: translate3D(0, 0, 0) scale(0.2) rotate(-600deg);
         filter: brightness(0);
     }
 }
+
 @keyframes fall07 {
     0% {
         transform: translate3D(-85vw, 70vh, 0) scale(1) rotate(30deg);
         filter: brightness(1);
-    } 100% {
+    }
+
+    100% {
         transform: translate3D(0, 0, 0) scale(0.2) rotate(-300deg);
         filter: brightness(0);
     }
@@ -481,10 +589,13 @@ header {
     .blackhole_ctnr::before {
         transform: translateY(-50%) scale(1.2) rotate(45deg);
     }
+
     @keyframes rotatebg {
         0% {
             transform: translateY(-50%) scale(1.2) rotate(0deg);
-        } 100% {
+        }
+
+        100% {
             transform: translateY(-50%) scale(1.2) rotate(-360deg);
         }
     }

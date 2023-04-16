@@ -1,38 +1,25 @@
-// const blackholeZoom = document.querySelector('.zoom_ctnr')
+let totalBurnt;
+let burntToday;
 
-// const blackhole = document.querySelector('.blackhole')
+const totalBurntValue = document.querySelector('#total_burnt_value')
 
-// const blackholeborder = document.querySelector('.blackhole .border')
-// const blackholeblur = document.querySelector('.blackhole .blur')
+async function logJSONData() {
+    const response = await fetch("https://tecnocao.github.io/reau-blackhole/blackhole.json");
+    const jsonData = await response.json();
+    console.log("hoje: " + jsonData.last_updated)
+    console.log(jsonData.results[0].total_burnt)
+    console.log(BigInt(Number(jsonData.results[0].total_burnt)).toLocaleString('pt-br'));
 
-// let isInsideBlackHole = false;
+    totalBurnt = BigInt(Number(jsonData.results[0].total_burnt));
+    
+    burntToday = jsonData.last_updated;
 
-// const statusCtnr = document.querySelector('.status_ctnr')
+    totalBurntValue.innerHTML = `
+        ${String(BigInt(Number(jsonData.results[0].total_burnt))).substring(0,3)}
+        <span class="restante">
+            ${String(BigInt(Number(jsonData.results[0].total_burnt)).toLocaleString('pt-br')).substring(3, 19)}
+        </span>
+    `
+}
 
-// function toggleBlackhole(e) {
-//     if(isInsideBlackHole == false) {
-//         e.preventDefault()
-//         isInsideBlackHole = true;
-
-//         blackholeborder.style.animation = 'unset'
-//         blackholeblur.style.animation = 'unset'
-//         blackholeZoom.style.transform = 'scale(5.5)'
-
-//         setTimeout(() => {
-//             statusCtnr.style.top = '24vh'
-//         }, 900);
-//     } else {
-//         e.preventDefault()
-//         isInsideBlackHole = false;
-//         blackholeZoom.style.transform = 'scale(1)'
-
-//         statusCtnr.style.top = 'calc(50% - (clamp(6rem, 10vw, 10rem) / 2))'
-
-//         setTimeout(() => {
-//             blackholeborder.style.animation = 'movegradient 3s linear infinite'
-//             blackholeblur.style.animation = 'movegradient 3s linear infinite'
-//         }, 1500);
-//     }
-// }
-
-// blackhole.addEventListener('click', toggleBlackhole)
+  logJSONData()

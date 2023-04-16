@@ -62,9 +62,11 @@
                 <div class="zoom_ctnr">
                     <div class="blackhole">
                         <div class="title_ctnr">
-                            <h2>545 <span>trilhões</span></h2>
+                            <h2>
+                                <div id="total_burnt_value">XXX</div>
+                                <span>trilhões</span>
+                            </h2>
                             <a href="#stats">Status <div class="icon"></div></a>
-                            <sub class="current_date"></sub>
                         </div>
                         <div class="border"></div>
                         <div class="blur"></div>
@@ -82,41 +84,41 @@
                     <li>
                         <span>Supply Total máximo</span>
                         <div class="divider"></div>
-                        <span id="total_burn">1.000.000.000.000.000</span>
+                        <span id="max_supply">1.000.000.000.000.000</span>
                     </li>
                     
                     <li>
                         <span>Supply Total</span>
                         <div class="divider"></div>
-                        <span id="total_burn">450.495.495.394.948</span>
+                        <span id="total_supply">450.495.495.394.948</span>
                     </li>
     
                     <li>
                         <span>Total no Blackhole</span>
                         <div class="divider"></div>
-                        <span id="blackhole-total">545.630.074.492.220</span>
+                        <span id="total_blackhole">545.630.074.492.220</span>
                     </li>
                     
                     <li>
                         <span>Queima Total</span>
                         <div class="divider"></div>
-                        <span id="total_burn">45.630.074.492.220</span>
+                        <span id="total_queimado">45.630.074.492.220</span>
                     </li>
                     
                     <li>
                         <span>Total circulante</span>
                         <div class="divider"></div>
-                        <span id="total_burn">150.495.495.394.948</span>
+                        <span id="total_circulante">150.495.495.394.948</span>
                     </li>
                     
                     <li>
                         <span>Valor Total Bloqueado</span>
                         <div class="divider"></div>
-                        <span id="total_burn">U$495.452</span>
+                        <span id="tvl">U$495.452</span>
                     </li>
                 </ul>
         
-                <p>🔥 Dados atualizados em tempo reau 🔥</p>
+                <p>🔥 Dados atualizados diariamente 🔥</p>
     
                 <a href="../index.html">$REAU viralata.finance</a>
             </section>
@@ -134,10 +136,6 @@
                 statusSec.style.backdropFilter = 'blur(0rem)'
             }
         })
-
-        let currentDate = new Date().toLocaleDateString("pt-BR");
-
-        document.querySelector('.current_date').innerHTML = currentDate
     </script>
 </body>
 </html>
