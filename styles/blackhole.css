@@ -8,6 +8,10 @@ main {
     height: clamp(69lvh, calc(55vh + 40vw), 85vh);
 }
 
+.Typewriter__cursor {
+    display: none;
+}
+
 .home {
     position: fixed;
     left: 0;
@@ -67,8 +71,8 @@ main {
 
 .blackhole {
     background-color: #000;
-    width: clamp(10rem, 60vw, clamp(25rem, 50vh, 35rem));
-    height: clamp(10rem, 60vw, clamp(25rem, 50vh, 35rem));
+    width: clamp(10rem, 62vw, clamp(25rem, 50vh, 35rem));
+    height: clamp(10rem, 62vw, clamp(25rem, 50vh, 35rem));
     max-width: 40rem;
     border-radius: 50%;
     position: relative;
@@ -124,8 +128,8 @@ main {
 
 .title_ctnr {
     position: relative;
-    width: clamp(10rem, 60vw, clamp(25rem, 50vh, 35rem));
-    height: clamp(10rem, 60vw, clamp(25rem, 50vh, 35rem));
+    width: clamp(10rem, 62vw, clamp(25rem, 50vh, 35rem));
+    height: clamp(10rem, 62vw, clamp(25rem, 50vh, 35rem));
     max-width: 40rem;
     max-height: 40rem;
     display: flex;
@@ -160,13 +164,14 @@ main {
 }
 
 .title_ctnr h2>span {
-    font-size: 0.25em;
+    font-size: 0.27em;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1;
     color: var(--c2);
-    margin-top: 1rem;
+    margin-top: 0.8rem;
+    margin-right: -0.15em;
 }
 
 .title_ctnr a {
@@ -202,9 +207,11 @@ main {
 
 .title_ctnr .restante {
     display: block;
-    font-size: 0.2em;
+    font-size: clamp(2rem, 5vw, 2.3rem);
     font-weight: 400;
-    letter-spacing: 0.1rem;
+    letter-spacing: clamp(0.1rem, 0.25vw, 0.4rem);
+    position: relative;
+    right: calc(clamp(0.1rem, 0.2vw, 0.2rem) * -0.5);
 }
 
 

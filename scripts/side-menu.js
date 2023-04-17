@@ -8,13 +8,15 @@ function toggleNav() {
     if(showingMenu == false) {
 
         nav.style.transform = 'translateX(0)';
-        menuBt.classList.add('hide')
 
         showingMenu = true;
+
+        if(showingWalletStats == true) {
+            toggleWalletStats()
+        }
     } else {
 
         nav.style.transform = 'translateX(-100%)';
-        menuBt.classList.remove('hide')
 
         showingMenu = false;
     }

@@ -264,17 +264,34 @@ header .conectar_wallet:hover span {
     /* height: 25rem; */
     background-color: var(--darkgrey2);
     z-index: 5;
-    right: 2rem;
-    left: 2rem;
-    top: 7.1rem;
+    right: 1.6rem;
+    left: 1.6rem;
+    top: 9.1rem;
     border-radius: 1.2rem;
     border: 0.2rem solid var(--c1);
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     color: var(--light);
     font-size: clamp(1.4rem, 3.8vw, 1.7rem);
-    padding: 3rem 0 1rem;
+    padding: clamp(1rem, 3vw, 2rem) 0 2rem 0rem;
     box-sizing: border-box;
+    flex-direction: column;
+}
+
+.wallet_stats .flex {
+align-items: center;
+justify-content: space-between;
+width: 91%;
+margin-bottom: 2rem;
+position: sticky;
+top: 0;
+}
+
+.wallet_stats .flex a {
+text-decoration: underline;
+color: var(--lightgrey);
+position: relative;
+padding-right: 1.2rem;
 }
 
 .wallet_stats .ctnr {
@@ -327,23 +344,22 @@ header .conectar_wallet:hover span {
     content: '';
     position: absolute;
     top: 0;
-    right: 2rem;
-    background-color: var(--c1);
-    width: 2.6rem;
-    height: 1.3rem;
+    right: 10%;
+    background-color: var(--darkgrey2);
+    width: 1.1rem;
+    height: 1.1rem;
     clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0% 100%);
     transform: translateY(-100%);
 }
 
 .wallet_stats .close {
-    position: absolute;
     left: 0;
     top: 0;
-    width: clamp(3rem, 6vw, 4rem);
-    height: clamp(3rem, 6vw, 4rem);
+    width: clamp(1.4rem, 3vw, 1.8rem);
+    height: clamp(1.4rem, 3vw, 1.8rem);
     background-image: url(../assets/icons/close-8bit.svg);
     background-position: center;
-    background-size: clamp(1rem, 3vw, 1.6rem);
+    background-size: contain;
     background-repeat: no-repeat;
 }
 

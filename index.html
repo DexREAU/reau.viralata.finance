@@ -111,21 +111,43 @@
      -->
 
     <div class="wallet_stats">
-        <div class="header">
+        <div class="flex">
             <button class="close" type="button" title="close"></button>
+
+            <a class="external" href="https://bscscan.com/" target="_blank">BSCScan</a>
         </div>
 
         <div class="ctnr">
             <div class="row">
-                <p>💰 Em carteira</p>
+                <p>💰 Seu saldo</p>
                 <hr>
                 <p>934.837.486.342 $REAUs</p>
             </div>
 
             <div class="row">
-                <p>🔥 Queimados</p>
+                <p>🔥 Queima acumulada</p>
                 <hr>
                 <p>9.308.374.863 $REAUs</p>
+            </div>
+
+            <div class="row">
+                <p>🤑 Auto Staking (30d)</p>
+                <hr>
+                <p>+40.336.152 $REAUs</p>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <p>🧬 XP acumulado</p>
+                <hr>
+                <p>233<sup>XP</sup></p>
+            </div>
+
+            <div class="row">
+                <p>🏆 Posição de Hodler</p>
+                <hr>
+                <p>245º de 57.913</p>
             </div>
 
             <hr>
@@ -1016,6 +1038,10 @@
                 walletStats.style.display = 'flex';
 
                 showingWalletStats = true;
+
+                if(showingMenu == true) {
+                    toggleNav()
+                }
             } else {
                 walletStats.style.display = 'none';
 
