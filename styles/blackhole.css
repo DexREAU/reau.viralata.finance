@@ -27,7 +27,7 @@ main {
     color: var(--lightgrey);
     z-index: 1;
     font-size: 1.4rem;
-    border: 0.2rem solid var(--c1);
+    border: 0.2rem solid var(--darkgrey);
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     font-weight: 800;
@@ -40,18 +40,19 @@ main {
     align-items: center;
 }
 .home span {
-    color:var(--c1);
+    color: var(--c2);
     position: absolute;
     right: 0;
-    transform: translateX(100%);
+    transform: translateX(calc(100% - 2rem));
     font-size: 1.6rem;
     text-align: left;
     opacity: 0;
     transition:opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    padding-left: 2rem;
 } .home:hover span {
     opacity:1;
     visibility:visible;
-    transform: translateX(130%);
+    transform: translateX(100%);
 }
 .home svg {
     width: 50%;
@@ -59,7 +60,7 @@ main {
 
 .svg01 {
     fill: none;
-    stroke: var(--c1);
+    stroke: var(--c2);
     stroke-miterlimit: 133.33;
     stroke-width: 98.86px;
 }

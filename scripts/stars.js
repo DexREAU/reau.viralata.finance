@@ -5,7 +5,7 @@
 	console.log(windowSum / 100000)
 	
 	const NB_STARS = windowSum * 1.7;
-	const MAX_RADIUS = 0.5 + (windowSum / 5000);
+	const MAX_RADIUS = 0.6 + (windowSum / 5000);
 	const GLOBAL_SPEED = (windowSum / 150000);
 	 
 	const canvas = document.getElementById('stars');
