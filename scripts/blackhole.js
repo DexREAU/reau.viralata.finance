@@ -22,7 +22,7 @@ async function logJSONData() {
     // console.log("hoje: " + jsonData.last_updated)
     // console.log(jsonData.results[0].total_burnt)
 
-    console.log(Number(String(BigInt(Number(jsonData.results[0].total_burnt))).substring(0, 15)) );
+    // console.log(Number(String(BigInt(Number(jsonData.results[0].total_burnt))).substring(0, 15)) );
 
     bigBlackholeValue = BigInt(Number(jsonData.results[0].total_burnt));
     

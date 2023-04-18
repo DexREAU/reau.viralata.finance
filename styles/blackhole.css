@@ -44,7 +44,7 @@ main {
     overflow: hidden;
 }
 
-.blackhole_ctnr .bg {
+/* .blackhole_ctnr .bg {
     position: fixed;
     inset: 0;
     background-image: url('../assets/buraco-negro/space.jpg');
@@ -53,13 +53,19 @@ main {
     background-size: cover;
     transform: translateY(-50%) scale(2.4) rotate(0deg);
     z-index: -1;
-    animation: rotatebg 120s linear infinite;
+    animation: rotatebg 160s linear infinite;
     width: 100vw;
     height: 100vw;
     top: 50%;
+} */
+
+#stars {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
 }
 
-@keyframes rotatebg {
+/* @keyframes rotatebg {
     0% {
         transform: translateY(-50%) scale(2.4) rotate(0deg);
     }
@@ -67,7 +73,7 @@ main {
     100% {
         transform: translateY(-50%) scale(2.4) rotate(-360deg);
     }
-}
+} */
 
 .blackhole {
     background-color: #000;
@@ -82,7 +88,7 @@ main {
 .blackhole .blur,
 .blackhole .border {
     position: absolute;
-    inset: calc(clamp(0.7rem, 2vw, 1rem) * -1);
+    inset: calc(clamp(0.7rem, 2vw, 1.2rem) * -1);
     background-image: linear-gradient(90deg, #00eeef, #fffc85, #fffc85, #00eeef);
     z-index: -1;
     border-radius: 50%;
@@ -115,7 +121,7 @@ main {
 }
 
 .blackhole .blur {
-    filter: blur(clamp(3rem, 8vw, 5rem));
+    filter: blur(clamp(3rem, 8vw, 6rem));
     mix-blend-mode: hard-light;
 }
 
@@ -173,7 +179,7 @@ main {
 
 .title_ctnr a {
     position: absolute;
-    bottom: -7rem;
+    bottom: -9rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-size: 0.85em;
@@ -367,18 +373,20 @@ header .address::after {
     background-position: center;
     background-size: contain;
     transform: rotate(-30deg) translateY(calc(30vh + 20vw));
-    animation: translate_moon 90s linear infinite;
+    animation: translate_moon 120s linear infinite;
     background-repeat: no-repeat;
     filter: brightness(0.6);
+    z-index: 5;
+    cursor: pointer;
 }
 
 @keyframes translate_moon {
     0% {
-        transform: rotate(-30deg) translateY(calc(30vh + 20vw));
+        transform: rotate(-35deg) translateY(calc(30vh + 20vw)) rotate(0deg);
     }
 
     100% {
-        transform: rotate(-390deg) translateY(calc(30vh + 20vw));
+        transform: rotate(-395deg) translateY(calc(30vh + 20vw)) rotate(720deg);
     }
 }
 
@@ -617,6 +625,11 @@ header .address::after {
         top: 1.5rem;
         border-radius: 0.5rem;
         border: 0.1rem solid var(--darkgrey2);
+        transition:border-color 0.3s ease, color 0.3s ease;
+    } .home:hover {
+        border-color:var(--grey);
+        color:var(--c2);
+        transition:border-color 0s ease, color 0s ease;
     }
 }
 
