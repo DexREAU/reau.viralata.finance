@@ -612,7 +612,11 @@ header .address::after {
 
     .home {
         width: fit-content;
-        padding: 1.5rem;
+        padding: 1.2rem 2rem;
+        left: 1.5rem;
+        top: 1.5rem;
+        border-radius: 0.5rem;
+        border: 0.1rem solid var(--darkgrey2);
     }
 }
 
