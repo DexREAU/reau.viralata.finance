@@ -125,10 +125,14 @@ header nav .bt:not(.cta) {
 }
 
 header nav .bt svg {
-width: 2rem;
-height: 1.6rem;
-opacity: 0.15;
-transition: opacity 0.4s ease;
+
+width: 2rem;
+
+height: 1.6rem;
+
+opacity: 0.15;
+
+transition: opacity 0.4s ease;
 }
 
 header nav .bt:hover svg {
@@ -843,9 +847,10 @@ header nav::-webkit-scrollbar-thumb:hover,
 .sobre_sec .ctnr .content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     align-items: center;
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 .sobre_sec .txt {
@@ -914,11 +919,11 @@ header nav::-webkit-scrollbar-thumb:hover,
     }
 
     15% {
-        transform: rotate(10deg)
+        transform: rotate(3deg)
     }
 
     38% {
-        transform: rotate(-15deg)
+        transform: rotate(-6deg)
     }
 
     62% {
@@ -1014,7 +1019,7 @@ header nav::-webkit-scrollbar-thumb:hover,
 
 .sobre_sec .bottom_doggo {
     display: flex;
-    width: clamp(10rem, 30vw, 15rem);
+    width: clamp(10rem, 55vw, 31rem);
     animation: tilt 7s ease infinite;
 }
 
@@ -2423,6 +2428,7 @@ footer .moon_doggo {
         gap: clamp(2rem, 4vw, 7rem);
         width: var(--base-width);
         justify-content: center;
+        margin: unset;
     }
 
     .sobre_sec .txt {

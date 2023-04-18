@@ -156,7 +156,7 @@ main {
 }
 
 .blackhole .blur {
-    filter: blur(clamp(3rem, 8vw, 6rem));
+    filter: blur(clamp(3rem, 8vw, 5rem));
     mix-blend-mode: hard-light;
 }
 
