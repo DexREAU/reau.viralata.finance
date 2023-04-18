@@ -55,7 +55,7 @@ async function logJSONData() {
         let typewritedValue = new Typewriter('#total_burnt_value', {
             autoStart: true,
             loop:false,
-            delay:250,
+            delay:200,
         });
 
         typewritedValue

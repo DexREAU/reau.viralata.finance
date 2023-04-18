@@ -5,7 +5,7 @@ main {
     flex-direction: column;
     overflow: hidden;
     height: 63vh;
-    height: clamp(69lvh, calc(55vh + 40vw), 85vh);
+    height: 85vh;
 }
 
 .Typewriter__cursor {
@@ -35,7 +35,7 @@ main {
     height: 100vh;
     height: 100%;
     inset: 0;
-    background-color: #000000;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,8 +71,8 @@ main {
 
 .blackhole {
     background-color: #000;
-    width: clamp(10rem, 62vw, clamp(25rem, 50vh, 35rem));
-    height: clamp(10rem, 62vw, clamp(25rem, 50vh, 35rem));
+    width: clamp(10rem, calc(20vh + 20vw), clamp(25rem, 50vh, 35rem));
+    height: clamp(10rem, calc(20vh + 20vw), clamp(25rem, 50vh, 35rem));
     max-width: 40rem;
     border-radius: 50%;
     position: relative;
@@ -121,15 +121,10 @@ main {
 
 .blackhole p {}
 
-.zoom_ctnr {
-    /* transform: scale(6); */
-    /* transition: transform 0.3s cubic-bezier(1, 0, 0.6, 0.95); */
-}
-
 .title_ctnr {
     position: relative;
-    width: clamp(10rem, 62vw, clamp(25rem, 50vh, 35rem));
-    height: clamp(10rem, 62vw, clamp(25rem, 50vh, 35rem));
+    width: clamp(10rem, calc(20vh + 20vw), clamp(25rem, 50vh, 35rem));
+    height: clamp(10rem, calc(20vh + 20vw), clamp(25rem, 50vh, 35rem));
     max-width: 40rem;
     max-height: 40rem;
     display: flex;
@@ -151,6 +146,8 @@ main {
     /* width: 100%; */
     display: flex;
     flex-direction: column;
+    /* height: 15rem; */
+    /* justify-content: space-between; */
 }
 
 
@@ -402,27 +399,27 @@ header .address::after {
     background-image: url(../assets/buraco-negro/falling-objs/mc_wojak.png);
     width: 24rem;
     height: 18em;
-    animation: fall01 50s infinite;
+    animation: fall01 47s infinite;
 }
 
 .falling_ctnr .o2 {
     background-image: url(../assets/buraco-negro/falling-objs/doggo01.png);
     width: 18rem;
     height: 18em;
-    animation: fall02 75s infinite;
+    animation: fall02 71s infinite;
 }
 
 .falling_ctnr .o3 {
     background-image: url(../assets/buraco-negro/falling-objs/pepe.gif);
     width: 16rem;
     height: 18rem;
-    animation: fall03 70s infinite;
+    animation: fall03 65s infinite;
 }
 
 .falling_ctnr .o4 {
     width: 12rem;
     height: 12rem;
-    animation: fall04 15s infinite;
+    animation: fall04 17s infinite;
 }
 
 .falling_ctnr .o5 {
@@ -440,7 +437,7 @@ header .address::after {
 .falling_ctnr .o7 {
     width: 7rem;
     height: 7rem;
-    animation: fall07 7s infinite;
+    animation: fall07 9s infinite;
 }
 
 .falling_ctnr .obj {
@@ -592,7 +589,7 @@ header .address::after {
 
 
 
-@media screen and (min-width:100vh) {
+@media screen and (min-width: 100vh) {
     .blackhole_ctnr::before {
         transform: translateY(-50%) scale(1.2) rotate(45deg);
     }
@@ -616,5 +613,20 @@ header .address::after {
     .home {
         width: fit-content;
         padding: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 120vh) and (max-height:700px) {
+    header {
+        right: unset;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5vw;
     }
 }

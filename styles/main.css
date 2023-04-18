@@ -131,6 +131,12 @@ header nav .bt svg {
     height: 1.6rem;
 
     opacity: 0.15;
+    transition: opacity 0.4s ease;
+}
+
+header nav .bt:hover svg {
+    transition: opacity 0.1s ease;
+    opacity: 0.7;
 }
 
 header nav .cta {
@@ -279,19 +285,29 @@ header .conectar_wallet:hover span {
 }
 
 .wallet_stats .flex {
-align-items: center;
-justify-content: space-between;
-width: 91%;
-margin-bottom: 2rem;
-position: sticky;
-top: 0;
+
+align-items: center;
+
+justify-content: space-between;
+
+width: 91%;
+
+margin-bottom: 2rem;
+
+position: sticky;
+
+top: 0;
 }
 
 .wallet_stats .flex a {
-text-decoration: underline;
-color: var(--lightgrey);
-position: relative;
-padding-right: 1.2rem;
+
+text-decoration: underline;
+
+color: var(--lightgrey);
+
+position: relative;
+
+padding-right: 1.2rem;
 }
 
 .wallet_stats .ctnr {
