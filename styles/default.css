@@ -82,24 +82,24 @@ ul, li {
 }
 
 body::-webkit-scrollbar-track, .nfts_sec article::-webkit-scrollbar-track {
-    background: var(--light);
+    background-color: var(--light);
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--dark);
+    background-color: var(--dark);
 }
 
 .nfts_sec .wrapper::-webkit-scrollbar {
     width: 0.6rem;
 } .nfts_sec .wrapper::-webkit-scrollbar-thumb {
-    background: var(--darkgrey);
+    background-color: var(--darkgrey);
 }
 
 
 .ctnr_compra ul::-webkit-scrollbar-thumb, .tokenomics .content::-webkit-scrollbar-thumb {
-    background: var(--light);
+    background-color: var(--light);
 } .ctnr_compra ul::-webkit-scrollbar-track, .tokenomics .content::-webkit-scrollbar-track, .nfts_sec .wrapper::-webkit-scrollbar-track, .nfts_sec article::-webkit-scrollbar-thumb {
-    background: var(--dark);
+    background-color: var(--dark);
 }
 
 

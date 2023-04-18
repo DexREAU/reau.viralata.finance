@@ -55,12 +55,11 @@ async function logJSONData() {
         let typewritedValue = new Typewriter('#total_burnt_value', {
             autoStart: true,
             loop:false,
-            delay:200,
+            delay:100,
         });
 
         typewritedValue
         .typeString(`${String(BigInt(Number(jsonData.results[0].total_burnt))).substring(0,3)}`)
-        .changeDelay(80)
         .typeString(`<span class="restante">
         ${String(BigInt(Number(jsonData.results[0].total_burnt)).toLocaleString('pt-br')).substring(3, 19)}
     </span>`)
