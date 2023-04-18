@@ -7,7 +7,7 @@
 	const NB_STARS = windowSum;
 	const MAX_RADIUS = 1 + (windowSum / 5000);
 	const GLOBAL_SPEED = 0.02;
-	
+	 
 	const canvas = document.getElementById('stars');
 	const context = canvas.getContext('2d');
 	const stars = [];
