@@ -40,7 +40,7 @@ main {
     align-items: center;
 }
 .home span {
-    color: var(--c2);
+    color: var(--c1);
     position: absolute;
     right: 0;
     transform: translateX(calc(100% - 2rem));
@@ -55,12 +55,13 @@ main {
     transform: translateX(100%);
 }
 .home svg {
-    width: 50%;
+    width: 45%;
 }
 
 .svg01 {
     fill: none;
-    stroke: var(--c2);
+    stroke: var(
+--c1);
     stroke-miterlimit: 133.33;
     stroke-width: 98.86px;
 }
@@ -270,6 +271,7 @@ header {
     width: fit-content;
     z-index: 3;
     gap: clamp(0.2rem, 1vw, 0.3rem);
+    filter: drop-shadow(0 0 1rem black);
 }
 
 header .title {
@@ -371,9 +373,9 @@ header .address::after {
     flex-flow: column;
     width: 100%;
     justify-content: space-between;
-    gap: clamp(0.3rem, 4vw, 3rem);
+    gap: clamp(0.3rem, 4vw, 3.5rem);
     align-items: baseline;
-    font-size: clamp(1.5rem, 5.3vw, 2.2rem);
+    font-size: clamp(1.5rem, 5.3vw, 2rem);
     margin-bottom: 5rem;
     align-items: stretch;
 }
@@ -386,10 +388,10 @@ header .address::after {
     gap: 0.5rem;
     text-shadow: 0 0.2rem var(--dark);
     align-items: center;
-} .status_ctnr .content li span:last-child {
-    font-size: 1.3em;
-    color: var(--c2);
     letter-spacing: 0.06em;
+} .status_ctnr .content li span:last-child {
+    font-size: 1.4em;
+    color: var(--c2);
 }
 
 .status_ctnr .content span {
@@ -411,7 +413,7 @@ header .address::after {
     background-position: center;
     background-size: contain;
     transform: rotate(-30deg) translateY(calc(30vh + 20vw));
-    animation: translate_moon 120s linear infinite;
+    animation: translate_moon 240s linear infinite;
     background-repeat: no-repeat;
     filter: brightness(0.6);
     z-index: 1;
@@ -424,7 +426,7 @@ header .address::after {
     }
 
     100% {
-        transform: rotate(-395deg) translateY(calc(30vh + 20vw)) rotate(720deg);
+        transform: rotate(-395deg) translateY(calc(30vh + 20vw)) rotate(1440deg);
     }
 }
 
@@ -663,7 +665,6 @@ header .address::after {
 
     .home:hover {
         border-color: var(--grey);
-        color: var(--c2);
         transition: border-color 0s ease, color 0s ease;
     }
 

@@ -4,9 +4,9 @@
 	const windowSum = window.innerWidth + window.innerHeight
 	console.log(windowSum / 100000)
 	
-	const NB_STARS = windowSum * 1.7;
-	const MAX_RADIUS = 0.6 + (windowSum / 5000);
-	const GLOBAL_SPEED = (windowSum / 150000);
+	const NB_STARS = windowSum / 1.2;
+	const MAX_RADIUS = 0.8 + (windowSum / 5000);
+	const GLOBAL_SPEED = (windowSum / 120000);
 	 
 	const canvas = document.getElementById('stars');
 	const context = canvas.getContext('2d');
