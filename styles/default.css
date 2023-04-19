@@ -62,6 +62,7 @@ html {
 a {
     text-decoration: none;
     color:unset;
+    -webkit-tap-highlight-color: transparent;
 }
 
 img, video {
