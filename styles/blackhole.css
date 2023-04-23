@@ -73,6 +73,7 @@ main {
     inset: 0;
     background-color: black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: -8rem;
@@ -219,7 +220,7 @@ main {
     font-size: clamp(1rem, calc(1vw + 1vh), 1.6rem);
     letter-spacing: 0.15em;
     position: absolute;
-    bottom: clamp(1.2rem, 4vw, 2rem);
+    bottom: clamp(1.2rem, 4vw, 3rem);
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -275,6 +276,22 @@ main {
     letter-spacing: clamp(0.1rem, 0.25vw, 0.4rem);
     position: relative;
     right: calc(clamp(0.1rem, 0.2vw, 0.2rem) * -0.5);
+}
+
+.title_ctnr .loading {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-weight: 400;
+    color: var(--darkgrey);
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 5%;
+    right: 5%;
+    background-color: black;
+    transform: translateY(-50%);
+    padding: 3rem 0;
 }
 
 
@@ -343,6 +360,27 @@ header .address::after {
     right: 0;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    position: absolute;
+    bottom: clamp(2rem, 7vh, 6.5rem);
+    font-size: 1.7rem;
+}
+
+footer a {
+    background-color: var(--light);
+    padding: 0.4rem 1.4rem;
+    border-radius: 10rem;
+    color: var(--dark);
+    font-weight: 800;
+    margin: 1.5rem 0;
+    border: 0.1rem solid var(--lightgrey);
+}
+
 .status_ctnr {
     width: 100%;
     position: sticky;
@@ -356,15 +394,6 @@ header .address::after {
     gap: 1.4rem;
     z-index: 3;
     box-sizing: border-box;
-}
-
-.status_ctnr a {
-    background-color: var(--light);
-    padding: 0.5rem 1.6rem;
-    border-radius: 10rem;
-    color: var(--dark);
-    font-weight: 800;
-    margin: 1.5rem 0;
 }
 
 .status_ctnr section {
@@ -463,6 +492,7 @@ header .address::after {
     align-items: center;
     margin-bottom: 0;
     box-sizing: border-box;
+    pointer-events: none;
 }
 
 .falling_ctnr .o1 {
