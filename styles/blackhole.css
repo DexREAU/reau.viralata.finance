@@ -368,7 +368,7 @@ footer {
     color: var(--light);
     position: absolute;
     bottom: clamp(2rem, 7vh, 6.5rem);
-    font-size: 1.7rem;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
 }
 
 footer a {

@@ -1,4 +1,34 @@
 
+const relativeDate = document.getElementById('relative_date')
+
+function formatRelativeDate(unixTimestamp) {
+    const milliseconds = unixTimestamp * 1000; // convert to milliseconds
+    const date = new Date(milliseconds); // create a new Date object
+    
+    const now = new Date(); // get the current date
+    
+    const secondsAgo = Math.floor((now - date) / 1000); // calculate the number of seconds ago
+    const minutesAgo = Math.floor(secondsAgo / 60);
+    const hoursAgo = Math.floor(minutesAgo / 60);
+    const daysAgo = Math.floor(hoursAgo / 24);
+    
+    if (secondsAgo < 60) {
+      return `🔥 Dados atualizados há ${secondsAgo} segundos 🔥`;
+    } else if (minutesAgo < 60) {
+      return `🔥 Dados atualizados há ${minutesAgo} minuto(s) 🔥`;
+    } else if (hoursAgo < 24) {
+      return `🔥 Dados atualizados há ${hoursAgo} hora(s) 🔥`;
+    } else {
+      return `🔥 Dados atualizados há ${daysAgo} dia(s) 🔥`;
+    }
+  }
+
+
+
+
+
+
+
 const maxSupply = 1000000000000000
 const initialBurn = 500000000000000
 
@@ -62,10 +92,13 @@ async function logJSONData() {
         ${String(BigInt(Number(jsonResult.total_burnt)).toLocaleString('pt-br')).substring(3, 19)}
     </span>`)
         .start()
+        
+
+
+    relativeDate.innerHTML = formatRelativeDate(jsonResult.time)
 }
 
   logJSONData()
-
 
 
 
