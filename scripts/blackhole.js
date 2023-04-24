@@ -11,42 +11,40 @@ let totalSupply;
 let totalOnBlackhole;
 let totalBurn;
 
-const blackholeValueEl = document.querySelector('#total_burnt_value')
-const totalSupplyEl = document.querySelector('#total_supply')
-const totalOnBlackholeEl = document.querySelector('#total_blackhole')
-const totalBurnEl = document.querySelector('#total_queimado')
+let jsonResult;
 
 async function logJSONData() {
     const response = await fetch("https://tecnocao.github.io/reau-blackhole/blackhole.json");
+
     const jsonData = await response.json();
-    // console.log("hoje: " + jsonData.last_updated)
-    // console.log(jsonData.results[0].total_burnt)
 
-    // console.log(Number(String(BigInt(Number(jsonData.results[0].total_burnt))).substring(0, 15)) );
+    jsonResult = jsonData.results[jsonData.results.length - 1]
 
-    bigBlackholeValue = BigInt(Number(jsonData.results[0].total_burnt));
+    // console.log(jsonResult.total_burnt)
+
+    bigBlackholeValue = BigInt(Number(jsonResult.total_burnt));
     
     burntToday = jsonData.last_updated;
 
     bigBlackholeValue = `
-        ${String(BigInt(Number(jsonData.results[0].total_burnt))).substring(0,3)}
+        ${String(BigInt(Number(jsonResult.total_burnt))).substring(0,3)}
         <span class="restante">
-            ${String(BigInt(Number(jsonData.results[0].total_burnt)).toLocaleString('pt-br')).substring(3, 19)}
+            ${String(BigInt(Number(jsonResult.total_burnt)).toLocaleString('pt-br')).substring(3, 19)}
         </span>
     `
 
     // Supply total = 1 quatrilhão - blackhole
-    totalSupply = (maxSupply - Number(String(BigInt(Number(jsonData.results[0].total_burnt))).substring(0, 15))).toLocaleString('pt-br')
+    totalSupply = (maxSupply - Number(String(BigInt(Number(jsonResult.total_burnt))).substring(0, 15))).toLocaleString('pt-br')
 
-    totalOnBlackhole = String(BigInt(Number(jsonData.results[0].total_burnt)).toLocaleString('pt-br')).substring(0, 19)
+    totalOnBlackhole = String(BigInt(Number(jsonResult.total_burnt)).toLocaleString('pt-br')).substring(0, 19)
     
-    totalBurn = (Number(String(BigInt(Number(jsonData.results[0].total_burnt))).substring(0, 15)) - initialBurn).toLocaleString('pt-br')
+    totalBurn = (Number(String(BigInt(Number(jsonResult.total_burnt))).substring(0, 15)) - initialBurn).toLocaleString('pt-br')
 
 
-    blackholeValueEl.innerHTML = bigBlackholeValue
-    totalSupplyEl.innerHTML = totalSupply
-    totalOnBlackholeEl.innerHTML = totalOnBlackhole
-    totalBurnEl.innerHTML = totalBurn
+    document.querySelector('#total_burnt_value').innerHTML = bigBlackholeValue
+    document.querySelector('#total_supply').innerHTML = totalSupply
+    document.querySelector('#total_blackhole').innerHTML = totalOnBlackhole
+    document.querySelector('#total_queimado').innerHTML = totalBurn
 
 
 
@@ -59,9 +57,9 @@ async function logJSONData() {
         });
 
         typewritedValue
-        .typeString(`${String(BigInt(Number(jsonData.results[0].total_burnt))).substring(0,3)}`)
+        .typeString(`${String(BigInt(Number(jsonResult.total_burnt))).substring(0,3)}`)
         .typeString(`<span class="restante">
-        ${String(BigInt(Number(jsonData.results[0].total_burnt)).toLocaleString('pt-br')).substring(3, 19)}
+        ${String(BigInt(Number(jsonResult.total_burnt)).toLocaleString('pt-br')).substring(3, 19)}
     </span>`)
         .start()
 }

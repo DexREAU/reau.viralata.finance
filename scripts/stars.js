@@ -2,7 +2,7 @@
 	'use strict';
 
 	const windowSum = window.innerWidth + window.innerHeight
-	console.log(windowSum / 100000)
+	// console.log(windowSum / 100000)
 	
 	const NB_STARS = windowSum / 1.2;
 	const MAX_RADIUS = 0.8 + (windowSum / 5000);
