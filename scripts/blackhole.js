@@ -13,94 +13,82 @@ function formatRelativeDate(unixTimestamp) {
     const daysAgo = Math.floor(hoursAgo / 24);
     
     if (secondsAgo < 60) {
-      return `🔥 Dados atualizados há ${secondsAgo} segundos 🔥`;
+      return `🔥 Última atualização há ${secondsAgo} segundos 🔥`;
     } else if (minutesAgo < 60) {
-      return `🔥 Dados atualizados há ${minutesAgo} minuto(s) 🔥`;
+      return `🔥 Última atualização há ${minutesAgo} minuto(s) 🔥`;
     } else if (hoursAgo < 24) {
-      return `🔥 Dados atualizados há ${hoursAgo} hora(s) 🔥`;
+      return `🔥 Última atualização há ${hoursAgo} hora(s) 🔥`;
     } else {
-      return `🔥 Dados atualizados há ${daysAgo} dia(s) 🔥`;
+      return `🔥 Última atualização há ${daysAgo} dia(s) 🔥`;
     }
-  }
+}
 
 
-
-
-
-
-
-const maxSupply = 1000000000000000
-const initialBurn = 500000000000000
-
+const maxSupply = BigInt(1000000000000000);
+const initialBurn = BigInt(500000000000000);
 
 let burntToday;
-
 let bigBlackholeValue;
-
 let totalSupply;
 let totalOnBlackhole;
 let totalBurn;
-
+let rawTotalBurn;
 let jsonResult;
 
 async function logJSONData() {
+  try {
     const response = await fetch("https://tecnocao.github.io/reau-blackhole/blackhole.json");
 
     const jsonData = await response.json();
 
-    jsonResult = jsonData.results[jsonData.results.length - 1]
+    jsonResult = jsonData.results[jsonData.results.length - 1];
 
-    // console.log(jsonResult.total_burnt)
+    bigBlackholeValue = rawTotalBurn;
 
-    bigBlackholeValue = BigInt(Number(jsonResult.total_burnt));
-    
     burntToday = jsonData.last_updated;
 
+    rawTotalBurn = BigInt(jsonResult.total_burnt);
+
     bigBlackholeValue = `
-        ${String(BigInt(Number(jsonResult.total_burnt))).substring(0,3)}
-        <span class="restante">
-            ${String(BigInt(Number(jsonResult.total_burnt)).toLocaleString('pt-br')).substring(3, 19)}
-        </span>
-    `
+      ${String(rawTotalBurn).substring(0,3)}
+      <span class="restante">
+        ${String(rawTotalBurn).toLocaleString('pt-br').substring(3, 19)}
+      </span>
+    `;
 
-    // Supply total = 1 quatrilhão - blackhole
-    totalSupply = (maxSupply - Number(String(BigInt(Number(jsonResult.total_burnt))).substring(0, 15))).toLocaleString('pt-br')
+    totalSupply = (maxSupply - BigInt(String(rawTotalBurn).substring(0, 15))).toLocaleString('pt-br');
 
-    totalOnBlackhole = String(BigInt(Number(jsonResult.total_burnt)).toLocaleString('pt-br')).substring(0, 19)
+    totalOnBlackhole = String(rawTotalBurn.toLocaleString('pt-br')).substring(0, 19);
+
+    totalBurn = (BigInt(String(rawTotalBurn).substring(0, 15)) - initialBurn).toLocaleString('pt-br');
     
-    totalBurn = (Number(String(BigInt(Number(jsonResult.total_burnt))).substring(0, 15)) - initialBurn).toLocaleString('pt-br')
+    // Média semanal
+    for(let i=0;i<7;i++) {
+      console.log(jsonData.results[jsonData.results.length - i - 1].prev_diff);
+    }
 
+    document.querySelector('#total_burnt_value').innerHTML = bigBlackholeValue;
+    document.querySelector('#total_supply').innerHTML = totalSupply;
+    document.querySelector('#total_blackhole').innerHTML = totalOnBlackhole;
+    document.querySelector('#total_queimado').innerHTML = totalBurn;
 
-    document.querySelector('#total_burnt_value').innerHTML = bigBlackholeValue
-    document.querySelector('#total_supply').innerHTML = totalSupply
-    document.querySelector('#total_blackhole').innerHTML = totalOnBlackhole
-    document.querySelector('#total_queimado').innerHTML = totalBurn
+    let typewritedValue = new Typewriter('#total_burnt_value', {
+      autoStart: true,
+      loop:false,
+      delay:100,
+    });
 
+    typewritedValue
+      .typeString(`${String(rawTotalBurn).substring(0,3)}`)
+      .typeString(`<span class="restante">
+      ${String(rawTotalBurn.toLocaleString('pt-br')).substring(3, 19)}
+      </span>`)
+      .start();
 
-
-
-
-        let typewritedValue = new Typewriter('#total_burnt_value', {
-            autoStart: true,
-            loop:false,
-            delay:100,
-        });
-
-        typewritedValue
-        .typeString(`${String(BigInt(Number(jsonResult.total_burnt))).substring(0,3)}`)
-        .typeString(`<span class="restante">
-        ${String(BigInt(Number(jsonResult.total_burnt)).toLocaleString('pt-br')).substring(3, 19)}
-    </span>`)
-        .start()
-        
-
-
-    relativeDate.innerHTML = formatRelativeDate(jsonResult.time)
+    relativeDate.innerHTML = formatRelativeDate(jsonResult.time);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-  logJSONData()
-
-
-
-
-
+logJSONData();

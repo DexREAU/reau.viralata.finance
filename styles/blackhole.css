@@ -156,6 +156,7 @@ main {
     transform: skew(60deg, 0deg);
     filter: blur(3.8rem);
     z-index: -1;
+    pointer-events: none;
 }
 
 .blackhole .blur {
@@ -180,6 +181,7 @@ main {
     font-weight: 700;
     /* top: 50%; */
     /* transform: translateY(-50%); */
+    border-radius: 50%;
 }
 
 .title_ctnr h2 {
@@ -405,10 +407,8 @@ footer a {
     flex-direction: column;
     align-items: center;
     padding: 6rem 3rem 3rem;
-    height: 100%;
-    height: -webkit-fill-available;
     transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1);
-    min-height: 75vh;
+    min-height: 70vh;
 }
 
 .status_ctnr section::before {
@@ -425,7 +425,7 @@ footer a {
     flex-flow: column;
     width: 100%;
     justify-content: space-between;
-    gap: clamp(0.3rem, 4vw, 3.5rem);
+    gap: clamp(0.3rem, 5vw, 3.5rem);
     align-items: baseline;
     font-size: clamp(1.5rem, 5.3vw, 2rem);
     margin-bottom: 5rem;
@@ -438,10 +438,10 @@ footer a {
     justify-content: space-between;
     width: 100%;
     gap: 0.5rem;
-    text-shadow: 0 0.2rem var(--dark);
+    /* text-shadow: 0 0.2rem var(--dark); */
     align-items: center;
     letter-spacing: 0.06em;
-} .status_ctnr .content li span:last-child {
+} .status_ctnr .content li>span:last-child {
     font-size: 1.4em;
     color: var(--c2);
 }
@@ -449,6 +449,41 @@ footer a {
 .status_ctnr .content span {
     /* display: inline-block; */
     /* word-break: break-word; */
+    position: relative;
+}
+
+.status_ctnr .tooltip {
+    position:absolute;
+    background-image: url(../assets/icons/tooltip.svg);
+    right: -2.5rem;
+    width: 2rem;
+    height: 2rem;
+    top: 0;
+} .status_ctnr .tooltip:hover span {
+    opacity: 1;
+    visibility: visible;
+} .status_ctnr .tooltip span {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    right: 0;
+    width: clamp(10rem, 85vw, 40rem);
+    background-color: var(--dark);
+    color: var(--light);
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    z-index: 2;
+    margin: 0 auto;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    font-weight: 300;
+    text-align: center;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    letter-spacing: 0.04rem;
+    border: 0.1rem solid var(--c2);
+    pointer-events: none;
 }
 
 .status_ctnr .content .divider {
@@ -514,6 +549,27 @@ footer a {
     width: 16rem;
     height: 18rem;
     animation: fall03 65s infinite;
+}
+
+.falling_ctnr .o8 {
+    background-image: url(../assets/buraco-negro/falling-objs/mc_maha.png);
+    width: 27rem;
+    height: 15rem;
+    animation: fall08 34s infinite;
+}
+
+.falling_ctnr .o9 {
+    background-image: url(../assets/buraco-negro/falling-objs/kiko.png);
+    width: 27rem;
+    height: 20rem;
+    animation: fall09 55s infinite;
+}
+
+.falling_ctnr .o10 {
+    background-image: url(../assets/nota-200.jpg);
+    width: 24rem;
+    height: 18rem;
+    animation: fall10 44s infinite;
 }
 
 .falling_ctnr .o4 {
@@ -671,6 +727,48 @@ footer a {
         filter: brightness(0);
     }
 }
+
+@keyframes fall08 {
+    0% {
+        transform: translate3D(155vw, -30vh, 0) scale(1) rotate(270deg);
+        filter: brightness(1);
+    }
+
+    100% {
+        transform: translate3D(0, 0, 0) scale(0.2) rotate(-300deg);
+        filter: brightness(0);
+    }
+}
+
+@keyframes fall09 {
+    0% {
+        transform: translate3D(162vw, -60vh, 0) scale(1) rotate(270deg);
+        filter: brightness(1);
+    }
+
+    100% {
+        transform: translate3D(0, 0, 0) scale(0.2) rotate(-300deg);
+        filter: brightness(0);
+    }
+}
+
+@keyframes fall10 {
+    0% {
+        transform: translate3D(62vw, 90vh, 0) scale(1) rotate(270deg);
+        filter: brightness(1);
+    }
+
+    30% {
+        transform: translate3D(62vw, 90vh, 0) scale(1) rotate(270deg);
+        filter: brightness(1);
+    }
+
+    100% {
+        transform: translate3D(0, 0, 0) scale(0.2) rotate(-300deg);
+        filter: brightness(0);
+    }
+}
+
 
 /* .falling_ctnr .fire {
     background-image: url(../assets/buraco-negro/fire.gif);

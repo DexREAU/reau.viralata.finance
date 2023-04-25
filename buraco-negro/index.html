@@ -64,6 +64,10 @@
                     <div class="obj o5 reau"></div>
                     <div class="obj o6 reau"></div>
                     <div class="obj o7 reau"></div>
+                    
+                    <div class="obj o8"></div>
+                    <div class="obj o9"></div>
+                    <div class="obj o10"></div>
                 </div>
     
                 <a href="#stats" class="blackhole">
@@ -93,27 +97,63 @@
             <section id="stats">
                 <ul class="content">
                     <li>
-                        <span>Supply Absoluto</span>
+                        <span>
+                            Supply Absoluto
+
+                            <div class="tooltip">
+                                <span>Supply absoluto é a quantidade total de $REAUs criados, levando em conta os 500 trilhões (50%) de tokens enviados ao buraco negro (endereço morto) antes da renúncia do contrato inteligente em seu lançamento.</span>
+                            </div>
+                        </span>
                         <div class="divider"></div>
                         <span id="max_supply">1.000.000.000.000.000</span>
                     </li>
                     
                     <li>
-                        <span>Supply Relativo</span>
+                        <span>
+                            Supply Relativo
+
+                            <div class="tooltip">
+                                <span>Supply relativo é a quantidade de $REAUs existente fora do buraco negro (endereço morto). Esse valor diminui a cada transação realizada com REAU na blockchain.</span>
+                            </div>
+                        </span>
                         <div class="divider"></div>
                         <span id="total_supply">--</span>
                     </li>
     
                     <li>
-                        <span>Total no Blackhole</span>
+                        <span>
+                            Total no Blackhole
+
+                            <div class="tooltip">
+                                <span>Quantidade total de $REAUs no endereço morto. Esse valor cresce a cada transação, e os tokens dentro dele não podem escapar - como tudo o que entra em um buraco negro!</span>
+                            </div>
+                        </span>
                         <div class="divider"></div>
                         <span id="total_blackhole">--</span>
                     </li>
                     
                     <li>
-                        <span>Queima Total</span>
+                        <span>
+                            Queima Automática Total
+
+                            <div class="tooltip">
+                                <span>A queima automática é a quantidade de $REAUs enviados ao buraco negro (endereço morto) de modo automático a cada transação ocorrida após o lançamento do token.</span>
+                            </div>
+                        </span>
                         <div class="divider"></div>
                         <span id="total_queimado">--</span>
+                    </li>
+                    
+                    <li>
+                        <span>
+                            Média Semanal
+
+                            <div class="tooltip">
+                                <span>Média de $REAUs enviados ao buraco negro (endereço morto) nos últimos sete dias.</span>
+                            </div>
+                        </span>
+                        <div class="divider"></div>
+                        <span id="media_semanal">--</span>
                     </li>
                     
                     <!-- <li>
