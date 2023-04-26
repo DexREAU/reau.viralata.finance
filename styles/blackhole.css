@@ -481,13 +481,12 @@ footer a {
     z-index: 2;
     margin: 0 auto;
     font-size: 1.7rem;
-    line-height: 1.5;
+    line-height: 1.4;
     font-weight: 300;
     text-align: center;
     transition: opacity 0.2s ease, visibility 0.2s ease;
     letter-spacing: 0.04rem;
     border: 0.1rem solid var(--c2);
-    pointer-events: none;
 }
 
 .status_ctnr .content .divider {
@@ -571,8 +570,8 @@ footer a {
 
 .falling_ctnr .o10 {
     background-image: url(../assets/nota-200.jpg);
-    width: 24rem;
-    height: 18rem;
+    width: 33rem;
+    height: 24rem;
     animation: fall10 44s infinite;
 }
 
