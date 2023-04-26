@@ -63,8 +63,21 @@ async function logJSONData() {
     totalBurn = (BigInt(String(rawTotalBurn).substring(0, 15)) - initialBurn).toLocaleString('pt-br');
     
     // Média semanal
+
+    let soma = 0;
+
+    let media;
+
     for(let i=0;i<7;i++) {
-      console.log(jsonData.results[jsonData.results.length - i - 1].prev_diff);
+      // console.log(Number(String(jsonData.results[jsonData.results.length - i - 1].prev_diff).substring(0, 10)));
+
+      soma += Number(String(jsonData.results[jsonData.results.length - i - 1].prev_diff).substring(0, 10))
+
+      media = soma / 7;
+      
+      if(i==6) {
+        document.querySelector('#media_semanal').innerHTML = `${Math.trunc(media).toLocaleString('pt-br')} <sub>$REAUs queimados</sub>`
+      }
     }
 
     document.querySelector('#total_burnt_value').innerHTML = bigBlackholeValue;

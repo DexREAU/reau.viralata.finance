@@ -11,6 +11,8 @@ function toggleNav() {
 
         showingMenu = true;
 
+        menuBt.classList.add('hide')
+
         if(showingWalletStats == true) {
             toggleWalletStats()
         }
@@ -19,6 +21,8 @@ function toggleNav() {
         nav.style.transform = 'translateX(-100%)';
 
         showingMenu = false;
+
+        menuBt.classList.remove('hide')
     }
 }
 

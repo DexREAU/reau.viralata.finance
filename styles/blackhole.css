@@ -371,6 +371,7 @@ footer {
     position: absolute;
     bottom: clamp(2rem, 7vh, 6.5rem);
     font-size: clamp(1.6rem, 2vw, 1.8rem);
+    z-index: 2;
 }
 
 footer a {
@@ -428,7 +429,7 @@ footer a {
     justify-content: space-between;
     gap: clamp(0.3rem, 5vw, 3.5rem);
     align-items: baseline;
-    font-size: clamp(1.5rem, 5.3vw, 2rem);
+    font-size: clamp(1.5rem, 5.3vw, 2.4rem);
     margin-bottom: 5rem;
     align-items: stretch;
 }
@@ -442,6 +443,7 @@ footer a {
     /* text-shadow: 0 0.2rem var(--dark); */
     align-items: center;
     letter-spacing: 0.06em;
+    text-align: center;
 } .status_ctnr .content li>span:last-child {
     font-size: 1.4em;
     color: var(--c2);
@@ -451,6 +453,10 @@ footer a {
     /* display: inline-block; */
     /* word-break: break-word; */
     position: relative;
+} .status_ctnr .content span sub {
+    display: block;
+    font-size: 0.6em;
+    opacity: 0.6;
 }
 
 .status_ctnr .tooltip {
@@ -461,7 +467,10 @@ footer a {
     height: 2rem;
     top: 0;
     cursor: help;
+    z-index: 2;
 } .status_ctnr .tooltip:hover {
+    z-index: 4;
+} .status_ctnr .tooltip:focus {
     z-index: 3;
 } .status_ctnr .tooltip:hover span, .status_ctnr .tooltip:focus span {
     opacity: 1;
@@ -485,7 +494,8 @@ footer a {
     font-weight: 300;
     text-align: center;
     transition: opacity 0.2s ease, visibility 0.2s ease;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.06rem;
+    font-family: 'Sofia Sans', 'Roboto', sans-serif;
     border: 0.1rem solid var(--c2);
 }
 
@@ -531,6 +541,7 @@ footer a {
     margin-bottom: 0;
     box-sizing: border-box;
     pointer-events: none;
+    z-index: 2;
 }
 
 .falling_ctnr .o1 {
@@ -733,7 +744,7 @@ footer a {
 
 @keyframes fall08 {
     0% {
-        transform: translate3D(155vw, -30vh, 0) scale(1) rotate(270deg);
+        transform: translate3D(115vw, 50vh, 0) scale(1) rotate(470deg);
         filter: brightness(1);
     }
 

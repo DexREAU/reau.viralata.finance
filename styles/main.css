@@ -126,13 +126,13 @@ header nav .bt:not(.cta) {
 
 header nav .bt svg {
 
-width: 2rem;
+    width: 2rem;
 
-height: 1.6rem;
+    height: 1.6rem;
 
-opacity: 0.15;
+    opacity: 0.15;
 
-transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease;
 }
 
 header nav .bt:hover svg {
@@ -287,28 +287,28 @@ header .conectar_wallet:hover span {
 
 .wallet_stats .flex {
 
-align-items: center;
+    align-items: center;
 
-justify-content: space-between;
+    justify-content: space-between;
 
-width: 91%;
+    width: 91%;
 
-margin-bottom: 2rem;
+    margin-bottom: 2rem;
 
-position: sticky;
+    position: sticky;
 
-top: 0;
+    top: 0;
 }
 
 .wallet_stats .flex a {
 
-text-decoration: underline;
+    text-decoration: underline;
 
-color: var(--lightgrey);
+    color: var(--lightgrey);
 
-position: relative;
+    position: relative;
 
-padding-right: 1.2rem;
+    padding-right: 1.2rem;
 }
 
 .wallet_stats .ctnr {
@@ -412,7 +412,7 @@ padding-right: 1.2rem;
 }
 
 .menu_bt.hide {
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
 }
 
 
@@ -1651,7 +1651,23 @@ header nav::-webkit-scrollbar-thumb:hover,
 
 
 .doacoes_sec {
+    min-height: 50rem;
+    background-color: #ffa2d1;
+    display: none;
+}
 
+.doacoes_sec > .ctnr {
+    width: clamp(10rem, 100%, 130rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.doacoes_sec video {
+    width: clamp(10rem, 80vw, 50rem);
+    border-radius: 2rem;
+    margin-top: -2rem;
+    z-index: 4;
 }
 
 
@@ -1768,6 +1784,7 @@ header nav::-webkit-scrollbar-thumb:hover,
     /* border-left: clamp(0.4rem, 1vw, 1rem) solid var(--dark); */
     /* border-right: clamp(0.4rem, 1vw, 1rem) solid var(--dark); */
     clip-path: ellipse(180% 100% at 50% 100%);
+    scroll-margin: 10rem;
 }
 
 .nfts_sec .ctnr {
@@ -1801,7 +1818,7 @@ section h2 span {
     gap: clamp(2rem, 3vw, 3rem);
     margin-top: 4rem;
     overflow-x: auto;
-    padding: 0 clamp(1rem, calc((100vw - clamp(10rem, 64vw, 33rem)) / 2), 20rem) 6rem;
+    padding: 0 clamp(1rem, calc((100vw - clamp(10rem, 64vw, 33rem)) / 2), 20rem) 12rem;
     /* background-color: var(--light); */
     -webkit-mask-image: linear-gradient(90deg, white calc(100% - 3rem), transparent calc(100% + 15rem));
     max-width: 180rem;
@@ -2204,8 +2221,10 @@ footer .moon_doggo {
     border-bottom: 0.1rem solid var(--darkgrey);
     border-left: 0.1rem solid var(--darkgrey);
     transition: border-color 0.3s ease;
-} .ctnr_compra .close:hover {
-    border-color:var(--light);
+}
+
+.ctnr_compra .close:hover {
+    border-color: var(--light);
     transition: border-color 0s ease;
 }
 
@@ -2494,12 +2513,10 @@ footer .moon_doggo {
     .dead .img_perfil {}
 
     .nfts_sec {
-        padding-top: 9rem;
-        margin-top: -3%;
     }
 
     .nfts_sec .ctnr .content {
-        padding: 4rem 20rem 6rem;
+        padding: 4rem 20rem 12rem;
         margin: 0 auto 0;
         scroll-snap-type: unset;
     }
