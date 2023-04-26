@@ -384,7 +384,6 @@ footer a {
 }
 
 .status_ctnr {
-    width: 100%;
     position: sticky;
     top: 0vh;
     display: flex;
@@ -396,6 +395,8 @@ footer a {
     gap: 1.4rem;
     z-index: 3;
     box-sizing: border-box;
+    width: clamp(10rem, 100%, 70rem);
+    margin: 0 auto;
 }
 
 .status_ctnr section {
@@ -459,7 +460,10 @@ footer a {
     width: 2rem;
     height: 2rem;
     top: 0;
-} .status_ctnr .tooltip:hover span {
+    cursor: help;
+} .status_ctnr .tooltip:hover {
+    z-index: 3;
+} .status_ctnr .tooltip:hover span, .status_ctnr .tooltip:focus span {
     opacity: 1;
     visibility: visible;
 } .status_ctnr .tooltip span {
@@ -553,8 +557,8 @@ footer a {
 
 .falling_ctnr .o8 {
     background-image: url(../assets/buraco-negro/falling-objs/mc_maha.png);
-    width: 27rem;
-    height: 15rem;
+    width: 37rem;
+    height: 21rem;
     animation: fall08 34s infinite;
 }
 
