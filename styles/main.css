@@ -1277,7 +1277,8 @@ header nav::-webkit-scrollbar-thumb:hover,
     transition: max-height 0.8s ease;
     overflow-y: hidden;
     position: relative;
-    display: none;
+    /* display: none; */
+    scroll-margin: 30rem;
 }
 
 .placar_sec .ctnr {
