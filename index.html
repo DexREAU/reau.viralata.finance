@@ -28,6 +28,7 @@
 
     <script src="scripts/side-menu.js" defer></script>
     <script src="scripts/lazy-video.js" defer></script>
+    <script src="scripts/stars.js" defer></script>
 </head>
 <body id="top">
     <header>
@@ -50,7 +51,7 @@
                 <div class="bt pre cta">Comprar <span><span>$</span>REAU</span></div>
 
                 <a class="bt external" href="https://bscscan.com/address/0x4c79b8c9cB0BD62B047880603a9DEcf36dE28344" target="_blank" title="contrato na BSCScan">
-                    <?xml version="1.0" encoding="UTF-8"?><svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.88 87.44"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="m38.47,0H4.61C2.07,0,0,2.07,0,4.61v78.21c0,2.55,2.07,4.61,4.61,4.61h55.65c2.55,0,4.61-2.07,4.61-4.61V26.41c0-1.22-.49-2.4-1.35-3.26L41.73,1.35c-.87-.87-2.04-1.35-3.26-1.35Z"/></svg>
+                    <svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.88 87.44"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="m38.47,0H4.61C2.07,0,0,2.07,0,4.61v78.21c0,2.55,2.07,4.61,4.61,4.61h55.65c2.55,0,4.61-2.07,4.61-4.61V26.41c0-1.22-.49-2.4-1.35-3.26L41.73,1.35c-.87-.87-2.04-1.35-3.26-1.35Z"></path></svg>
                     Contrato
                 </a>
                     
@@ -164,7 +165,7 @@
 
                     <img src="https://i.seadn.io/gcs/files/c62d0d849972fc738e386a983c6d7f41.png?auto=format&w=1000" alt="">
 
-                    <img src="https://1400214502-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-MebWz1Zc0hSkoVe6anX%2F-MftcFrV_8La07RkQ_Zb%2F-MfuWcXvRIX8VXHykDk1%2Fimage.png?alt=media&token=986f89ae-68c1-43de-92f4-0b21fc933152" alt="">
+                    <img src="assets/dogira-bg.webp" alt="">
 
                     <img src="assets/bitcao-01.png" alt="">
                 </div>
@@ -249,7 +250,7 @@
 
             <div class="content">
                 <div class="txt">
-                    <h4>Por quê?</h4>
+                    <p class="heading">Por quê?</p>
 
                     <p>Já que o nosso governo, apesar de imprimir dinheiro sem parar, não nos deixou <strong>colocar o vira-lata caramelo na nota de R$ 200,00</strong>, então faremos o <b>$REAUUUUUU</b> valer (bem) mais que 1 real.</p>
                     
@@ -347,27 +348,27 @@
 
             <div class="content">
                 <div class="box">
-                    <h4>🪙 Número de tokens</h4>
+                    <p class="heading">🪙 Número de tokens</p>
                     <p>1 quatrilhão</p>
                 </div>
 
                 <div class="box">
-                    <h4>🔄 Tokens em circulação</h4>
+                    <p class="heading">🔄 Tokens em circulação</p>
                     <p>454 trilhões</p>
                 </div>
 
                 <div class="box">
-                    <h4>🔥 Queima</h4>
+                    <p class="heading">🔥 Queima</p>
                     <p>3% do valor de cada transação é "queimado" para a piscina de liquidez</p>
                 </div>
                 
                 <div class="box">
-                    <h4>💸 Staking</h4>
+                    <p class="heading">💸 Staking</p>
                     <p>1% distribuído aos hodlers a cada transação</p>
                 </div>
 
                 <div class="box">
-                    <h4>💧 Liquidez</h4>
+                    <p class="heading">💧 Liquidez</p>
                     <p>Metade dos tokens foram adicionados à liquidez</p>
                 </div>
 
@@ -380,12 +381,9 @@
             <source srcset="assets/rocket_doggo.png" type="image/png">
             <img src="assets/rocket_doggo.png" alt="Rocket Doggo" draggable="false">
         </picture>
+
+        <canvas id="stars"></canvas>
     </section>
-
-
-
-
-
 
 
 
@@ -888,9 +886,21 @@
 
     <section class="doacoes_sec">
         <div class="ctnr">
-            <video class="lazy" muted loop playsinline controls poster="assets/sos_bichos.jpg">
+            <video class="lazy" playsinline controls poster="assets/sos_bichos_poster.jpg">
                 <source data-src="assets/sos_bichos.mp4" type="video/mp4">
             </video>
+            
+            <div class="content">
+                <h3>Ações sociais da comunidade Viralata</h3>
+    
+                <p><strong>No momento, a articulação de doações se realiza quase que unicamente pelo poder de nossa comunidade.</strong></p>
+    
+                <p>É objetivo da Viralata Finance, no entanto, integrar esse aspecto aos nossos planos futuros – <b>destinar parcelas de transações realizadas em um marketplace descentralizado</b>, por exemplo, para um “fundo social”, como a carteira de caridade da Viralata, que acumula hoje mais de 16 ETH (<a href="https://etherscan.io/address/0x9220557A6dDa69a1837c1B88359D55Aa6bE9A77e" target="_blank">veja em EtherScan</a>).</p>
+    
+                <p>A destinação destes fundos será votada pela comunidade através de uma <strong>DAO (Organização Autônoma Descentralizada)</strong> e direcionado à diversas causas – que podem esteder-se ou não além das causas animais, dependendo da vontade da comunidade.</p>
+    
+                <p>Para mais informações, <a href="https://www.viralatometro.com/#/fundo-caridade" target="_blank">acesse o Viralatômetro</a>.</p>                
+            </div>
         </div>
     </section>
 
@@ -984,7 +994,7 @@
 
     <div class="ctnr_compra">
         <div class="close" role="button" title="fechar"></div>
-        <h4>Beleza, aí vão algumas dicas:</h4>
+        <p class="heading">Beleza, aí vão algumas dicas:</p>
 
         <ul>
             <li>A liquidez original do $REAU está na <a href="https://v1exchange.pancakeswap.finance/#/swap?outputCurrency=0x4c79b8c9cB0BD62B047880603a9DEcf36dE28344">PancakeSwap v1 (versão 1)</a> - par BNB SmartChain (BEP20);</li>
