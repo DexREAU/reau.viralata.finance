@@ -2130,7 +2130,7 @@ footer .moon_doggo {
 }
 
 .balloon {
-    width: clamp(12rem, 63vw, 26rem);
+    width: clamp(12rem, 63vw, 30rem);
     background-color: var(--darkgrey);
     padding: 0.6rem 1.2rem 0.6rem 0.6rem;
     border-radius: 0.1rem;
