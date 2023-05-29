@@ -1084,7 +1084,7 @@ header nav::-webkit-scrollbar-thumb:hover,
     /* background-size: cover; */
     /* background-position: bottom center; */
     /* background-attachment: fixed; */
-    margin-bottom: -3rem;
+    margin-bottom: -4rem;
     /* overflow: hidden; */
 }
 
@@ -1304,7 +1304,7 @@ header nav::-webkit-scrollbar-thumb:hover,
     transition: max-height 0.8s ease;
     overflow-y: hidden;
     position: relative;
-    /* display: none; */
+    display: none;
     scroll-margin: 30rem;
 }
 
