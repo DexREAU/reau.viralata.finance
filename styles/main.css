@@ -2024,12 +2024,29 @@ section h2 span {
 }
 
 .outdoor picture img {
-
     object-position: bottom;
 }
 
 
 
+
+
+
+
+
+.meme_sec {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.meme_sec img,
+.meme_sec video {
+    max-width: 100%;
+    min-width: 20vw;
+    max-height: 50rem;
+}
 
 
 
