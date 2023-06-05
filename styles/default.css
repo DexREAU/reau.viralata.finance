@@ -28,15 +28,18 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
     font-family: Sofia Sans;
     src: url("../assets/fonts/SofiaSansSemiCondensed-VariableFont_wght.ttf");
     font-style: normal;
+    font-display: swap;
 } @font-face {
     font-family: Sofia Sans;
     src: url("../assets/fonts/SofiaSansSemiCondensed-Italic-VariableFont_wght.ttf");
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: Retro;
     src: url("../assets/fonts/retro.ttf");
+    font-display: swap;
 }
 
 
