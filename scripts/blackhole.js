@@ -68,7 +68,7 @@ async function logJSONData() {
 
     let media;
 
-    for(let i=0;i<7;i++) {
+    for(let i=0;i<6;i++) {
       // console.log(Number(String(jsonData.results[jsonData.results.length - i - 1].prev_diff).substring(0, 10)));
 
       soma += Number(String(jsonData.results[jsonData.results.length - i - 1].prev_diff).substring(0, 10))
