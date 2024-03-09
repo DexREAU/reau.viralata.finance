@@ -29,7 +29,7 @@ const initialBurn = BigInt(500000000000000);
 
 let burntToday;
 let bigBlackholeValue;
-let totalSupply;
+// let totalSupply;
 let totalOnBlackhole;
 let totalBurn;
 let rawTotalBurn;
@@ -56,7 +56,7 @@ async function logJSONData() {
       </span>
     `;
 
-    totalSupply = (maxSupply - BigInt(String(rawTotalBurn).substring(0, 15))).toLocaleString('pt-br');
+    // totalSupply = (maxSupply - BigInt(String(rawTotalBurn).substring(0, 15))).toLocaleString('pt-br');
 
     totalOnBlackhole = String(rawTotalBurn.toLocaleString('pt-br')).substring(0, 19);
 
@@ -68,7 +68,7 @@ async function logJSONData() {
 
     let media;
 
-    for(let i=0;i<6;i++) {
+    for(let i=0;i<7;i++) {
       // console.log(Number(String(jsonData.results[jsonData.results.length - i - 1].prev_diff).substring(0, 10)));
 
       soma += Number(String(jsonData.results[jsonData.results.length - i - 1].prev_diff).substring(0, 10))
@@ -81,7 +81,7 @@ async function logJSONData() {
     }
 
     document.querySelector('#total_burnt_value').innerHTML = bigBlackholeValue;
-    document.querySelector('#total_supply').innerHTML = totalSupply;
+    // document.querySelector('#total_supply').innerHTML = totalSupply;
     document.querySelector('#total_blackhole').innerHTML = totalOnBlackhole;
     document.querySelector('#total_queimado').innerHTML = totalBurn;
 
