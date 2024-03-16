@@ -4,7 +4,7 @@
 	const windowSum = window.innerWidth + window.innerHeight
 	// console.log(windowSum / 100000)
 	
-	const NB_STARS = windowSum / 1.2;
+	const NB_STARS = windowSum / 4;
 	const MAX_RADIUS = 0.8 + (windowSum / 5000);
 	const GLOBAL_SPEED = (windowSum / 120000);
 	 

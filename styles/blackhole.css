@@ -2,6 +2,11 @@
     background-color: black;
 } ::-webkit-scrollbar-thumb {
     background-color: white;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
 
 main {
@@ -375,6 +380,7 @@ footer {
     /* bottom: clamp(2rem, 7vh, 6.5rem); */
     font-size: clamp(1.6rem, 2vw, 1.8rem);
     z-index: 2;
+    margin-bottom: clamp(1rem, 4vh, 3rem);
 }
 
 footer a {
@@ -383,13 +389,12 @@ footer a {
     border-radius: 10rem;
     color: var(--dark);
     font-weight: 800;
-    margin: 1.5rem 0;
+    margin-top: 1.5rem;
     border: 0.1rem solid var(--lightgrey);
 }
 
 .status_ctnr {
     position: relative;
-    bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -399,16 +404,19 @@ footer a {
     z-index: 3;
     box-sizing: border-box;
     width: clamp(10rem, 100%, 70rem);
+    max-height: clamp(3rem, 22vh, 20rem);
     margin: 0 auto;
-    max-height: clamp(3rem, 25vh, 20rem);
     height: fit-content;
     overflow-y: auto;
     overflow-x: hidden;
     box-sizing: border-box;
     width: 90%;
-    border-radius: 2rem;
-    border: 0.1rem solid var(--c2);
+    border-radius: 1.2rem;
+    border: 0.2rem solid var(--c2);
     background-color: var(--dark);
+    border-bottom-width: 1rem;
+    box-shadow: 0 2rem 4rem -3rem var(--c2);
+    max-width: 40rem;
 }
 
 .status_ctnr::-webkit-scrollbar-track, .status_ctnr::-webkit-scrollbar-thumb  {
@@ -416,12 +424,12 @@ footer a {
 }
 
 .status_ctnr section {
-    width: clamp(10rem, 100%, 55rem);
+    width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 2rem 2rem;
+    padding: 2rem clamp(1.5rem, 4vw, 3rem) 2rem;
     transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1);
     /* min-height: 70vh; */
 }
@@ -461,6 +469,14 @@ footer a {
     color: var(--c2);
 }
 
+
+.status_ctnr .content li hr {
+    flex: 1;
+    border: navajowhite;
+    height: 0.2rem;
+    background-color: var(--darkgrey2);
+}
+
 .status_ctnr .content span {
     /* display: inline-block; */
     /* word-break: break-word; */
@@ -468,6 +484,7 @@ footer a {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    align-items: center;
 } .status_ctnr .content span sub {
     display: block;
     font-size: 0.6em;
@@ -476,9 +493,13 @@ footer a {
     top: 100%;
 }
 
-.status_ctnr .content span#media_semanal {
-    flex-direction: column;
-    gap: 0;
+.status_ctnr .content li>span:last-child::after {
+    content:'';
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../assets/REAU-ticker.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .status_ctnr .tooltip {
@@ -890,8 +911,10 @@ footer a {
     .status_ctnr {
         position: absolute;
         top: 3rem;
-        right:3rem;
+        right: 3rem;
         width: clamp(5rem, 50vw, 50rem);
+        max-height: clamp(3rem, 19vw, 24rem);
+        max-width: 30vw;
     }
 
     footer {

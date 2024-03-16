@@ -24,7 +24,6 @@ function formatRelativeDate(unixTimestamp) {
 }
 
 
-const maxSupply = BigInt(1000000000000000);
 const initialBurn = BigInt(500000000000000);
 
 let burntToday;
@@ -56,8 +55,6 @@ async function logJSONData() {
       </span>
     `;
 
-    // totalSupply = (maxSupply - BigInt(String(rawTotalBurn).substring(0, 15))).toLocaleString('pt-br');
-
     totalOnBlackhole = String(rawTotalBurn.toLocaleString('pt-br')).substring(0, 19);
 
     totalBurn = (BigInt(String(rawTotalBurn).substring(0, 15)) - initialBurn).toLocaleString('pt-br');
@@ -76,7 +73,7 @@ async function logJSONData() {
       media = soma / 7;
       
       if(i==6) {
-        document.querySelector('#media_semanal').innerHTML = `${Math.trunc(media).toLocaleString('pt-br')} <sub>$REAUs queimados</sub>`
+        document.querySelector('#media_semanal').innerHTML = `${Math.trunc(media).toLocaleString('pt-br')}`
       }
     }
 

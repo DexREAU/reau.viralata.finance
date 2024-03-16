@@ -2,7 +2,6 @@ body {
     color:var(--light);
 }
 
-
 @font-face {
     font-family: Sofia Sans;
     src: url("assets/fonts/SofiaSansSemiCondensed-VariableFont_wght.ttf");
