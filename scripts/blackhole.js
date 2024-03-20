@@ -33,6 +33,7 @@ let totalOnBlackhole;
 let totalBurn;
 let rawTotalBurn;
 let jsonResult;
+let lastWeek;
 
 async function logJSONData() {
   try {
@@ -61,19 +62,35 @@ async function logJSONData() {
     
     // Média semanal
 
-    let soma = 0;
-
-    let media;
+    let soma7Dias = 0;
+    let media7Dias;
 
     for(let i=0;i<7;i++) {
       // console.log(Number(String(jsonData.results[jsonData.results.length - i - 1].prev_diff).substring(0, 10)));
 
-      soma += Number(String(jsonData.results[jsonData.results.length - i - 1].prev_diff).substring(0, 10))
+      soma7Dias += Number(String(jsonData.results[jsonData.results.length - i - 1].prev_diff).substring(0, 10))
 
-      media = soma / 7;
+      media7Dias = soma7Dias / 7;
       
       if(i==6) {
-        document.querySelector('#media_semanal').innerHTML = `${Math.trunc(media).toLocaleString('pt-br')}`
+        document.querySelector('#media_da_semana').innerHTML = `${Math.trunc(media7Dias).toLocaleString('pt-br')}`
+
+        document.querySelector('#ultima_semana').innerHTML = `${Math.trunc(soma7Dias).toLocaleString('pt-br')}`
+      }
+    }
+
+    let soma30Dias = 0;
+    let media30Dias;
+
+    for(let j=0;j<30;j++) {
+      // console.log(Number(String(jsonData.results[jsonData.results.length - j - 1].prev_diff).substring(0, 10)));
+
+      soma30Dias += Number(String(jsonData.results[jsonData.results.length - j - 1].prev_diff).substring(0, 10))
+
+      media30Dias = soma30Dias / 30;
+      
+      if(j==29) {
+        document.querySelector('#media_mensal').innerHTML = `${Math.trunc(media30Dias).toLocaleString('pt-br')}`
       }
     }
 
@@ -81,6 +98,7 @@ async function logJSONData() {
     // document.querySelector('#total_supply').innerHTML = totalSupply;
     document.querySelector('#total_blackhole').innerHTML = totalOnBlackhole;
     document.querySelector('#total_queimado').innerHTML = totalBurn;
+    // document.querySelector('#ultima_semana').innerHTML = lastWeek;
 
     let typewritedValue = new Typewriter('#total_burnt_value', {
       autoStart: true,

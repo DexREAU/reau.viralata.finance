@@ -14,7 +14,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 63vh;
     height: 100dvh;
 }
@@ -83,7 +83,6 @@ main {
     align-items: center;
     margin-bottom: -8rem;
     width: 100%;
-    overflow: hidden;
     z-index: 1;
     padding-top: 32vh;
     box-sizing: border-box;
@@ -193,7 +192,7 @@ main {
 }
 
 .title_ctnr h2 {
-    font-size: clamp(2rem, calc(8vw + 8vh), 14.5rem);
+    font-size: clamp(8rem, calc(10vw + 10vh - 7rem), 14.5rem);
     line-height: 0.85;
     text-align: center;
     white-space: nowrap;
@@ -389,7 +388,7 @@ footer a {
     border-radius: 10rem;
     color: var(--dark);
     font-weight: 800;
-    margin-top: 1.5rem;
+    margin-top: clamp(0.5rem, 3vw, 1.5rem);
     border: 0.1rem solid var(--lightgrey);
 }
 
@@ -404,7 +403,7 @@ footer a {
     z-index: 3;
     box-sizing: border-box;
     width: clamp(10rem, 100%, 70rem);
-    max-height: clamp(3rem, 22vh, 20rem);
+    max-height: clamp(3rem, 17vh, 20rem);
     margin: 0 auto;
     height: fit-content;
     overflow-y: auto;
@@ -429,9 +428,8 @@ footer a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem clamp(1.5rem, 4vw, 3rem) 2rem;
+    padding: 1.6rem clamp(1rem, 2vw, 2rem) 1.6rem;
     transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1);
-    /* min-height: 70vh; */
 }
 
 .status_ctnr section::before {
@@ -448,9 +446,9 @@ footer a {
     flex-flow: column;
     width: 100%;
     justify-content: space-between;
-    gap: clamp(0.3rem, 2vw, 1.3rem);
+    gap: clamp(0.3rem, 2vw, 1.2rem);
     align-items: baseline;
-    font-size: clamp(1.5rem, 3vw, 1.6rem);
+    font-size: clamp(1.4rem, 3vw, 1.6rem);
     align-items: stretch;
 }
 
@@ -465,7 +463,7 @@ footer a {
     letter-spacing: 0.06em;
     /* text-align: center; */
 } .status_ctnr .content li>span:last-child {
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: var(--c2);
 }
 
@@ -475,6 +473,7 @@ footer a {
     border: navajowhite;
     height: 0.2rem;
     background-color: var(--darkgrey2);
+    margin:0 1rem;
 }
 
 .status_ctnr .content span {
@@ -483,7 +482,7 @@ footer a {
     position: relative;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: clamp(0.6rem, 1vw, 1rem);
     align-items: center;
 } .status_ctnr .content span sub {
     display: block;
@@ -910,8 +909,8 @@ footer a {
 
     .status_ctnr {
         position: absolute;
-        top: 3rem;
-        right: 3rem;
+        top: clamp(3rem, 3vw, 4rem);
+        right: clamp(3rem, 3vw, 4rem);
         width: clamp(5rem, 50vw, 50rem);
         max-height: clamp(3rem, 19vw, 24rem);
         max-width: 30vw;
