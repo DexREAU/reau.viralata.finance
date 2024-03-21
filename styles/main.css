@@ -209,8 +209,8 @@ header .social .tiktok {
 }
 
 header .conectar_wallet {
-    box-shadow: 0 0.35rem;
-    padding: clamp(0.6rem, 2vw, 1rem) calc(clamp(0.6rem, 3vw, 1.1rem) * 1.4);
+    box-shadow: 0 0.35rem var(--c1);
+    padding: clamp(0.6rem, 2vw, 1rem) calc(clamp(0.6rem, 4vw, 2rem)* 1.4);
     border-radius: 0.4rem;
     font-weight: 400;
     align-self: center;
@@ -219,13 +219,14 @@ header .conectar_wallet {
     white-space: nowrap;
     user-select: none;
     cursor: pointer;
-    letter-spacing: 0.06rem;
+    letter-spacing: 0.15rem;
     font-size: 0.8em;
-    border: 0.1rem solid;
+    border: 0.1rem solid var(--c1);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    text-transform: uppercase;
 }
 
 header .conectar_wallet:hover span {
@@ -421,6 +422,15 @@ header .conectar_wallet:hover span {
 .menu_bt.hide {
     transform: translateX(-100%);
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -828,6 +838,16 @@ header nav::-webkit-scrollbar-thumb:hover,
 
 
 
+
+
+
+
+
+
+
+
+
+
 .sobre_sec {
     background-color: #ffffff;
     padding: 7rem 0 0;
@@ -1067,6 +1087,16 @@ header nav::-webkit-scrollbar-thumb:hover,
 
 
 
+
+
+
+
+
+
+
+
+
+
 .space_sec {
     position: relative;
     width: 100%;
@@ -1270,6 +1300,18 @@ header nav::-webkit-scrollbar-thumb:hover,
     font-size: 3.5rem;
     width: fit-content;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1673,6 +1715,15 @@ header nav::-webkit-scrollbar-thumb:hover,
 
 
 
+
+
+
+
+
+
+
+
+
 .pdg_sec {
     background-color: var(--c1);
     background-image: linear-gradient(180deg, #ffffffaa, transparent 38%);
@@ -1745,6 +1796,17 @@ header nav::-webkit-scrollbar-thumb:hover,
     font-size: 0.9em;
     border: 0.1rem solid var(--light);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1923,6 +1985,13 @@ section h2 span {
 
 
 
+
+
+
+
+
+
+
 .doacoes_sec {
     min-height: 50rem;
     background-color: #ffb5c9;
@@ -2002,6 +2071,15 @@ section h2 span {
 
 
 
+
+
+
+
+
+
+
+
+
 .outdoor {
     position: sticky;
     /* display: flex; */
@@ -2034,6 +2112,11 @@ section h2 span {
 
 
 
+
+
+
+
+
 .meme_sec {
     display: flex;
     flex-flow: row wrap;
@@ -2047,6 +2130,15 @@ section h2 span {
     min-width: 20vw;
     max-height: 50rem;
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2085,6 +2177,9 @@ footer .moon_doggo {
     text-align: center;
     margin: 0 auto;
 }
+
+
+
 
 
 
@@ -2207,6 +2302,38 @@ footer .moon_doggo {
     box-sizing: border-box;
     border: 0.1rem solid var(--light);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .reau_app_ctnr {
+    margin-bottom: 10rem;
+}
+
+.reau_app_ctnr iframe {
+    width: 100%;
+    height: 50rem;
+    position: relative;
+    border: 0.1rem solid var(--c2);
+    border-radius: 1.5rem;
+} */
+
+
+
+
+
 
 
 
