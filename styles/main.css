@@ -784,7 +784,6 @@ header .conectar_wallet:hover span {
 
 .vfunk_cta .icon {
     background-image: url(../assets/icons/foragido.png);
-    background-image: -webkit-image-set(url(../assetsicons/foragido.png) 1x, url(../assets/icons/foragido.webp) 1x);
     width: 1.8rem;
     margin-top: 0.4rem;
     background-position: bottom;
@@ -2352,11 +2351,11 @@ footer .moon_doggo {
     top: 50%;
     transform: translateY(-50%);
     margin: 0 auto;
-    width: clamp(10rem, 91vw, 80rem);
+    width: fit-content;
     background-color: var(--dark);
     z-index: 1000;
     border-radius: 0.3rem;
-    padding: clamp(2rem, 12vw, 5rem) 1rem 3rem;
+    padding: clamp(2rem, 12vw, 6rem) clamp(1rem, 7vw, 3rem);
     box-sizing: border-box;
     color: var(--light);
     display: flex;
@@ -2365,6 +2364,55 @@ footer .moon_doggo {
     align-items: center;
     box-shadow: 0 0.3rem var(--c2), 0 4rem 5rem lch(6.45 2.36 235.75 / 0.4), inset 0 -2rem 10rem -9rem var(--c2);
     max-height: 85vh;
+    box-sizing: border-box;
+    max-width: 91vw;
+}
+
+.ctnr_compra .anchors {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.ctnr_compra .buy_anchor {
+    background-color: var(--dark);
+    text-align: center;
+    border: 0.1rem solid var(--c1);
+    padding: 2rem clamp(1rem, 2vw, 3rem);
+    box-sizing: border-box;
+    font-size: clamp(1.9rem, 2vw, 2.3rem);
+    border-radius: 0.6rem;
+    border-bottom-width: 0.6rem;
+    transition: background-color 0.1s ease, box-shadow 0.1s ease;
+    -webkit-transition: background-color 0.1s ease, box-shadow 0.1s ease;
+    -moz-transition: background-color 0.1s ease, box-shadow 0.1s ease;
+    -ms-transition: background-color 0.1s ease, box-shadow 0.1s ease;
+    -o-transition: background-color 0.1s ease, box-shadow 0.1s ease;
+}
+
+.ctnr_compra .buy_anchor:hover {
+    background-color: var(--darkgrey2);
+    box-shadow: 0 0.5rem 2rem -1.6rem var(--light);
+}
+
+.ctnr_compra .buy_anchor:first-child {
+    border-color: var(--c2);
+}
+
+.ctnr_compra .buy_anchor sub {
+    display: block;
+    font-size: 0.7em;
+    color: var(--lightgrey);
+    margin-top: 0.3rem;
+}
+
+.ctnr_compra .buy_anchor strong {
+    color: var(--c1);
+    white-space: nowrap;
+}
+
+.ctnr_compra .buy_anchor:first-child strong {
+    color: var(--c2);
 }
 
 .ctnr_compra.show {
@@ -2374,11 +2422,12 @@ footer .moon_doggo {
 .ctnr_compra .cta {}
 
 .ctnr_compra .heading {
-    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-size: clamp(2.5rem, 4vw, 3rem);
     font-weight: 500;
     display: block;
     margin-bottom: 2rem;
-    width: clamp(20rem, 75vw, 68rem);
+    width: clamp(20rem, 75vw, 67rem);
+    text-align: center;
 }
 
 .ctnr_compra ul {
@@ -2503,8 +2552,7 @@ footer .moon_doggo {
 
     header {
         /* position:sticky; */
-        backdrop-filter: blur(0.4rem);
-        background-color: rgb(17 21 23 / 96%);
+        background-color: rgb(17 21 23 / 98%);
         /* max-height: 16vh; */
     }
 
