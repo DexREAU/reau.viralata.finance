@@ -2345,6 +2345,7 @@ footer .moon_doggo {
 
 .ctnr_compra {
     visibility: hidden;
+    overflow: hidden;
     position: fixed;
     left: 0;
     right: 0;
@@ -2486,6 +2487,7 @@ footer .moon_doggo {
     border-bottom: 0.1rem solid var(--darkgrey);
     border-left: 0.1rem solid var(--darkgrey);
     transition: border-color 0.3s ease;
+    background-color: var(--darkgrey2);
 }
 
 .ctnr_compra .close:hover {
@@ -2495,6 +2497,12 @@ footer .moon_doggo {
 
 .ctnr_compra video {
     width: 100%;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
 }
 
 
