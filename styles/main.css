@@ -203,6 +203,11 @@ header .social .discord {
     background-color: #7289da;
 }
 
+header .social .youtube {
+    background-image: url(../assets/icons/youtube.svg);
+    background-color: #ff0000;
+}
+
 header .social .tiktok {
     background-image: url(../assets/icons/tiktok.svg);
     background-color: #000000;
